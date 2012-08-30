@@ -196,9 +196,6 @@ CC = cc
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 ARCHIVE = ar rcv
 
-### set gsflib - could be version supplied with MB-System or other installation
-GSFINCDIR  = $(INCDIR)
-
 ### set projlib - could be version supplied with MB-System or other installation
 PROJINCDIR  = $(INCDIR)
 #
@@ -216,7 +213,7 @@ all:	$(INCDIR)/mb_format.h $(INCDIR)/mb_status.h \
 	$(INCDIR)/mbsys_ldeoih.h \
 	$(INCDIR)/mbsys_reson.h $(INCDIR)/mbsys_sb2000.h \
 	$(INCDIR)/mbsys_hsmd.h $(INCDIR)/mbsys_dsl.h \
-	$(INCDIR)/mbsys_gsf.h $(INCDIR)/mbsys_mstiff.h \
+	$(INCDIR)/mbsys_mstiff.h \
 	$(INCDIR)/mbsys_oic.h $(INCDIR)/mbsys_hdcs.h \
 	$(INCDIR)/mbsys_singlebeam.h $(INCDIR)/mbsys_xse.h \
 	$(INCDIR)/mbsys_hs10.h \
@@ -241,7 +238,7 @@ all:	$(INCDIR)/mb_format.h $(INCDIR)/mb_status.h \
 	$(INCDIR)/mbf_sbsioswb.h \
 	$(INCDIR)/mbf_hsmdaraw.h $(INCDIR)/mbf_hsmdldih.h \
 	$(INCDIR)/mbf_dsl120pf.h $(INCDIR)/mbf_dsl120sf.h \
-	$(INCDIR)/mbf_gsfgenmb.h $(INCDIR)/mbf_mstiffss.h \
+	$(INCDIR)/mbf_mstiffss.h \
 	$(INCDIR)/mbf_oicgeoda.h $(INCDIR)/mbf_oicmbari.h \
 	$(INCDIR)/mbf_omghdcsj.h $(INCDIR)/mbf_mgd77dat.h \
 	$(INCDIR)/mbf_mbarirov.h $(INCDIR)/mbf_mbarrov2.h \
@@ -274,7 +271,7 @@ $(LIBDIR)/libmbio.a:	mb_format.o mb_error.o \
 		mbsys_ldeoih.o mbsys_reson.o \
 		mbsys_elac.o mbsys_elacmk2.o \
 		mbsys_sb2000.o mbsys_hsmd.o mbsys_dsl.o \
-		mbsys_gsf.o mbsys_mstiff.o \
+		mbsys_mstiff.o \
 		mbsys_oic.o mbsys_hdcs.o \
 		mbsys_singlebeam.o mbsys_xse.o \
 		mbsys_hs10.o  mbsys_atlas.o \
@@ -304,14 +301,14 @@ $(LIBDIR)/libmbio.a:	mb_format.o mb_error.o \
 		mbr_sb2000sb.o mbr_sb2000ss.o \
 		mbr_hsmdaraw.o mbr_hsmdldih.o \
 		mbr_dsl120pf.o mbr_dsl120sf.o \
-		mbr_gsfgenmb.o mbr_mstiffss.o \
+		mbr_mstiffss.o \
 		mbr_oicgeoda.o mbr_oicmbari.o \
 		mbr_omghdcsj.o mbr_mgd77dat.o \
 		mbr_asciixyz.o mbr_hydrob93.o \
 		mbr_mbarirov.o mbr_mbarrov2.o \
 		mbr_mbpronav.o mbr_hs10jams.o \
 		mbr_hsds2raw.o mbr_hsds2lam.o \
- 		mbr_xtfr8101.o \
+		mbr_xtfr8101.o \
 		mbr_mbnetcdf.o mbr_nvnetcdf.o \
 		mbr_samesurf.o mbr_reson7kr.o \
 		mbr_edgjstar.o mbr_segysegy.o \
@@ -340,7 +337,7 @@ $(LIBDIR)/libmbio.a:	mb_format.o mb_error.o \
 		mbsys_ldeoih.o mbsys_reson.o \
 		mbsys_elac.o mbsys_elacmk2.o \
 		mbsys_sb2000.o mbsys_hsmd.o mbsys_dsl.o \
-		mbsys_gsf.o mbsys_mstiff.o \
+		mbsys_mstiff.o \
 		mbsys_oic.o mbsys_hdcs.o \
 		mbsys_singlebeam.o mbsys_xse.o \
 		mbsys_hs10.o mbsys_atlas.o \
@@ -370,14 +367,14 @@ $(LIBDIR)/libmbio.a:	mb_format.o mb_error.o \
 		mbr_sb2000sb.o mbr_sb2000ss.o \
 		mbr_hsmdaraw.o mbr_hsmdldih.o \
 		mbr_dsl120pf.o mbr_dsl120sf.o \
-		mbr_gsfgenmb.o mbr_mstiffss.o \
+		mbr_mstiffss.o \
 		mbr_oicgeoda.o mbr_oicmbari.o \
 		mbr_omghdcsj.o mbr_mgd77dat.o \
 		mbr_asciixyz.o mbr_hydrob93.o \
 		mbr_mbarirov.o mbr_mbarrov2.o \
 		mbr_mbpronav.o mbr_hs10jams.o \
 		mbr_hsds2raw.o mbr_hsds2lam.o \
- 		mbr_xtfr8101.o \
+		mbr_xtfr8101.o \
 		mbr_mbnetcdf.o mbr_nvnetcdf.o \
 		mbr_samesurf.o mbr_reson7kr.o \
 		mbr_edgjstar.o mbr_segysegy.o \
@@ -398,11 +395,11 @@ mb_compare.o:	mb_compare.c $(INCDIR)/mb_define.h
 mb_navint.o:	mb_navint.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
 	$(CC) -c $(CFLAGS) mb_navint.c
 mb_read_init.o:	mb_read_init.c $(INCDIR)/mb_format.h $(INCDIR)/mb_status.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h
-	$(CC) -c $(CFLAGS) -I$(GSFINCDIR) -I$(NETCDFINCDIR) mb_read_init.c
+	$(CC) -c $(CFLAGS) -I$(NETCDFINCDIR) mb_read_init.c
 mb_write_init.o:	mb_write_init.c $(INCDIR)/mb_format.h $(INCDIR)/mb_status.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h
-	$(CC) -c $(CFLAGS) -I$(GSFINCDIR) -I$(NETCDFINCDIR) mb_write_init.c
+	$(CC) -c $(CFLAGS) -I$(NETCDFINCDIR) mb_write_init.c
 mb_close.o:	mb_close.c $(INCDIR)/mb_format.h $(INCDIR)/mb_status.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h
-	$(CC) -c $(CFLAGS) -I$(GSFINCDIR) -I$(NETCDFINCDIR) mb_close.c
+	$(CC) -c $(CFLAGS) -I$(NETCDFINCDIR) mb_close.c
 mb_fileio.o:	mb_fileio.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
 	$(CC) -c $(CFLAGS) mb_fileio.c
 mb_mem.o:	mb_mem.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
@@ -482,8 +479,6 @@ mbsys_hsmd.o:	mbsys_hsmd.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)
 	$(CC) -c $(CFLAGS) mbsys_hsmd.c
 mbsys_dsl.o:	mbsys_dsl.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mbsys_dsl.h
 	$(CC) -c $(CFLAGS) mbsys_dsl.c
-mbsys_gsf.o:	mbsys_gsf.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mbsys_gsf.h
-	$(CC) -c $(CFLAGS) -I$(GSFINCDIR) mbsys_gsf.c
 mbsys_mstiff.o:	mbsys_mstiff.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mbsys_mstiff.h
 	$(CC) -c $(CFLAGS) mbsys_mstiff.c
 mbsys_oic.o:	mbsys_oic.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mbsys_oic.h
@@ -596,8 +591,6 @@ mbr_dsl120pf.o: mbr_dsl120pf.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INC
 	$(CC) -c $(CFLAGS) mbr_dsl120pf.c
 mbr_dsl120sf.o: mbr_dsl120sf.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mb_swap.h $(INCDIR)/mbf_dsl120sf.h $(INCDIR)/mbsys_dsl.h
 	$(CC) -c $(CFLAGS) mbr_dsl120sf.c
-mbr_gsfgenmb.o: mbr_gsfgenmb.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mb_swap.h $(INCDIR)/mbf_gsfgenmb.h $(INCDIR)/mbsys_gsf.h
-	$(CC) -c $(CFLAGS) -I$(GSFINCDIR)  mbr_gsfgenmb.c
 mbr_mstiffss.o: mbr_mstiffss.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mb_swap.h $(INCDIR)/mbf_mstiffss.h $(INCDIR)/mbsys_mstiff.h
 	$(CC) -c $(CFLAGS) mbr_mstiffss.c
 mbr_oicgeoda.o: mbr_oicgeoda.c $(INCDIR)/mb_status.h $(INCDIR)/mb_format.h $(INCDIR)/mb_io.h $(INCDIR)/mb_define.h $(INCDIR)/mb_swap.h $(INCDIR)/mbf_oicgeoda.h $(INCDIR)/mbsys_oic.h
@@ -722,9 +715,6 @@ $(INCDIR)/mbsys_hsmd.h:	mbsys_hsmd.h
 $(INCDIR)/mbsys_dsl.h:	mbsys_dsl.h
 	cp mbsys_dsl.h $(INCDIR)/mbsys_dsl.h
 	chmod 664 $(INCDIR)/mbsys_dsl.h
-$(INCDIR)/mbsys_gsf.h:	mbsys_gsf.h
-	cp mbsys_gsf.h $(INCDIR)/mbsys_gsf.h
-	chmod 664 $(INCDIR)/mbsys_gsf.h
 $(INCDIR)/mbsys_mstiff.h:	mbsys_mstiff.h
 	cp mbsys_mstiff.h $(INCDIR)/mbsys_mstiff.h
 	chmod 664 $(INCDIR)/mbsys_mstiff.h
@@ -851,9 +841,6 @@ $(INCDIR)/mbf_dsl120pf.h:	mbf_dsl120pf.h
 $(INCDIR)/mbf_dsl120sf.h:	mbf_dsl120sf.h
 	cp mbf_dsl120sf.h $(INCDIR)/mbf_dsl120sf.h
 	chmod 664 $(INCDIR)/mbf_dsl120sf.h
-$(INCDIR)/mbf_gsfgenmb.h:	mbf_gsfgenmb.h
-	cp mbf_gsfgenmb.h $(INCDIR)/mbf_gsfgenmb.h
-	chmod 664 $(INCDIR)/mbf_gsfgenmb.h
 $(INCDIR)/mbf_mstiffss.h:	mbf_mstiffss.h
 	cp mbf_mstiffss.h $(INCDIR)/mbf_mstiffss.h
 	chmod 664 $(INCDIR)/mbf_mstiffss.h

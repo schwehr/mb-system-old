@@ -28,9 +28,6 @@
  * Revision 5.11  2008/09/13 06:08:09  caress
  * Updates to apply suggested patches to segy handling. Also fixes to remove compiler warnings.
  *
- * Revision 5.10  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
  * Revision 5.9  2005/11/05 00:48:05  caress
  * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
  *

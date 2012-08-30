@@ -43,9 +43,6 @@
  * Revision 5.20  2006/10/05 18:58:28  caress
  * Changes for 5.1.0beta4
  *
- * Revision 5.19  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
  * Revision 5.18  2005/06/04 04:15:59  caress
  * Support for Edgetech Jstar format (id 132 and 133).
  *
@@ -268,7 +265,7 @@
 #define	MB_SYS_ELACMK2		15
 #define MB_SYS_HSMD		16
 #define MB_SYS_DSL		17
-#define MB_SYS_GSF		18
+/*#define MB_SYS_GSF		18*/
 #define MB_SYS_MSTIFF		19
 #define MB_SYS_OIC		20
 #define MB_SYS_HDCS		21
@@ -450,7 +447,7 @@
 #define MBF_DSL120SF    112     /* WHOI DSL AMS-120 deep-tow,
 					2048 beam bathymetry, 2048 pixel sidescan,
 					binary, single files, WHOI DSL. */
-#define MBF_GSFGENMB    121     /* SAIC Generic Sensor Format (GSF),
+/*#define MBF_GSFGENMB    121*/     /* SAIC Generic Sensor Format (GSF),
 					variable beams,  bathymetry and amplitude,
 					binary, single files, SAIC. */
 #define MBF_MSTIFFSS    131     /* MSTIFF sidescan format,
@@ -568,7 +565,6 @@ int mbr_register_hsmdaraw(int verbose, void *mbio_ptr, int *error);
 int mbr_register_hsmdldih(int verbose, void *mbio_ptr, int *error);
 int mbr_register_dsl120pf(int verbose, void *mbio_ptr, int *error);
 int mbr_register_dsl120sf(int verbose, void *mbio_ptr, int *error);
-int mbr_register_gsfgenmb(int verbose, void *mbio_ptr, int *error);
 int mbr_register_mstiffss(int verbose, void *mbio_ptr, int *error);
 int mbr_register_edgjstar(int verbose, void *mbio_ptr, int *error);
 int mbr_register_edgjstr2(int verbose, void *mbio_ptr, int *error);
@@ -1478,26 +1474,6 @@ int mbr_info_dsl120pf(int verbose,
 			double *beamwidth_ltrack,
 			int *error);
 int mbr_info_dsl120sf(int verbose,
-			int *system,
-			int *beams_bath_max,
-			int *beams_amp_max,
-			int *pixels_ss_max,
-			char *format_name,
-			char *system_name,
-			char *format_description,
-			int *numfile,
-			int *filetype,
-			int *variable_beams,
-			int *traveltime,
-			int *beam_flagging,
-			int *nav_source,
-			int *heading_source,
-			int *vru_source,
-			int *svp_source,
-			double *beamwidth_xtrack,
-			double *beamwidth_ltrack,
-			int *error);
-int mbr_info_gsfgenmb(int verbose,
 			int *system,
 			int *beams_bath_max,
 			int *beams_amp_max,

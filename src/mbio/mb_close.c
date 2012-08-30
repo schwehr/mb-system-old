@@ -170,7 +170,6 @@
 #include "../../include/mb_define.h"
 #include "../../include/mb_segy.h"
 #include "../../include/sapi.h"
-#include "gsf.h"
 #include "netcdf.h"
 
 static	char	rcs_id[]="$Id$";
@@ -232,12 +231,6 @@ int mb_close(int verbose, void **mbio_ptr, int *error)
 	else if (mb_io_ptr->filetype == MB_FILETYPE_SINGLE)
 	    {
 	    status = mb_fileio_close(verbose, *mbio_ptr, error);
-	    }
-
-	/* else if gsf then use gsfClose */
-	else if (mb_io_ptr->filetype == MB_FILETYPE_GSF)
-	    {
-	    gsfClose((int) mb_io_ptr->gsfid);
 	    }
 
 	/* else if netcdf then use nc_close */

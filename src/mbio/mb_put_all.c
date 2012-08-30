@@ -23,10 +23,6 @@
  * Author:	D. W. Caress
  * Date:	February 4, 1993
  *
- * $Log: mb_put_all.c,v $
- * Revision 5.4  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
  * Revision 5.3  2003/04/17 21:05:23  caress
  * Release 5.0.beta30
  *

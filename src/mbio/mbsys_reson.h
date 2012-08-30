@@ -107,10 +107,6 @@
  *           of Coastal Oceanographics in conjunction with
  *           Reson 8101 data. This format is supported as read-only 
  *           by MB-System.
- *        MBF_GSFGENMB - the generic sensor format of SAIC which
- *           supports data from a large number of sonars, including
- *           Reson sonars. MB-System handles GSF separately from
- *           other formats.
  *   6. For the UNB-style formats MBF_CBAT9001 and MBF_CBAT8101, 
  *      each data telegram is preceded by a two byte start code and
  *      followed by a three byte end code consisting of 0x03

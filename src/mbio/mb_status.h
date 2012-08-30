@@ -61,11 +61,14 @@
 #define	MB_DATA_SSV			19	/* Simrad */
 #define	MB_DATA_ANGLE			20	/* HSMD */
 #define	MB_DATA_EVENT			21	/* HSMD */
-#define	MB_DATA_HISTORY			22	/* GSF */
-#define	MB_DATA_SUMMARY			23	/* GSF */
-#define	MB_DATA_PROCESSING_PARAMETERS	24	/* GSF */
-#define	MB_DATA_SENSOR_PARAMETERS	25	/* GSF */
-#define	MB_DATA_NAVIGATION_ERROR	26	/* GSF */
+#if 1
+#  warning "THERE ARE GSF defines still in the code"
+#  define	MB_DATA_HISTORY			22	/* GSF */
+#  define	MB_DATA_SUMMARY			23	/* GSF */
+#  define	MB_DATA_PROCESSING_PARAMETERS	24	/* GSF */
+#  define	MB_DATA_SENSOR_PARAMETERS	25	/* GSF */
+#  define	MB_DATA_NAVIGATION_ERROR	26	/* GSF */
+#endif
 #define	MB_DATA_RAW_LINE		27	/* uninterpretable line for ascii formats */
 #define	MB_DATA_NAV1			28	/* ancillary nav system 1 */
 #define	MB_DATA_NAV2			29	/* ancillary nav system 2 */
@@ -248,11 +251,11 @@ static char *notice_msg[] =
 	"MB_DATA_SSV (ID=19): Surface sound speed record",
 	"MB_DATA_ANGLE (ID=20): Beam angle record",
 	"MB_DATA_EVENT (ID=21): Hydrosweep MD event record",
-	"MB_DATA_HISTORY (ID=22): GSF history record",
-	"MB_DATA_SUMMARY (ID=23): GSF summary record",
-	"MB_DATA_PROCESSING_PARAMETERS (ID=24): GSF processing parameters record",
-	"MB_DATA_SENSOR_PARAMETERS (ID=25): GSF sensor parameter record",
-	"MB_DATA_NAVIGATION_ERROR (ID=26): GSF navigation error record",
+	"MB_DATA_HISTORY (ID=22): GSF history record GPL VIOLATION",
+	"MB_DATA_SUMMARY (ID=23): GSF summary record GPL VIOLATION",
+	"MB_DATA_PROCESSING_PARAMETERS (ID=24): GSF processing parameters record GPL VIOLATION",
+	"MB_DATA_SENSOR_PARAMETERS (ID=25): GSF sensor parameter record GPL VIOLATION",
+	"MB_DATA_NAVIGATION_ERROR (ID=26): GSF navigation error record GPL VIOLATION",
 	"MB_DATA_RAW_LINE (ID=27): uninterpretable ASCII line",
 	"MB_DATA_NAV1 (ID=28): Auxilliary nav system 1",
 	"MB_DATA_NAV2 (ID=29): Auxilliary nav system 2",

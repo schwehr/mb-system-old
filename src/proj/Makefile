@@ -28,9 +28,6 @@
 # Revision 5.6  2007/10/07 20:05:48  caress
 # New proj version 4.5.0
 #
-# Revision 5.5  2006/03/06 21:49:27  caress
-# Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
-#
 # Revision 5.4  2004/02/25 21:39:36  caress
 # Release 5.0.3
 #
@@ -193,7 +190,7 @@ $(LIBDIR)/libmbproj.a: \
 		bchgen.o \
 		biveval.o \
 		dmstor.o \
- 		emess.o \
+		emess.o \
 		gen_cheb.o \
 		geocent.o \
 		geod_for.o \
@@ -347,7 +344,7 @@ $(LIBDIR)/libmbproj.a: \
 		bchgen.o \
 		biveval.o \
 		dmstor.o \
- 		emess.o \
+		emess.o \
 		gen_cheb.o \
 		geocent.o \
 		geod_for.o \

@@ -238,7 +238,7 @@ struct mb_io_struct
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, single normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, single normal, xdr) */
 	int	filemode;	/* file mode (read or write) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
@@ -283,7 +283,6 @@ struct mb_io_struct
 				    last record read */
 	long	file3_bytes;	/* number of bytes read from file */
 	int	ncid;		/* netCDF datastream ID */
-	int	gsfid;		/* GSF datastream ID */
 	void	*xdrs;		/* XDR stream handle */
 	void	*xdrs2;		/* XDR stream handle #2 */
 	void	*xdrs3;		/* XDR stream handle #2 */

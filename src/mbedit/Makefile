@@ -19,9 +19,6 @@
 # Revision 5.2  2009/03/13 07:05:58  caress
 # Release 5.1.2beta02
 #
-# Revision 5.1  2006/03/06 21:36:26  caress
-# Changed libproj and libgsf to libmbproj and libmbgsf.
-#
 # Revision 5.0  2003/07/27 20:52:58  caress
 # Release 5.0.0
 #
@@ -87,9 +84,6 @@ CC = cc
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
 
-### set gsflib - could be version supplied with MB-System or other installation
-GSFLIB  = $(LIBDIR)/libmbgsf.a
-
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
 #
@@ -103,7 +97,6 @@ $(BINDIR)/mbedit: mbedit.o mbedit_prog.o \
 		$(LIBDIR)/libmbio.a \
 		$(LIBDIR)/libmbaux.a \
 		$(PROJLIB) \
-		$(GSFLIB) \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
@@ -114,7 +107,6 @@ $(BINDIR)/mbedit: mbedit.o mbedit_prog.o \
 		$(LIBDIR)/libmbio.a \
 		$(LIBDIR)/libmbaux.a \
 		$(PROJLIB) \
-		$(GSFLIB) \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \

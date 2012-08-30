@@ -86,7 +86,6 @@
 #
 
 all:
-	cd gsf; make all
 	cd surf; make all
 	cd mr1pr; make all
 	cd proj; make all
@@ -103,7 +102,6 @@ all:
 	cd otps; make all
 
 clean:
-	- cd gsf; make clean
 	- cd surf; make clean
 	- cd mr1pr; make clean
 	- cd proj; make clean

@@ -25,9 +25,6 @@
 # Revision 5.6  2006/06/16 19:30:58  caress
 # Check in after the Santa Monica Basin Mapping AUV Expedition.
 #
-# Revision 5.5  2006/03/06 21:38:15  caress
-# Changed libproj and libgsf to libmbproj and libmbgsf.
-#
 # Revision 5.4  2003/07/27 20:49:38  caress
 # Release 5.0.0
 #
@@ -67,9 +64,6 @@ CC = cc
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
 
-### set gsflib - could be version supplied with MB-System or other installation
-GSFLIB  = $(LIBDIR)/libmbgsf.a
-
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
 #
@@ -86,7 +80,6 @@ $(BINDIR)/mbnavadjust: mbnavadjust.o \
 		mbnavadjust_prog.o \
 		$(LIBDIR)/libmbio.a \
 		$(PROJLIB) \
-		$(GSFLIB) \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmbaux.a \
@@ -99,7 +92,6 @@ $(BINDIR)/mbnavadjust: mbnavadjust.o \
 		mbnavadjust_prog.o \
 		$(LIBDIR)/libmbio.a \
 		$(PROJLIB) \
-		$(GSFLIB) \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmbaux.a \

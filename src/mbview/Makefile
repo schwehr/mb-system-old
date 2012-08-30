@@ -37,9 +37,6 @@
 # Revision 5.7  2006/04/11 19:17:04  caress
 # Added a profile capability.
 #
-# Revision 5.6  2006/03/06 21:41:02  caress
-# Changed libproj and libgsf to libmbproj and libmbgsf.
-#
 # Revision 5.5  2005/02/10 02:50:00  caress
 # Removed mbeditviz and updated usage message for mbgrdviz.
 #
@@ -88,9 +85,6 @@ CC = cc
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
 ARCHIVE = ar rcv
-
-### set gsflib - could be version supplied with MB-System or other installation
-GSFLIB  = $(LIBDIR)/libmbgsf.a
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
@@ -157,7 +151,6 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
 		$(GMTLIBDIR)/libpsl.a
 	$(CC) $(CFLAGS) mbgrdviz_main.o \
 		mbgrdviz_bxutils.o \
@@ -170,7 +163,6 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
 		$(GMTLIBDIR)/libgmt.a \
 		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbgrdviz
@@ -187,7 +179,6 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
 		$(GMTLIBDIR)/libgmt.a \
 		$(GMTLIBDIR)/libpsl.a
 	$(CC) $(CFLAGS) mbeditviz_main.o \
@@ -202,7 +193,6 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
 		$(GMTLIBDIR)/libgmt.a \
 		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbeditviz

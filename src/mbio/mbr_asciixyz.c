@@ -35,9 +35,6 @@
  * Revision 5.6  2006/04/11 19:14:46  caress
  * Various fixes.
  *
- * Revision 5.5  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
  * Revision 5.4  2005/11/05 00:48:03  caress
  * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
  *
