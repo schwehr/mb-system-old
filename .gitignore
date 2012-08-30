@@ -1,2 +1,5 @@
 *.o
 *.a
+*.bak
+bin
+include
