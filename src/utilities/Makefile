@@ -1,220 +1,19 @@
-#     The MB-system:	Makefile.template  5/23/94
-#	$Id$
-#
 #     Copyright (c) 1993-2011 by
 #     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/utilities directory level
-# Author:	D. W. Caress
-# Date:		May 23, 1994
-#
-# $Log: Makefile.template,v $
-# Revision 5.32  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.31  2009/03/02 18:54:40  caress
-# Fixed pixel size problems with mbmosaic, resurrected program mbfilter, and also updated copyright dates in several source files.
-#
-# Revision 5.30  2008/12/31 08:47:38  caress
-# Updates towards release 5.1.1
-#
-# Revision 5.29  2008/09/20 00:57:41  caress
-# Release 5.1.1beta23
-#
-# Revision 5.28  2008/07/10 18:16:33  caress
-# Proceeding towards 5.1.1beta20.
-#
-# Revision 5.26  2008/05/13 20:23:56  caress
-# Added mbabsorption.
-#
-# Revision 5.25  2008/02/12 02:49:51  caress
-# Added new program mbabsorption.
-#
-# Revision 5.24  2007/10/08 16:48:07  caress
-# State of the code on 8 October 2007.
-#
-# Revision 5.23  2006/09/11 18:55:53  caress
-# Changes during Western Flyer and Thomas Thompson cruises, August-September
-# 2006.
-#
-# Revision 5.21  2006/02/03 21:10:39  caress
-# Working on supporting water column datagrams in Simrad formats.
-#
-# Revision 5.20  2006/01/18 15:16:06  caress
-# Had to link some programs with both gmtlib and pslib to work with GMT 4.1.
-#
-# Revision 5.19  2006/01/06 18:19:58  caress
-# Working towards 5.0.8
-#
-# Revision 5.18  2005/11/05 01:07:54  caress
-# Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
-#
-# Revision 5.17  2005/06/04 06:32:07  caress
-# Added program mb7k2jstar.
-#
-# Revision 5.16  2004/12/02 06:39:28  caress
-# Fixes while supporting Reson 7k data.
-#
-# Revision 5.15  2004/10/18 03:37:49  caress
-# Added libpsl to GMT related programs.
-#
-# Revision 5.14  2004/10/06 19:10:51  caress
-# Release 5.0.5 update.
-#
-# Revision 5.13  2004/06/18 04:08:41  caress
-# Adding support for segy i/o and working on support for Reson 7k format 88.
-#
-# Revision 5.12  2004/05/21 23:51:19  caress
-# Progress supporting Reson 7k data, including support for extracing subbottom profiler data.
-#
-# Revision 5.11  2003/07/27 20:50:28  caress
-# Release 5.0.0
-#
-# Revision 5.10  2003/03/10 20:01:59  caress
-# Added mr1pr library.
-#
-# Revision 5.9  2002/09/19 00:28:12  caress
-# Release 5.0.beta23
-#
-# Revision 5.8  2002/08/21 00:57:11  caress
-# Release 5.0.beta22
-#
-# Revision 5.7  2002/07/20 20:56:55  caress
-# Release 5.0.beta20
-#
-# Revision 5.6  2002/05/02 04:01:37  caress
-# Release 5.0.beta17
-#
-# Revision 5.5  2002/02/22 09:07:08  caress
-# Release 5.0.beta13
-#
-# Revision 5.4  2001/11/15 22:58:02  caress
-# Reordered program building.
-#
-# Revision 5.3  2001/10/12  21:08:10  caress
-# Added mbdatalist
-#
-# Revision 5.2  2001/06/29  22:50:23  caress
-# Atlas Hydrosweep DS2 raw data and SURF data formats.
-#
-# Revision 5.1  2001/03/22  21:14:16  caress
-# Trying to make release 5.0.beta0.
-#
-# Revision 5.0  2001/01/22  08:07:07  caress
-# Version 5.0.beta01
-#
-# Revision 4.21  2000/12/10  20:30:44  caress
-# Version 5.0.alpha02
-#
-# Revision 4.20  2000/09/30  07:22:17  caress
-# Snapshot for Dale.
-#
-# Revision 4.19  2000/03/08  00:06:36  caress
-# Release 4.6.10
-#
-# Revision 4.18  1999/12/29  00:35:11  caress
-# Release 4.6.8
-#
-# Revision 4.17  1998/12/17  22:52:10  caress
-# MB-System version 4.6beta4
-#
-# Revision 4.16  1998/10/05 19:19:24  caress
-# MB-System version 4.6beta
-#
-# Revision 4.15  1997/09/17  19:21:33  caress
-# Removed hsbath.
-#
-# Revision 4.14  1997/09/12  18:54:47  caress
-# Moved mb_rt.c to src/mbrt directory.
-#
-# Revision 4.13  1997/04/21  17:19:14  caress
-# MB-System 4.5 Beta Release.
-#
-# Revision 4.13  1997/04/17  15:14:38  caress
-# MB-System 4.5 Beta Release
-#
-# Revision 4.12  1996/04/22  13:23:05  caress
-# Now have DTR and MIN/MAX defines in mb_define.h
-#
-# Revision 4.11  1995/08/07  17:39:23  caress
-# Moved to GMT 3
-#
-# Revision 4.10  1995/04/25  20:03:07  caress
-# Replaced surfunc.c with zgrid.c
-#
-# Revision 4.9  1995/03/23  16:29:34  caress
-# Added -Olimit flag for compiling mbgrid.c under IRIX
-#
-# Revision 4.8  1995/02/14  21:20:26  caress
-# Added new sidescan processing programs.
-#
-# Revision 4.7  1995/01/04  17:08:14  caress
-# Added mbhistogram
-#
-# Revision 4.6  1994/11/21  20:40:18  caress
-# Fixed mblevitus target so changing Makefile causes remake
-# of mblevitus.
-#
-# Revision 4.5  1994/11/21  19:05:43  caress
-# Added mb_rt for gradient raytracing with mbbath.
-#
-# Revision 4.4  1994/10/31  20:24:03  caress
-# Change man pages from section 1 to l.
-#
-# Revision 4.3  1994/10/31  20:17:32  caress
-# Change man pages from section 1 to l.
-#
-# Revision 4.2  1994/10/31  18:47:28  caress
-# Changed man pages from section 1 to section l.
-#
-# Revision 4.1  1994/10/21  13:03:49  caress
-# Release V4.0
-#
-# Revision 4.0  1994/05/24  02:34:15  caress
-# First cut.
-#
-#
 
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Locations of GMT libraries, binaries, and include files:
 GMTLIBDIR = /sw/lib
 GMTINCDIR = /sw/include
 NETCDFINCDIR = /sw/include
-#
-# Locations of FFTW libraries, binaries, and include files:
 FFTWLIBDIR = /sw/lib
 FFTWINCDIR = /sw/include
-#
-# Location of Levitus annual database file
-LEVITUS = /sw/share/mbsystem/LevitusAnnual82.dat
-#
-# Compilers
-CC = cc
-#
-# Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__ -I/usr/include/gmt
-LFLAGS = -Wl -lm -lnetcdf
-BIGFLAG = 
-
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the MB-system utilites and man pages
 all:	$(BINDIR)/mbformat \
 	$(BINDIR)/mbdefaults \
 	$(BINDIR)/mbdatalist \
@@ -258,11 +57,9 @@ all:	$(BINDIR)/mbformat \
 	$(BINDIR)/mbhysweeppreprocess \
 	$(BINDIR)/mbkongsbergpreprocess
 
-### make clean removes the object files
 clean:
 	rm -f *.o
 
-### link the executables
 $(BINDIR)/mbformat:	mbformat.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbformat.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a $(LFLAGS) \
 		-o $(BINDIR)/mbformat

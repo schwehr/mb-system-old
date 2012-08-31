@@ -1,54 +1,23 @@
-#     The MB-system:	Makefile.template  5/23/94
-#	$Id$
-#
 #     Copyright (c) 2009-2011 by 
 #     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system in the src/gmt directory level
-# Author:	D. W. Caress
-# Date:		July 31, 2009
-#
-# $Log: Makefile.template,v $
-#
-#
-
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Locations of GMT libraries, binaries, and include files:
 OTPSDIR = /usr/local/OTPSnc
-#
-# Compilers
 CC = cc
-#
-# Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DBYTESWAPPED
 LFLAGS = -Wl -lm -lnetcdf
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the MB-system macros and man pages
 all:	$(BINDIR)/mbotps 
 
-### make clean removes the object files
 clean:
 	rm -f *.o
 
-### link or copy the executables
 $(BINDIR)/mbotps: mbotps.o \
 		$(LIBDIR)/libmbio.a  \
 		$(LIBDIR)/libmbaux.a  \
@@ -63,7 +32,6 @@ $(BINDIR)/mbotps: mbotps.o \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LFLAGS) -o $(BINDIR)/mbotps
 
-### compile the source files
 mbotps.o:	mbotps.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
 	echo "	char *otps_location = "'"$(OTPSDIR)"'";" > otps.h
 	$(CC) -c $(CFLAGS) mbotps.c

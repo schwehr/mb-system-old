@@ -1,78 +1,23 @@
-#     The MB-system:	Makefile.template  6/23/95
-#	$Id$
-#
 #     Copyright (c) 2000-2011 by 
 #     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/mbnavadjust directory level
-# Author:	D. W. Caress
-# Date:		September 7, 2000
-#
-# $Log: Makefile.template,v $
-# Revision 5.8  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.7  2006/11/10 22:36:05  caress
-# Working towards release 5.1.0
-#
-# Revision 5.6  2006/06/16 19:30:58  caress
-# Check in after the Santa Monica Basin Mapping AUV Expedition.
-#
-# Revision 5.4  2003/07/27 20:49:38  caress
-# Release 5.0.0
-#
-# Revision 5.3  2003/03/10 20:01:31  caress
-# Added mr1pr library.
-#
-# Revision 5.2  2002/07/20 20:45:56  caress
-# Release 5.0.beta20
-#
-# Revision 5.1  2001/06/30 17:40:46  caress
-# Release 5.0.beta02
-#
-# Revision 5.0  2001/03/22  21:08:55  caress
-# Trying to make release 5.0.beta0
-#
-# Revision 1.1  2000/09/30  07:21:32  caress
-# Initial revision
-#
-#
-#
 
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Locations of Motif include files:
 MOTIFINCDIR = /sw/include
 MOTIFLIBS = -L/sw/lib -L/usr/X11R6/lib -lXm -lXt -lX11
-#
-# Compilers 
 CC = cc
-#
-# Compile and load flags:
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED
 LFLAGS = -Wl -lm -lnetcdf
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the executable and man page
 all: $(BINDIR)/mbnavadjust
 
-### link the executable
+
 $(BINDIR)/mbnavadjust: mbnavadjust.o \
 		mbnavadjust_creation.o \
 		mbnavadjust_callbacks.o \
@@ -100,7 +45,6 @@ $(BINDIR)/mbnavadjust: mbnavadjust.o \
 		$(MOTIFLIBS) $(LFLAGS) \
 		-o $(BINDIR)/mbnavadjust
 
-### compile the source files
 mbnavadjust.o: mbnavadjust.c mbnavadjust_creation.h mbnavadjust.h \
 	mbnavadjust_extrawidgets.h
 	$(CC) $(CFLAGS) -I$(INCDIR) -I$(MOTIFINCDIR) -c mbnavadjust.c

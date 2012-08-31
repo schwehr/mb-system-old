@@ -1,63 +1,9 @@
-#     The MB-system:	Makefile.template  9/8/00
-#	$Id$
-#
-#     Copyright (c) 2000-2009 by
-#     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
-#     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/mbaux directory level
-# Author:	D. W. Caress
-# Date:		September 8, 2000
-#
-# $Log: Makefile.template,v $
-# Revision 5.7  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.6  2007/10/08 06:09:51  caress
-# Added mb_readgrd.c
-#
-# Revision 5.5  2003/07/27 20:49:13  caress
-# Release 5.0.0
-#
-# Revision 5.4  2003/03/22 03:09:45  caress
-# Added mb_surface.c
-#
-# Revision 5.3  2002/02/22 09:06:20  caress
-# Release 5.0.beta13
-#
-# Revision 5.2  2001/06/30 17:39:13  caress
-# Release 5.0.beta02
-#
-# Revision 5.1  2001/03/22  21:06:19  caress
-# Trying to make release 5.0.beta0
-#
-# Revision 5.0  2001/01/22  07:38:58  caress
-# Version 5.0.0beta01
-#
-# Revision 4.0  2000/09/08  17:19:14  caress
-# Initial version.
-#
-# Revision 4.0  2000/09/08  17:19:14  caress
-# Initial version.
-#
-#
-#
-#
+#     Copyright (c) 2000-2009 by David W. Caress and Dale N. Chayes
 
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Locations of GMT and netcdf include files:
 GMTINCDIR = /sw/include
 NETCDFINCDIR = /sw/include
 # 
@@ -67,17 +13,13 @@ CC = cc
 # Compile and load flags:
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -I/usr/include/gmt
 ARCHIVE = ar rcv
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the mbaux library and associated include files
 all:	$(LIBDIR)/libmbaux.a \
 	$(LIBDIR)/libmbps.a \
 	$(LIBDIR)/libmbxgr.a \
 	$(INCDIR)/mb_aux.h \
 	$(INCDIR)/mb_xgraphics.h
 
-### make clean removes the object files
 clean:
 	rm -f *.o
 

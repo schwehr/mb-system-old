@@ -1,207 +1,21 @@
-#     The MB-system:	Makefile.template  5/23/94
-#	$Id$
-#
-#     Copyright (c) 1993-2009 by
-#     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
-#     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/mbio directory level
-# Author:	D. W. Caress
-# Date:		May 23, 1994
-#
-# $Log: Makefile.template,v $
-# Revision 5.28  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.27  2008/10/17 07:30:22  caress
-# Added format 26 supporting Hydrosweep DS data used by SOPAC.
-#
-# Revision 5.26  2008/07/19 07:41:14  caress
-# Added formats 191 and 192 to support Imagenex Delta T multibeam data.
-#
-# Revision 5.25  2008/05/16 22:56:24  caress
-# Release 5.1.1beta18.
-#
-# Revision 5.24  2008/03/01 09:12:52  caress
-# Added support for Simrad EM710 multibeam in new formats 58 and 59.
-#
-# Revision 5.23  2006/11/10 22:36:04  caress
-# Working towards release 5.1.0
-#
-# Revision 5.22  2006/10/05 18:58:28  caress
-# Changes for 5.1.0beta4
-#
-# Revision 5.21  2006/09/11 18:55:52  caress
-# Changes during Western Flyer and Thomas Thompson cruises, August-September
-# 2006.
-#
-# Revision 5.20  2005/06/04 04:15:59  caress
-# Support for Edgetech Jstar format (id 132 and 133).
-#
-# Revision 5.19  2004/06/18 03:07:15  caress
-# Adding support for segy i/o and working on support for Reson 7k format 88.
-#
-# Revision 5.18  2004/04/27 01:46:11  caress
-# Various updates of April 26, 2004.
-#
-# Revision 5.17  2003/12/24 08:23:32  caress
-# Fixed problem with formats 42 and 43. Combined former files mbr_sb2100b1.c and mbr_sb2100b2.c into new file mbr_sb2100bi.c. Files mbf_sb2100b1.h and mbf_sb2100b2.h are no longer part of the archive.
-#
-# Revision 5.16  2003/12/24 06:57:37  caress
-# Fixed problem with formats 42 and 43. Combined former files mbr_sb2100b1.c and mbr_sb2100b2.c into new file mbr_sb2100bi.c. Files mbf_sb2100b1.h and mbf_sb2100b2.h are no longer part of the archive.
-#
-# Revision 5.15  2003/07/27 20:49:30  caress
-# Release 5.0.0
-#
-# Revision 5.14  2003/04/16 16:47:41  caress
-# Release 5.0.beta30
-#
-# Revision 5.13  2003/03/10 20:02:29  caress
-# Added mr1pr library.
-#
-# Revision 5.12  2002/09/19 22:19:00  caress
-# Release 5.0.beta23
-#
-# Revision 5.11  2002/09/18 23:36:22  caress
-# Release 5.0.beta23
-#
-# Revision 5.10  2002/07/20 20:45:35  caress
-# Release 5.0.beta20
-#
-# Revision 5.9  2002/05/02 04:00:41  caress
-# Release 5.0.beta17
-#
-# Revision 5.8  2002/02/22 09:03:43  caress
-# Release 5.0.beta13
-#
-# Revision 5.7  2001/09/17 23:25:13  caress
-# Added XTF format.
-#
-# Revision 5.6  2001/07/20 00:32:54  caress
-# Release 5.0.beta03
-#
-# Revision 5.5  2001/06/29  22:50:04  caress
-# Atlas Hydrosweep DS2 raw data and SURF data formats.
-#
-# Revision 5.4  2001/06/03  06:57:42  caress
-# Release 5.0beta01.
-#
-# Revision 5.3  2001/04/06  22:05:06  caress
-# Changed i/o modules for xse data.
-#
-# Revision 5.2  2001/03/22  20:45:56  caress
-# Trying to make 5.0.beta0...
-#
-# Revision 5.1  2000/12/10  20:27:47  caress
-# Version 5.0.alpha02
-#
-# Revision 5.0  2000/12/01  22:48:41  caress
-# First cut at Version 5.0.
-#
-# Revision 4.22  2000/09/30  07:21:21  caress
-# Snapshot for Dale.
-#
-# Revision 4.21  2000/09/30  06:35:13  caress
-# Snapshot for Dale.
-#
-# Revision 4.20  1999/10/21  22:38:36  caress
-# Added MBPRONAV format.
-#
-# Revision 4.19  1999/08/08  04:26:33  caress
-# Added MBF_ELMK2XSE format.
-#
-# Revision 4.17  1999/07/16 19:24:15  caress
-# Yet another version.
-#
-# Revision 4.16  1999/04/02  00:37:48  caress
-# Fixed dependencies on mb_format.h
-#
-# Revision 4.15  1999/03/31  18:11:35  caress
-# MB-System 4.6beta7
-#
-# Revision 4.14  1999/01/01  23:41:06  caress
-# MB-System version 4.6beta6
-#
-# Revision 4.13  1998/12/17  22:56:15  caress
-# MB-System version 4.6beta4
-#
-# Revision 4.12  1998/10/05  17:46:15  caress
-# MB-System version 4.6beta
-#
-# Revision 4.11  1997/09/15  19:06:40  caress
-# Real Version 4.5
-#
-# Revision 4.10  1997/07/25  14:29:21  caress
-# Version 4.5beta2
-#
-# Revision 4.9  1997/04/21  17:02:07  caress
-# MB-System 4.5 Beta Release.
-#
-# Revision 4.9  1997/04/17  15:07:36  caress
-# MB-System 4.5 Beta Release
-#
-# Revision 4.8  1996/08/26  15:39:12  caress
-# Release 4.4 revision.
-#
-# Revision 4.7  1996/04/22  13:21:19  caress
-# Now have DTR and MIN/MAX defines in mb_define.h
-#
-# Revision 4.6  1996/03/12  17:26:22  caress
-# Added format 63, short HMR1 processing format.
-#
-# Revision 4.5  1995/09/28  18:10:48  caress
-# Various bug fixes working toward release 4.3.
-#
-# Revision 4.4  1994/10/31  20:04:21  caress
-# Change man pages from section 1 to l.
-#
-# Revision 4.3  1994/10/31  18:28:56  caress
-# Changed man pages from section 1 to section l.
-#
-# Revision 4.2  1994/10/21  12:11:25  caress
-# Release V4.0
-#
-# Revision 4.1  1994/06/22  19:23:09  caress
-# Added ARCHIVE variable to accommodate different archivers
-# used in different operating systems.
-#
-# Revision 4.0  1994/05/24  02:33:11  caress
-# First cut.
-#
-#
+#     Copyright (c) 1993-2009 by David W. Caress and Dale N. Chayes
 
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
 # PROJ4 projection definitions
 PROJECTIONS = /sw/share/mbsystem/Projections.dat
-#
+
 # Netcdf include directory
 NETCDFINCDIR = /sw/include
-#
-# Compilers
 CC = cc
-#
-# Compile and load flags:
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 ARCHIVE = ar rcv
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJINCDIR  = $(INCDIR)
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the mbio library, man page, and associated include files
 all:	$(INCDIR)/mb_format.h $(INCDIR)/mb_status.h \
 	$(INCDIR)/mb_io.h $(INCDIR)/mb_swap.h \
 	$(INCDIR)/mb_define.h $(INCDIR)/mb_process.h \
@@ -249,7 +63,6 @@ all:	$(INCDIR)/mb_format.h $(INCDIR)/mb_status.h \
 clean:
 	rm -f *.o
 
-### put together the static library
 $(LIBDIR)/libmbio.a:	mb_format.o mb_error.o \
 		mb_swap.o mb_compare.o mb_navint.o \
 		mb_read_init.o mb_write_init.o mb_close.o \
