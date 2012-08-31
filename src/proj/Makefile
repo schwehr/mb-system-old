@@ -57,7 +57,7 @@ MANDIR = ../../man
 CC = cc
 #
 # Compile and load flags:
-LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
+LFLAGS = -Wl -lm -L/sw/lib -lnetcdf
 CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
 ARCHIVE = ar rcv
 #

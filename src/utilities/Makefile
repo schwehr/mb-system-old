@@ -205,8 +205,8 @@ LEVITUS = /sw/share/mbsystem/LevitusAnnual82.dat
 CC = cc
 #
 # Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
-LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__ -I/usr/include/gmt
+LFLAGS = -Wl -lm -lnetcdf
 BIGFLAG = 
 
 ### set projlib - could be version supplied with MB-System or other installation
@@ -289,11 +289,11 @@ $(BINDIR)/mbareaclean:	mbareaclean.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/li
 		-o $(BINDIR)/mbareaclean
 $(BINDIR)/mbgrid:	mbgrid.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbgrid.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a \
+		-lgmt -lpsl \
 		$(LFLAGS) -o $(BINDIR)/mbgrid
 $(BINDIR)/mbmosaic:	mbmosaic.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbmosaic.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a \
+		-lgmt -lpsl \
 		$(LFLAGS) -o $(BINDIR)/mbmosaic
 $(BINDIR)/mblevitus:	mblevitus.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mblevitus.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a $(LFLAGS) \
@@ -309,7 +309,7 @@ $(BINDIR)/mbneptune2esf:	mbneptune2esf.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR
 		-o $(BINDIR)/mbneptune2esf
 $(BINDIR)/mbps:	mbps.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbps.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(GMTLIBDIR)/libgmtps.a \
+		-lgmt -lpsl -lgmtps \
 		$(LFLAGS) -o $(BINDIR)/mbps
 $(BINDIR)/mbstripnan:	mbstripnan.o
 	$(CC) $(CFLAGS) mbstripnan.o $(LFLAGS) -o $(BINDIR)/mbstripnan
@@ -318,7 +318,7 @@ $(BINDIR)/mbhistogram:	mbhistogram.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/li
 		$(LFLAGS) -o $(BINDIR)/mbhistogram
 $(BINDIR)/mbbackangle:	mbbackangle.o $(LIBDIR)/libmbio.a $(LIBDIR)/libmbaux.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a
 	$(CC) $(CFLAGS) mbbackangle.o $(LIBDIR)/libmbio.a $(LIBDIR)/libmbaux.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a \
+		-lgmt -lpsl \
 		$(LFLAGS) -o $(BINDIR)/mbbackangle
 $(BINDIR)/mbnavlist:	mbnavlist.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbnavlist.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
@@ -331,7 +331,7 @@ $(BINDIR)/mbset:	mbset.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(L
 		$(LFLAGS) -o $(BINDIR)/mbset
 $(BINDIR)/mbprocess:	mbprocess.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbprocess.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a \
+		-lgmt -lpsl \
 		$(LFLAGS) -o $(BINDIR)/mbprocess
 $(BINDIR)/mbextractsegy:	mbextractsegy.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbextractsegy.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a $(LIBDIR)/libmbaux.a \
@@ -344,7 +344,7 @@ $(BINDIR)/mbsegyinfo:	mbsegyinfo.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libm
 		$(LFLAGS) -o $(BINDIR)/mbsegyinfo
 $(BINDIR)/mbsegygrid:	mbsegygrid.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbsegygrid.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a \
+		-lgmt -lpsl \
 		$(LFLAGS) -o $(BINDIR)/mbsegygrid
 $(BINDIR)/mbauvnavusbl:	mbauvnavusbl.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbauvnavusbl.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a \
@@ -363,7 +363,7 @@ $(BINDIR)/mbauvloglist:	mbauvloglist.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/
 		$(LFLAGS) -o $(BINDIR)/mbauvloglist
 $(BINDIR)/mb7k2ss:	mb7k2ss.o $(LIBDIR)/libmbio.a $(LIBDIR)/libmbaux.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a
 	$(CC) $(CFLAGS) mb7k2ss.o $(LIBDIR)/libmbio.a $(LIBDIR)/libmbaux.a $(PROJLIB) $(LIBDIR)/libmr1pr.a $(LIBDIR)/libsapi.a \
-		$(GMTLIBDIR)/libgmt.a \
+		-lgmt \
 		$(LFLAGS) -o $(BINDIR)/mb7k2ss
 $(BINDIR)/mbabsorption:	mbabsorption.o $(LIBDIR)/libmbio.a
 	$(CC) $(CFLAGS) mbabsorption.o $(LIBDIR)/libmbio.a \
@@ -391,11 +391,11 @@ $(BINDIR)/mbhysweeppreprocess:	mbhysweeppreprocess.o $(LIBDIR)/libmbio.a $(LIBDI
 		$(LFLAGS) -o $(BINDIR)/mbhysweeppreprocess
 $(BINDIR)/mbsegypsd:	mbsegypsd.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbsegypsd.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(FFTWLIBDIR)/libfftw3.a \
+		-lgmt -lpsl -lfftw3 \
 		$(LFLAGS) -o $(BINDIR)/mbsegypsd
 $(BINDIR)/mbprofilepsd:	mbprofilepsd.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a
 	$(CC) $(CFLAGS) mbprofilepsd.o $(LIBDIR)/libmbio.a $(PROJLIB) $(LIBDIR)/libmbaux.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(FFTWLIBDIR)/libfftw3.a \
+		-lgmt -lpsl -lfftw3 \
 		$(LFLAGS) -o $(BINDIR)/mbprofilepsd
 
 ### compile the source files

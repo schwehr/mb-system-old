@@ -65,7 +65,7 @@ NETCDFINCDIR = /sw/include
 CC = cc
 #
 # Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -I/usr/include/gmt
 ARCHIVE = ar rcv
 #
 # *** LEAVE EVERYTHING ELSE BELOW ALONE ***

@@ -101,8 +101,8 @@ NETCDFINCDIR = /sw/include
 CC = cc
 #
 # Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
-LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -I/usr/include/gmt
+LFLAGS = -Wl -lm -lnetcdf
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
@@ -133,7 +133,7 @@ $(BINDIR)/mbcontour: mbcontour.o \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbaux.a \
 		$(LIBDIR)/libmbps.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(GMTLIBDIR)/libgmtps.a \
+		-lgmt -lpsl -lgmtps \
 		$(LFLAGS) -o $(BINDIR)/mbcontour
 $(BINDIR)/mbswath: mbswath.o \
 		$(LIBDIR)/libmbio.a  \
@@ -147,13 +147,13 @@ $(BINDIR)/mbswath: mbswath.o \
 		$(PROJLIB) \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(GMTLIBDIR)/libgmtps.a \
+		-lgmt -lpsl -lgmtps \
 		$(LFLAGS) -o $(BINDIR)/mbswath
 $(BINDIR)/mbgrdtiff: mbgrdtiff.o \
 		$(LIBDIR)/libmbio.a 
 	$(CC) $(CFLAGS) mbgrdtiff.o \
 		$(LIBDIR)/libmbio.a \
-		$(GMTLIBDIR)/libgmt.a $(GMTLIBDIR)/libpsl.a $(GMTLIBDIR)/libgmtps.a \
+		-lgmt -lpsl -lgmtps \
 		$(LFLAGS) -o $(BINDIR)/mbgrdtiff
 
 ### compile the source files

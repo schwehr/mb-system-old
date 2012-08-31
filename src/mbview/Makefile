@@ -82,8 +82,8 @@ OPENGLLIBS = -lGLU -lGL
 CC = cc
 #
 # Compile and load flags:
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -D__APPLE__
-LFLAGS = -Wl -lm -bind_at_load -L/sw/lib -lnetcdf
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DDARWIN -DBYTESWAPPED -I/usr/include/gmt
+LFLAGS = -Wl -lm -lnetcdf -lgmt -lpsl
 ARCHIVE = ar rcv
 
 ### set projlib - could be version supplied with MB-System or other installation
@@ -150,8 +150,7 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
-		$(LIBDIR)/libmbxgr.a \
-		$(GMTLIBDIR)/libpsl.a
+		$(LIBDIR)/libmbxgr.a
 	$(CC) $(CFLAGS) mbgrdviz_main.o \
 		mbgrdviz_bxutils.o \
 		mbgrdviz_callbacks.o \
@@ -163,8 +162,6 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbgrdviz
 $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		mbeditviz_bxutils.o \
@@ -178,9 +175,7 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
-		$(LIBDIR)/libmbxgr.a \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a
+		$(LIBDIR)/libmbxgr.a
 	$(CC) $(CFLAGS) mbeditviz_main.o \
 		mbeditviz_bxutils.o \
 		mbeditviz_callbacks.o \
@@ -193,8 +188,6 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbeditviz
 
 ### compile the source files

@@ -414,7 +414,7 @@ mb_angle.o:	mb_angle.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
 	$(CC) -c $(CFLAGS) mb_angle.c
 mb_absorption.o:	mb_absorption.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h
 	$(CC) -c $(CFLAGS) mb_absorption.c
-mb_proj.o:	mb_proj.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h $(PROJINCDIR)/proj_api.h Makefile.template
+mb_proj.o:	mb_proj.c $(INCDIR)/mb_status.h $(INCDIR)/mb_define.h $(PROJINCDIR)/proj_api.h
 	echo "	char *projectionfile = "'"$(PROJECTIONS)"'";" > projections.h
 	$(CC) -c $(CFLAGS) -I$(PROJINCDIR) mb_proj.c
 mb_get_value.o:	mb_get_value.c $(INCDIR)/mb_define.h
