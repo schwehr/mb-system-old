@@ -16,10 +16,6 @@
  * mb_truecontour.c contours a block of multibeam bathymetry data,
  * dealing correctly with beams in arbitrary locations by forming
  * a delauney triangle network and then contouring that network.
- *
- * Author:	D. W. Caress
- * Date:	April, 1994
- *
  */
 
 /* standard global include files */

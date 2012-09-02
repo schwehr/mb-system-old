@@ -80,34 +80,15 @@
  * S = salinity (per mil)
  * D = depth (m)
  * 
- * **************************
- *  
- * Author:	D. W. Caress
- * Date:	February 10, 2008
- *              R/V Zephyr
- *              Hanging out at the channel entrance to La Paz, BCS, MX
- *              helping out as MBARI tries to save the grounded
- *              R/V Western Flyer. 
- *              Note: as I was writing this code the Flyer was refloated
- *              and successfully backed off the reef.
- *
- * $Log: mb_absorption.c,v $
- * Revision 5.0  2008/03/01 09:19:29  caress
- * Added function to calculate sound absoprtion in water from water properties parameters.
- *
- *
  */
 
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 
-/* mbio include files */
 #include "../../include/mb_status.h"
 #include "../../include/mb_define.h"
 
-/*--------------------------------------------------------------------*/
 int mb_absorption(int verbose,
 		double frequency, double temperature,double salinity, 
 		double depth, double ph, double soundspeed, 

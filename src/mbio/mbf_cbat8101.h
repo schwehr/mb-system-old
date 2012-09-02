@@ -16,28 +16,6 @@
  * mbf_cbat8101.h defines the data structures used by MBIO functions
  * to store multibeam data read from the MBF_CBAT8101 format (MBIO id 82).  
  *
- * Author:	D. W. Caress
- * Date:	December 10, 1998
- *
- * $Log: mbf_cbat8101.h,v $
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.1  2000/09/30  06:29:44  caress
- * Snapshot for Dale.
- *
- * Revision 4.0  1999/01/01  23:38:01  caress
- * MB-System version 4.6beta6
- *
- *
- */
-/*
  * Notes on the MBF_CBAT8101 data format:
  *   1. Reson SeaBat products are high frequency, 
  *      shallow water multibeam sonars.

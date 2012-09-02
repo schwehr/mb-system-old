@@ -15,18 +15,6 @@
 /*
  * This source file includes the functions used to extract data from
  * and insert data into sonar specific structures.
- *
- * Author:	D. W. Caress
- * Date:	October 1, 2000
- *
- * $Log: mb_access.c,v $
- * Revision 5.17  2008/09/20 00:57:40  caress
- * Release 5.1.1beta23
- *
- * Revision 5.16  2008/03/01 09:12:52  caress
- * Added support for Simrad EM710 multibeam in new formats 58 and 59.
- *
- *
  */
 
 /* standard include files */

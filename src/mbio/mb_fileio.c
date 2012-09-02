@@ -23,12 +23,6 @@
  *   mb_fileio_close	- cleanup i/o, called by mb_close()
  *   mb_fileio_get	- get bytes from input
  *   mb_fileio_put	- put bytes to output
- *
- * Author:	D. W. Caress
- * Date:	23 May 2012
- *
- * $Log: $
- *
  */
 
 /* standard include files */

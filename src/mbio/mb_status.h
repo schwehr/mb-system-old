@@ -15,13 +15,6 @@
 /*
  * mbio_status.h defines version, status and error codes used
  * by MBIO functions and programs
- *
- * Author:	D. W. Caress
- * Date:	January 19, 1993
- *
- * $Log: mb_status.h,v $
- *
- *
  */
 
 /* include this code only once */

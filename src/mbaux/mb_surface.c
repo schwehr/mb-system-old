@@ -52,39 +52,6 @@
  *
  * Particulars regarding turning the program "surface" version 4.3
  * (revision of 26 February, 1992) into a function "surfunc" follow:
- *
- * Author:	D. W. Caress
- * Date:	May 2, 1994
- *
- * $Log: mb_surface.c,v $
- * Revision 5.4  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.3  2006/08/09 22:41:27  caress
- * Fixed programs that read or write grids so that they do not use the GMT_begin() function; these programs will now work when GMT is built in the default fashion, when GMT is built in the default fashion, with "advisory file locking" enabled.
- *
- * Revision 5.2  2005/03/25 04:09:53  caress
- * Problems with global variables in mb_surface.c stomping on similarly named global variables in some programs has been fixed.
- *
- * Revision 5.1  2003/04/29 20:27:48  caress
- * Fixed multiple definitions of "error".
- *
- * Revision 5.0  2003/03/22 03:10:36  caress
- * Reinserting this code into MB-System for first time in years.
- *
- * Revision 4.2  1994/10/21  13:02:31  caress
- * Release V4.0
- *
- * Revision 4.1  1994/06/04  02:02:01  caress
- * Fixed several bugs and made some stylistic changes to
- * the output.  Changed the data input bounds to be much
- * larger than the working grid bounds.
- *
- * Revision 4.0  1994/05/05  20:30:06  caress
- * First cut. This code derived from GMT program surface by
- * Walter Smith and Paul Wessel.
- *
- *
  */
 
 /* standard include files */

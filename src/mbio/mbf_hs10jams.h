@@ -17,22 +17,6 @@
  * to store Furuno HS-10 multibeam sonar data read from the 
  * MBF_HS10JAMS format.  
  *
- * Author:	D. W. Caress
- * Date:	December 4, 2000
- *
- * $Log: mbf_hs10jams.h,v $
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/10 20:24:25  caress
- * Initial revision.
- *
- *
- */
-/*
  * Notes on the MBF_HS10JAMS data format:
  *   1. The Furuno HS-10 multibeam sonar generated 45 beams
  *      of bathymetry and amplitude.

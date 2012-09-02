@@ -18,13 +18,6 @@
  * This version uses the MOTIF toolkit and has been developed using
  * the Builder Xsessory package by ICS.  This file contains
  * contains function prototypes and was added in 2009.
- *
- * Author:	D. W. Caress
- * Date:	October 14, 2009
- *
- * $Log: $
- *
- *
  */
 
 /*--------------------------------------------------------------------*/

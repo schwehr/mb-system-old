@@ -16,51 +16,6 @@
  * mb_aux.h defines data structures used by swath contouring
  * functions and programs.  The source files mb_contour.c, mb_track.c,
  * and mbcontour.c all depend on this include file. 
- *
- * Author:	D. W. Caress
- * Date:	May 15, 1994
- *
- * Name change:	mb_countour.h changed to mb_aux.h
- * Date:	October 13, 2009
- *
- * $Log: mb_contour.h,v $
- * Revision 5.7  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.6  2006/11/10 22:36:04  caress
- * Working towards release 5.1.0
- *
- * Revision 5.5  2005/11/04 22:49:51  caress
- * Programs changed to register arrays through mb_register_array(); rather than allocating the memory directly with mb_realloc(); or mb_malloc();.
- *
- * Revision 5.4  2005/03/25 04:10:51  caress
- * Control over the filename annotation orientation has been added and the orientation itself has been fixed.
- *
- * Revision 5.3  2004/12/18 01:32:50  caress
- * Added filename annotation.
- *
- * Revision 5.2  2003/04/17 20:47:57  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2001/03/22 21:06:19  caress
- * Trying to make release 5.0.beta0
- *
- * Revision 5.0  2000/12/01  22:53:59  caress
- * First cut at Version 5.0.
- *
- * Revision 4.3  2000/09/30  06:54:58  caress
- * Snapshot for Dale.
- *
- * Revision 4.2  1998/10/04  04:18:07  caress
- * MB-System version 4.6beta
- *
- * Revision 4.1  1994/10/21  11:34:20  caress
- * Release V4.0
- *
- * Revision 4.0  1994/05/16  22:12:46  caress
- * First cut at new contouring scheme.
- *
- *
  */
 
 /* contour algorithm defines */

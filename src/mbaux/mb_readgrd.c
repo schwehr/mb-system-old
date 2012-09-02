@@ -15,18 +15,6 @@
 /*
  * Standalone function to read a GMT grid for programs not interfacing
  * with other GMT functionality.
- *
- * Author:	D. W. Caress
- * Date:	September 3, 2007
- *
- * $Log: mb_readgrd.c,v $
- * Revision 5.1  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.0  2007/10/08 05:47:27  caress
- * Added grd reading function.
- *
- *
  */
 
 /* standard include files */

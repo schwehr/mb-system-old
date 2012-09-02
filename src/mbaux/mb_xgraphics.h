@@ -14,12 +14,6 @@
  *--------------------------------------------------------------------*/
 /*
  * mb_xgraphics.h defines data structures used by mb_xgraphics.c. 
- *
- * Author:	D. W. Caress
- * Date:	October 13, 2009
- *
- * $Log: $
- *
  */
 
 /* xgraphics defines */

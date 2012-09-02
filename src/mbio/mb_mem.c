@@ -17,113 +17,12 @@
  * mb_malloc and mb_free.  These routines call malloc and free,
  * respectively, and also allow debug messages to be printed out
  * according to the verbosity.
- *
- * Author:	D. W. Caress
- * Date:	March 1, 1993
- *
- * $Log: mb_mem.c,v $
- * Revision 5.11  2009/03/08 09:21:00  caress
- * Fixed problem reading and writing format 16 (MBF_SBSIOSWB) data on little endian systems.
- *
- * Revision 5.10  2008/05/16 22:56:24  caress
- * Release 5.1.1beta18.
- *
- * Revision 5.9  2006/01/24 19:11:17  caress
- * Version 5.0.8 beta.
- *
- * Revision 5.8  2005/11/05 00:48:04  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.7  2004/12/18 01:34:43  caress
- * Working towards release 5.0.6.
- *
- * Revision 5.6  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.5  2003/04/16 16:47:41  caress
- * Release 5.0.beta30
- *
- * Revision 5.4  2002/11/12 07:25:23  caress
- * Added mb_memory_clear() call.
- *
- * Revision 5.3  2002/10/15 18:34:58  caress
- * Release 5.0.beta25
- *
- * Revision 5.2  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.1  2002/05/29 23:36:53  caress
- * Release 5.0.beta18
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.9  2000/10/11  01:02:30  caress
- * Convert to ANSI C
- *
- * Revision 4.8  2000/09/30  06:26:58  caress
- * Snapshot for Dale.
- *
- * Revision 4.7  1998/10/05  18:32:27  caress
- * MB-System version 4.6beta
- *
- * Revision 4.6  1997/04/21  17:02:07  caress
- * MB-System 4.5 Beta Release.
- *
- * Revision 4.6  1997/04/21  17:02:07  caress
- * MB-System 4.5 Beta Release.
- *
- * Revision 4.5  1994/10/28  03:52:18  caress
- * Got rid of realloc call - will try this again later. Will
- * just use malloc for now.
- *
- * Revision 4.5  1994/10/28  03:52:18  caress
- * Got rid of realloc call - will try this again later. Will
- * just use malloc for now.
- *
- * Revision 4.3  1994/10/21  12:11:53  caress
- * Release V4.0
- *
- * Revision 4.2  1994/07/29  18:46:51  caress
- * Changes associated with supporting Lynx OS (byte swapped) and
- * using unix second time base (for time_d values).
- *
- * Revision 4.1  1994/03/23  22:19:33  caress
- * Previous versions of mb_malloc returned an error if the
- * pointer returned by malloc() was NULL, even if the size
- * requested was zero.  This was ok on Suns running BSD, which
- * return pointer values even for zero sized objects, but on
- * IBM machines malloc() returns NULL for zero sized objects.
- * The function mb_malloc now returns a NULL pointer and no error
- * if the requested size is zero.
- *
- * Revision 4.0  1994/03/06  00:01:56  caress
- * First cut at version 4.0
- *
- * Revision 4.1  1994/03/03  03:39:43  caress
- * Fixed copyright message.
- *
- * Revision 4.0  1994/02/21  04:03:53  caress
- * First cut at new version.  No changes.
- *
- * Revision 3.2  1993/05/15  14:37:45  caress
- * fixed rcs_id message
- *
- * Revision 3.1  1993/05/14  22:27:48  sohara
- * fixed rcs_id message
- *
- * Revision 3.0  1993/04/23  16:03:04  dale
- * Initial version
- *
- *
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-/* mbio include files */
 #include "../../include/mb_status.h"
 #include "../../include/mb_define.h"
 #include "../../include/mb_io.h"
