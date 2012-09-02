@@ -21,26 +21,7 @@
  *
  * Author:	Roger Davis (primary author)
  * Author:	D. W. Caress (MB-System revisions)
- * Date:	March 7, 2003 (MB-System revisions)
- * $Log: mr1pr_defines.h,v $
- * Revision 5.2  2007/10/08 16:37:00  caress
- * Added cygwin define.
- *
- * Revision 5.1  2006/01/11 07:46:15  caress
- * Working towards 5.0.8
- *
- * Revision 5.0  2003/03/11 19:09:14  caress
- * Initial version.
- *
- *
- *
- *--------------------------------------------------------------------*/
-/*
  *	Copyright (c) 1991 by University of Hawaii.
- */
-
-/*
- *	mr1pr_defines.h --
  *	Hawaii MR1 post-processing software definitions.
  */
 

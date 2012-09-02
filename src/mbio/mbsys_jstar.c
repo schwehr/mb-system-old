@@ -20,32 +20,6 @@
  * data is called Jstar and is supported by the format:
  *      MBF_EDGJSTAR : MBIO ID 132
  *
- * Author:	D. W. Caress
- * Date:	May 4, 2005
- * $Log: mbsys_jstar.c,v $
- * Revision 5.8  2008/07/10 18:02:39  caress
- * Proceeding towards 5.1.1beta20.
- *
- * Revision 5.5  2007/10/08 15:59:34  caress
- * MBIO changes as of 8 October 2007.
- *
- * Revision 5.4  2006/11/10 22:36:05  caress
- * Working towards release 5.1.0
- *
- * Revision 5.3  2006/03/12 19:23:19  caress
- * Changed log2() and exp2() calls to log() and exp() for compatitibility with non-POSIX compliant operating systems.
- *
- * Revision 5.2  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.1  2005/06/15 15:20:17  caress
- * Fixed problems with writing Bluefin records in 7k data and improved support for Edgetech Jstar data.
- *
- * Revision 5.0  2005/06/04 04:11:35  caress
- * Support for Edgetech Jstar format (id 132 and 133).
- *
- *
- *
  */
 
 /* standard include files */

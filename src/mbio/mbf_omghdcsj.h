@@ -16,35 +16,6 @@
  * mbf_omghdcsj.h defines the data structures used by MBIO functions
  * to store multibeam data read from the  MBF_OMGHDCSJ format (MBIO id 141).
  *
- * Author:	D. W. Caress
- * Date:	March 10, 1999
- *
- * $Log: mbf_omghdcsj.h,v $
- * Revision 5.3  2008/03/14 18:33:21  caress
- * Updated support for JHC format 151.
- *
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.1  2000/09/30  06:34:20  caress
- * Snapshot for Dale.
- *
- * Revision 4.0  1999/03/31  18:29:20  caress
- * MB-System 4.6beta7
- *
- * Revision 1.1  1999/03/31  18:11:35  caress
- * Initial revision
- *
-
- *
- */
-/*
  * Notes on the MBF_OMGHDCSJ data format:
  *   1. The OMG-HDCS format is a collection of similar data
  *      formats used by the seafloor mapping software

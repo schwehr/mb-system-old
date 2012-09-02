@@ -20,20 +20,6 @@
  *      MBF_IMAGE83P : MBIO ID 191
  *      MBF_IMAGEMBA : MBIO ID 192
  *
- * Author:	Vivek Reddy, Santa Clara University
- *       	D.W. Caress
- * Date:	February 16, 1993
- * 
- * $Log: mbsys_image83p.h,v $
- * Revision 5.1  2008/07/19 07:41:14  caress
- * Added formats 191 and 192 to support Imagenex Delta T multibeam data.
- *
- * Revision 5.0  2008/05/16 22:51:24  caress
- * Initial version.
- *
- *
- */
-/*
  * Notes on the MBSYS_HSDS data structure:
  *   1. Imagex multibeam systems output raw data in a format
  *      combining ascii and binary values.  

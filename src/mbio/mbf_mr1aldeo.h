@@ -16,33 +16,6 @@
  * mbf_mr1aldeo.h defines the data structures used by MBIO functions
  * to store multibeam data read from the MBF_MR1ALDEO format (MBIO id 61).  
  *
- * Author:	D. W. Caress
- * Date:	October 23, 1995
- * $Log: mbf_mr1aldeo.h,v $
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 1.3  2000/09/30  06:34:20  caress
- * Snapshot for Dale.
- *
- * Revision 1.2  1998/10/05  18:32:27  caress
- * MB-System version 4.6beta
- *
- * Revision 1.1  1996/01/26  21:27:27  caress
- * Initial revision
- *
- * Revision 1.1  1996/01/26  21:27:27  caress
- * Initial revision
- *
- *
- */
-/*
  * Notes on the MBF_MR1ALDEO data format:
  *   1. The MR1 post processing format uses the xdr external
  *      data representation for portability.

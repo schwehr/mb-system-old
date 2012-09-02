@@ -14,32 +14,6 @@
  *--------------------------------------------------------------------*/
 /*
  * MBsegyinfo reads a segy data file and outputs some basic statistics.
- *
- * Author:	D. W. Caress
- * Date:	June 2, 2004
- *
- * $Log: mbsegyinfo.c,v $
- * Revision 5.5  2008/09/13 06:08:09  caress
- * Updates to apply suggested patches to segy handling. Also fixes to remove compiler warnings.
- *
- * Revision 5.4  2008/05/24 19:40:42  caress
- * Applied a Gordon Keith fix.
- *
- * Revision 5.3  2006/01/18 15:17:00  caress
- * Added stdlib.h include.
- *
- * Revision 5.2  2004/10/06 19:10:53  caress
- * Release 5.0.5 update.
- *
- * Revision 5.1  2004/07/27 19:48:35  caress
- * Working on handling subbottom data.
- *
- * Revision 5.0  2004/06/18 04:06:05  caress
- * Adding support for segy i/o and working on support for Reson 7k format 88.
- *
- *
- *
- *
  */
 
 /* standard include files */

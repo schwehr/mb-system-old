@@ -17,66 +17,6 @@
  * to store multibeam data in a general purpose archive format:
  *      MBF_HSLDEOIH : MBIO ID 71
  *
- * Author:	D. W. Caress
- * Date:	March 2, 1993
- *
- * $Log: mbsys_ldeoih.h,v $
- * Revision 5.6  2007/10/08 15:59:34  caress
- * MBIO changes as of 8 October 2007.
- *
- * Revision 5.5  2005/11/05 00:48:04  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.4  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.3  2002/04/06 02:43:39  caress
- * Release 5.0.beta16
- *
- * Revision 5.2  2001/07/20 00:32:54  caress
- * Release 5.0.beta03
- *
- * Revision 5.1  2001/01/22  07:43:34  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2000/12/01  22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.5  2000/09/30  06:31:19  caress
- * Snapshot for Dale.
- *
- * Revision 4.4  1999/03/31  18:11:35  caress
- * MB-System 4.6beta7
- *
- * Revision 4.3  1998/10/05  17:46:15  caress
- * MB-System version 4.6beta
- *
- * Revision 4.2  1997/04/21  17:02:07  caress
- * MB-System 4.5 Beta Release.
- *
- * Revision 4.1  1994/10/21  12:20:01  caress
- * Release V4.0
- *
- * Revision 4.1  1994/10/21  12:20:01  caress
- * Release V4.0
- *
- * Revision 4.0  1994/03/06  00:01:56  caress
- * First cut at version 4.0
- *
- * Revision 4.1  1994/03/03  03:39:43  caress
- * Fixed copyright message.
- *
- * Revision 4.0  1994/02/17  20:42:20  caress
- * First cut at new version.  Recast format to include both
- * beam amplitude and sidescan data.  I hope noone has used
- * the old version of this format, as the files will be
- * orphaned!!!
- *
- * Revision 3.0  1993/05/14  23:04:50  sohara
- * initial version
- *
- */
-/*
  * Notes on the MBSYS_LDEOIH data structure:
  *   1. This data structure is used to store multibeam bathymetry
  *      and/or backscatter data with arbitrary numbers of beams.

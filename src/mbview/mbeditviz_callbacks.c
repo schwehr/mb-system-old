@@ -20,35 +20,6 @@
  * This include file contains global control parameters shared with
  * the Motif interface code.
  *
- * Author:	D. W. Caress
- * Date:	April 27, 2007
- *
- * $Log: mbeditviz_callbacks.c,v $
- * Revision 5.9  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.8  2008/05/16 22:59:42  caress
- * Release 5.1.1beta18.
- *
- * Revision 5.7  2008/03/14 19:04:32  caress
- * Fixed memory problems with route editing.
- *
- * Revision 5.6  2007/11/16 17:26:56  caress
- * Progress on MBeditviz
- *
- * Revision 5.5  2007/10/17 20:35:05  caress
- * Release 5.1.1beta11
- *
- * Revision 5.4  2007/10/08 16:32:08  caress
- * Code status as of 8 October 2007.
- *
- * Revision 5.3  2007/07/03 17:35:54  caress
- * Working on MBeditviz.
- *
- * Revision 5.2  2007/06/18 01:16:51  caress
- * Added MBeditviz.
- *
- *
  */
 
 /**

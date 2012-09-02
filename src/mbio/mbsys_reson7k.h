@@ -17,65 +17,6 @@
  * Reson 7k series sonars:
  *      MBF_RESON7K1 : MBIO ID 191 - Reson 7K Series sonar
  *
- * Author:	D. W. Caress
- * Date:	March 3, 2004
- *
- * $Log: mbsys_reson7k.h,v $
- * Revision 5.16  2008/09/27 03:27:10  caress
- * Working towards release 5.1.1beta24
- *
- * Revision 5.15  2008/09/20 00:57:41  caress
- * Release 5.1.1beta23
- *
- * Revision 5.14  2008/05/16 22:56:24  caress
- * Release 5.1.1beta18.
- *
- * Revision 5.13  2008/03/01 09:14:03  caress
- * Some housekeeping changes.
- *
- * Revision 5.12  2007/07/03 17:25:50  caress
- * Changes to handle new time lag value in bluefin nav records.
- *
- * Revision 5.11  2006/11/10 22:36:05  caress
- * Working towards release 5.1.0
- *
- * Revision 5.10  2006/09/11 18:55:53  caress
- * Changes during Western Flyer and Thomas Thompson cruises, August-September
- * 2006.
- *
- * Revision 5.9  2006/04/11 19:14:46  caress
- * Various fixes.
- *
- * Revision 5.8  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.7  2004/12/02 06:33:29  caress
- * Fixes while supporting Reson 7k data.
- *
- * Revision 5.6  2004/11/08 05:47:20  caress
- * Now gets sidescan from snippet data, maybe even properly...
- *
- * Revision 5.5  2004/11/06 03:55:15  caress
- * Working to support the Reson 7k format.
- *
- * Revision 5.4  2004/09/16 19:02:34  caress
- * Changes to better support segy data.
- *
- * Revision 5.3  2004/07/15 19:25:05  caress
- * Progress in supporting Reson 7k data.
- *
- * Revision 5.2  2004/06/18 05:22:33  caress
- * Working on adding support for segy i/o and for Reson 7k format 88.
- *
- * Revision 5.1  2004/05/21 23:44:50  caress
- * Progress supporting Reson 7k data, including support for extracing subbottom profiler data.
- *
- * Revision 5.0  2004/04/27 01:50:16  caress
- * Adding support for Reson 7k sonar data, including segy extensions.
- *
- *
- */
-/*
  * Notes on the mbsys_reson7k data structure:
  *   1. This format is defined by the Interface Control Document
  *      for RESON SeaBat 7k format v0.42.

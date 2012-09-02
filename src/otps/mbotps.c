@@ -39,12 +39,6 @@
  * outputing the time and tide value for the sonar navigation sampled
  * according to -Dinterval. MBotps also sets the parameter file for each
  * swath file so that mbprocess applies the tide model during processing.
- *
- * Author:	D. W. Caress
- * Date:	July 30,  2009
- *
- * $Log: mbotps.c,v $
- *
  */
 
 /* standard include files */

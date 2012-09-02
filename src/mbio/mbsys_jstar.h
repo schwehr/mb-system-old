@@ -16,21 +16,6 @@
  * mbsys_jstar.h  defines the data structure used by MBIO functions
  * to store sidescan data read from the MBF_EDGJSTAR format (MBIO id 132).  
  *
- * Author:	D. W. Caress
- * Date:	February 21, 2005
- * $Log: mbsys_jstar.h,v $
- * Revision 5.2  2006/11/10 22:36:05  caress
- * Working towards release 5.1.0
- *
- * Revision 5.1  2005/11/05 00:48:03  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.0  2005/06/04 04:11:35  caress
- * Support for Edgetech Jstar format (id 132 and 133).
- *
- *
- */
-/*
  * Notes on the MBSYS_JSTAR data structure:
  *   1. The J-star data format is used to store raw sidescan data from 
  *      Edgetech sidescan and subbottom profiler sonars. This format 

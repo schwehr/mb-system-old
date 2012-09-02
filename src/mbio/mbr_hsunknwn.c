@@ -21,16 +21,6 @@
  *   mbr_rt_hsunknwn	- read and translate data
  *   mbr_wt_hsunknwn	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	October 13, 2008
- *
- * $Log: mbr_hsunknwn.c,v $
- * Revision 5.0  2008/10/17 07:28:41  caress
- * Supporting Hydrosweep DS data in format used by SOPAC.
- *
- *
- *--------------------------------------------------------------------
- *
  * Some notes on the data format:
  *
  * According to Brian Bishop of SOPAC (email 12 October 2008),

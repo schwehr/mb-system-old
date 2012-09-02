@@ -21,38 +21,6 @@
  *   mbr_rt_hs10jams	- read and translate data
  *   mbr_wt_hs10jams	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	December 4, 2000
- *
- * $Log: mbr_hs10jams.c,v $
- * Revision 5.7  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.6  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.5  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.4  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.3  2001/07/20 00:31:11  caress
- * Release 5.0.beta03
- *
- * Revision 5.2  2001/03/22  20:50:02  caress
- * Trying to make version 5.0.beta0
- *
- * Revision 5.1  2001/01/22  07:43:34  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2000/12/10  20:24:25  caress
- * Initial revision.
- *
- *
- *
- */
-/*
  * Notes on the MBF_HS10JAMS data format:
  *   1. The Furuno HS-10 multibeam sonar generated 45 beams
  *      of bathymetry and amplitude.

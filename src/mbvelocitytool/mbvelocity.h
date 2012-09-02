@@ -21,13 +21,6 @@
  * and to construct new profiles consistent with these various 
  * sources of information. This file contains
  * contains function prototypes and was added in 2009.
- *
- * Author:	D. W. Caress
- * Date:	October 15, 2009
- *
- * $Log: $
- *
- *
  */
 
 /*--------------------------------------------------------------------*/

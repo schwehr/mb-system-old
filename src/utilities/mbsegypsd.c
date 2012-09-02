@@ -16,12 +16,6 @@
  * mbsegypsd calculates the power spectral densisty function of each trace in a 
  * segy file, outputting the PSD as a GMT grid file with trace number along
  * the x axis and frequency along the y axis.
- *
- * Author:	D. W. Caress
- * Date:	November 2, 2009
- *
- * $Log: mbsegypsd.c,v $
- *
  */
 
 /* standard include files */

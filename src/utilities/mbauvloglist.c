@@ -19,17 +19,6 @@
  * style with data columns separated by tabs.
  *
  * Author:	D. W. Caress
- * Date:	August 14, 2006
- * Location:	R/V Western Flyer hove to in a gale offshore British Columbia
- *
- * $Log: mbauvloglist.c,v $
- * Revision 5.1  2006/11/26 09:42:01  caress
- * Making distribution 5.1.0.
- *
- * Revision 5.0  2006/11/20 19:59:21  caress
- * Added program to CVS.
- *
- *
  */
 
 /* standard include files */

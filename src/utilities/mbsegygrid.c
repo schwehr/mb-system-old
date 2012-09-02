@@ -16,65 +16,6 @@
  * mbsegygrid inserts trace data from segy data files into a grid in
  * which the y-axis is some measure of trace number, range, or distance
  * along a profile, and the y-axis is time..
- *
- * Author:	D. W. Caress
- * Date:	June 12, 2004
- *
- * $Log: mbsegygrid.c,v $
- * Revision 5.16  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.15  2008/09/11 20:20:14  caress
- * Checking in updates made during cruise AT15-36.
- *
- * Revision 5.14  2007/10/08 16:48:07  caress
- * State of the code on 8 October 2007.
- *
- * Revision 5.13  2006/12/15 21:42:49  caress
- * Incremental CVS update.
- *
- * Revision 5.12  2006/08/09 22:41:27  caress
- * Fixed programs that read or write grids so that they do not use the GMT_begin() function; these programs will now work when GMT is built in the default fashion, when GMT is built in the default fashion, with "advisory file locking" enabled.
- *
- * Revision 5.11  2006/06/22 04:45:43  caress
- * Working towards 5.1.0
- *
- * Revision 5.10  2006/06/16 19:30:58  caress
- * Check in after the Santa Monica Basin Mapping AUV Expedition.
- *
- * Revision 5.9  2006/04/19 18:30:34  caress
- * Fixed application of gain below seafloor.
- *
- * Revision 5.8  2006/04/11 19:19:30  caress
- * Various fixes.
- *
- * Revision 5.7  2006/01/18 15:17:00  caress
- * Added stdlib.h include.
- *
- * Revision 5.6  2005/06/15 15:35:01  caress
- * Added capability to scale shot to distance and time to depth. Also added -MGQ100 to the mbm_grdplot arguments so that the seismic image is more nicely displayed by grdimage.
- *
- * Revision 5.5  2005/06/04 05:59:26  caress
- * Added a time-varying gain option.
- *
- * Revision 5.4  2004/11/08 05:49:17  caress
- * Fixed problem with decimation.
- *
- * Revision 5.3  2004/10/06 19:10:52  caress
- * Release 5.0.5 update.
- *
- * Revision 5.2  2004/09/16 01:01:12  caress
- * Fixed many things.
- *
- * Revision 5.1  2004/07/15 19:33:56  caress
- * Improvements to support for Reson 7k data.
- *
- * Revision 5.0  2004/06/18 04:06:05  caress
- * Adding support for segy i/o and working on support for Reson 7k format 88.
- *
- *
- *
- *
  */
 
 /* standard include files */

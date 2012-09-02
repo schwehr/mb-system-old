@@ -12,25 +12,6 @@
  *
  *    See README file for copying and redistribution conditions.
  *--------------------------------------------------------------------*/
-/*
- *
- * Author:	D. W. Caress
- * Date:	November 11,  2007
- *
- * $Log: mbpingeditprivate.h,v $
- * Revision 5.1  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.0  2007/11/16 17:48:07  caress
- * Working to add an MBedit-like ping edit interface to MBeditviz
- *
- * Revision 1.1  2007/11/16 17:47:31  caress
- * Working to add an MBedit-like ping edit interface to MBeditviz
- *
- *
- */
-
-/*--------------------------------------------------------------------*/
 
 /* OpenGL Error checking */
 /* #define MBP_GETERRORS 1 */

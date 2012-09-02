@@ -21,23 +21,6 @@
  *   mbr_rt_em710mba	- read and translate data
  *   mbr_wt_em710mba	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	February 26, 2008
- *
- * $Log: mbr_em710mba.c,v $
- * Revision 5.3  2009/03/02 18:51:52  caress
- * Fixed problems with formats 58 and 59, and also updated copyright dates in several source files.
- *
- * Revision 5.2  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.1  2008/07/10 06:41:31  caress
- * Fixed support for EM122
- *
- * Revision 5.0  2008/03/01 09:11:35  caress
- * Added support for Simrad EM710 multibeam in new formats 58 and 59.
- *
- *
  */
 
 /* standard include files */

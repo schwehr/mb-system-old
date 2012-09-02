@@ -16,16 +16,6 @@
  * mbdumpesf reads an MB-System edit save file and dumps the contents
  * as an ascii table to stdout. This is primarily used for debugging
  * bathymetry editing tools such as mbedit and mbeditviz.
- *
- * Author:	D. W. Caress
- * Date:	March 20, 2008
- * 
- * $Log: mbdumpesf.c,v $
- * Revision 5.0  2008/05/26 03:27:31  caress
- * Program for dumping edit events from edit save files.
- *
- *
- *
  */
 
 /* standard include files */

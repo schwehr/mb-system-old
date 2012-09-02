@@ -21,38 +21,6 @@
  *   mbr_rt_samesurf	- read and translate data
  *   mbr_wt_samesurf	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	June 13, 2002
- * $Log: mbr_samesurf.c,v $
- * Revision 5.9  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.8  2003/11/24 21:04:29  caress
- * Implement Reinhard Holtkamp's suggested mods for better SURF format support.
- *
- * Revision 5.6  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.5  2003/03/06 00:14:52  caress
- * Put in Reinhard Holtkamp's mod's to support SVP data.
- *
- * Revision 5.4  2003/02/27 04:33:33  caress
- * Fixed handling of SURF format data.
- *
- * Revision 5.3  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.2  2002/08/02 01:01:10  caress
- * 5.0.beta22
- *
- * Revision 5.1  2002/07/20 20:42:40  caress
- * Release 5.0.beta20
- *
- * Revision 5.0  2002/06/13 22:56:59  caress
- * Initial Revision
- *
- *
- *
  */
 
 /* standard include files */

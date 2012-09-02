@@ -19,11 +19,6 @@
  * in the multibeam data. This program can also fix various problems
  * with the data, including sensor offsets.
  *
- * Author:	D. W. Caress
- * Date:	January 1, 2012
- *
- * $Log: mbhysweeppreprocess.c,v $
- *
  */
 
 /* standard include files */

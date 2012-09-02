@@ -21,14 +21,6 @@
  *   mbr_rt_segysegy	- read and translate data
  *   mbr_wt_segysegy	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	October 27, 2006
- 
- * $Log: mbr_segysegy.c,v $
- * Revision 5.0  2007/01/04 23:52:24  caress
- * Support for segy data as format 160
- *
- *
  */
 
 /* standard include files */

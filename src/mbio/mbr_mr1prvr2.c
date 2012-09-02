@@ -20,28 +20,6 @@
  *   mbr_dem_mr1prvr2	- deallocate read/write memory
  *   mbr_rt_mr1prvr2	- read and translate data
  *   mbr_wt_mr1prvr2	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	March 6, 2003
- *
- * $Log: mbr_mr1prvr2.c,v $
- * Revision 5.4  2008/07/10 06:43:41  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.3  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.2  2004/04/27 01:01:46  caress
- * Fixed typo.
- *
- * Revision 5.1  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.0  2003/03/10 20:03:59  caress
- * Initial version.
- *
- *
- *
  */
 
 /* standard include files */

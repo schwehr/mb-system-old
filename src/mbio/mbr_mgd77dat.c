@@ -20,60 +20,6 @@
  *   mbr_dem_mgd77dat	- deallocate read/write memory
  *   mbr_rt_mgd77dat	- read and translate data
  *   mbr_wt_mgd77dat	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	May 18, 1999
- *
- * $Log: mbr_mgd77dat.c,v $
- * Revision 5.11  2008/01/14 17:52:34  caress
- * Fixed problem with comments that prevented proper processing.
- *
- * Revision 5.10  2005/11/05 00:48:03  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.9  2004/09/24 20:44:44  caress
- * Implemented code fixes provided by Bob Covill.
- *
- * Revision 5.8  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.7  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.6  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.5  2002/08/21 00:55:46  caress
- * Release 5.0.beta22
- *
- * Revision 5.4  2002/02/22 09:03:43  caress
- * Release 5.0.beta13
- *
- * Revision 5.3  2001/07/20 00:32:54  caress
- * Release 5.0.beta03
- *
- * Revision 5.2  2001/03/22  20:50:02  caress
- * Trying to make version 5.0.beta0
- *
- * Revision 5.1  2001/01/22  07:43:34  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2000/12/01  22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.3  2000/10/11  01:03:21  caress
- * Convert to ANSI C
- *
- * Revision 4.2  2000/09/30  06:34:20  caress
- * Snapshot for Dale.
- *
- * Revision 4.1  1999/07/16  19:29:09  caress
- * First revision.
- *
- * Revision 1.1  1999/07/16  19:24:15  caress
- * Initial revision
- *
- *
  */
 
 /* standard include files */

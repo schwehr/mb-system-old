@@ -18,65 +18,6 @@
  * This include file contains global control parameters shared with
  * the Motif interface code.
  *
- * Author:	D. W. Caress
- * Date:	June 24,  1995
- * Date:	August 28, 2000 (New version - no buffered i/o)
- *
- * $Log: mbnavedit.h,v $
- * Revision 5.6  2009/03/10 05:11:22  caress
- * Added Gaussian mean smoothing to MBnavedit.
- *
- * Revision 5.5  2005/06/04 04:45:50  caress
- * Added feature to apply longitude and latitude offsets to the navigation.
- *
- * Revision 5.4  2004/05/21 23:33:03  caress
- * Moved to new version of BX GUI builder
- *
- * Revision 5.3  2003/04/17 21:09:06  caress
- * Release 5.0.beta30
- *
- * Revision 5.2  2001/01/22 07:47:40  caress
- * Version 5.0.beta01
- *
- * Revision 5.1  2000/12/10  20:30:08  caress
- * Version 5.0.alpha02
- *
- * Revision 5.0  2000/12/01  22:56:08  caress
- * First cut at Version 5.0.
- *
- * Revision 4.8  2000/09/30  07:03:14  caress
- * Snapshot for Dale.
- *
- * Revision 4.7  2000/09/30  07:02:34  caress
- * Snapshot for Dale.
- *
- * Revision 4.6  2000/08/28  22:45:11  caress
- * About to kick off new version.
- *
- * Revision 4.5  1999/04/09 22:34:08  caress
- * Added time interval plot.
- *
- * Revision 4.4  1997/04/21  17:07:38  caress
- * MB-System 4.5 Beta Release.
- *
- * Revision 4.3  1996/08/26  17:33:29  caress
- * Release 4.4 revision.
- *
- * Revision 4.3  1996/08/26  17:33:29  caress
- * Release 4.4 revision.
- *
- * Revision 4.2  1996/04/05  20:07:02  caress
- * Added GUI mode so done means quit for real. Also changed done and
- * quit handling in browse mode so that the program doesn't read the
- * entire data file before closing it.
- *
- * Revision 4.1  1995/08/17  14:59:39  caress
- * Revision for release 4.3.
- *
- * Revision 4.0  1995/08/07  18:33:22  caress
- * First cut.
- *
- *
  */
 
 /*--------------------------------------------------------------------*/

@@ -25,44 +25,12 @@
  *   mbr_rt_asciixyz	- read and translate data
  *   mbr_wt_asciixyz	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	May 8, 2002
- *
- * $Log: mbr_asciixyz.c,v $
- * Revision 5.7  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.6  2006/04/11 19:14:46  caress
- * Various fixes.
- *
- * Revision 5.5  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
- * Revision 5.4  2005/11/05 00:48:03  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.3  2003/09/23 21:05:12  caress
- * Added formats 168 and 169 for reading xyt and yxt triples (topography instead of depth).
- *
- * Revision 5.2  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.1  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.0  2002/05/29 23:37:38  caress
- * Release 5.0.beta18
- *
- *
- *
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
 
-/* mbio include files */
 #include "../../include/mb_status.h"
 #include "../../include/mb_format.h"
 #include "../../include/mb_io.h"

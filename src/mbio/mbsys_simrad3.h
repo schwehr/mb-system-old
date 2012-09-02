@@ -30,23 +30,6 @@
  *      MBF_EM710RAW : MBIO ID 58 - Vendor EM710
  *      MBF_EM710MBA : MBIO ID 59 - MBARI EM710 for processing
  *
- *
- * Author:	D. W. Caress (L-DEO)
- * Date:	February 22, 2008
- *
- * $Log: mbsys_simrad3.h,v $
- * Revision 5.2  2009/03/02 18:51:52  caress
- * Fixed problems with formats 58 and 59, and also updated copyright dates in several source files.
- *
- * Revision 5.1  2008/07/10 06:40:34  caress
- * Fixed support for EM122
- *
- * Revision 5.0  2008/03/01 09:11:35  caress
- * Added support for Simrad EM710 multibeam in new formats 58 and 59.
- *
- *
- */
-/*
  * Notes on the MBSYS_SIMRAD3 data structure:
  *   1. Simrad multibeam systems output datagrams which are
  *      a combination of ascii and binary. This code has been written

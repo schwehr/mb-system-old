@@ -16,24 +16,6 @@
  * mbf_xtfr8101.h defines the data structures used by MBIO functions
  * to store multibeam data read from the MBF_XTFR8101 format (MBIO id 83).  
  *
- * Author:	D. W. Caress
- * Date:	August 24, 2001
- *
- * $Log: mbf_xtfr8101.h,v $
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2001/09/17 23:24:10  caress
- * Added XTF format.
- *
- *
- *
- *
- */
-/*
  * Notes on the MBF_XTFR8101 data format:
  *   1. Reson SeaBat products are high frequency, 
  *

@@ -16,46 +16,6 @@
  * mbsys_mstiff.h  defines the data structure used by MBIO functions
  * to store sidescan data read from the MBF_MSTIFFSS format (MBIO id 131).  
  *
- * Author:	D. W. Caress
- * Date:	April 10, 1988
- * $Log: mbsys_mstiff.h,v $
- * Revision 5.6  2005/11/05 00:48:03  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.5  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.4  2003/01/15 20:51:48  caress
- * Release 5.0.beta28
- *
- * Revision 5.3  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.2  2001/07/20 00:32:54  caress
- * Release 5.0.beta03
- *
- * Revision 5.1  2001/01/22  07:43:34  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2000/12/01  22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.1  2000/09/30  06:31:19  caress
- * Snapshot for Dale.
- *
- * Revision 4.0  1998/10/05  18:30:03  caress
- * MB-System version 4.6beta
- *
- * Revision 1.1  1998/10/05  18:22:40  caress
- * Initial revision
- *
- * Revision 1.1  1998/10/05  17:46:15  caress
- * Initial revision
- *
-*
- *
- */
-/*
  * Notes on the MBSYS_MSTIFF data structure:
  *   1. The MSTIFF data format is used to store raw sidescan data from 
  *      Sea Scan sidescan sonars. This format is a variant of

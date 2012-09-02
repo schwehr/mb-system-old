@@ -20,15 +20,6 @@
  *   mbr_dem_xtfb1624	- deallocate read/write memory
  *   mbr_rt_xtfb1624	- read and translate data
  *   mbr_wt_xtfb1624	- translate and write data
- *
- * Author:	Jens Renken (MARUM/University of Bremen)
- * Date:	March 29, 2011
- *
- * Author:	D. W. Caress
- * Date:	2 May 2012 (when the code was brought into the MB-System archive as a read-only i/o module)
- *
- * $Log: $
- *
  */
 
 /* standard include files */

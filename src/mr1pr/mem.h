@@ -21,18 +21,6 @@
  *
  * Author:	Roger Davis (primary author)
  * Author:	D. W. Caress (MB-System revisions)
- * Date:	March 7, 2003 (MB-System revisions)
- * $Log: mem.h,v $
- * Revision 5.1  2003/04/17 21:12:03  caress
- * Release 5.0.beta30
- *
- * Revision 5.0  2003/03/11 19:09:14  caress
- * Initial version.
- *
- *
- *
- *--------------------------------------------------------------------*/
-/*
  *	Copyright (c) 1998 by University of Hawaii.
  */
 

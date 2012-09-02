@@ -28,45 +28,6 @@
  * so that the first svp output for each file becomes the
  * svp used for recalculating bathymetry for that swath file.
  *
- * Author:	D. W. Caress
- * Date:	January 3,  2001
- *
- * $Log: mbsvplist.c,v $
- * Revision 5.10  2008/09/20 00:57:41  caress
- * Release 5.1.1beta23
- *
- * Revision 5.9  2006/09/11 18:55:54  caress
- * Changes during Western Flyer and Thomas Thompson cruises, August-September
- * 2006.
- *
- * Revision 5.8  2006/01/18 15:17:00  caress
- * Added stdlib.h include.
- *
- * Revision 5.7  2005/11/05 01:07:54  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.6  2005/03/25 04:42:59  caress
- * Standardized the string lengths used for filenames and comment data.
- *
- * Revision 5.5  2004/10/06 19:10:53  caress
- * Release 5.0.5 update.
- *
- * Revision 5.4  2003/07/02 18:14:19  caress
- * Release 5.0.0
- *
- * Revision 5.3  2003/04/17 21:18:57  caress
- * Release 5.0.beta30
- *
- * Revision 5.2  2001/07/20 00:34:38  caress
- * Release 5.0.beta03
- *
- * Revision 5.1  2001/03/22 21:15:49  caress
- * Trying to make release 5.0.beta0.
- *
- * Revision 5.0  2001/01/04  21:43:50  caress
- * Initial revision.
- *
- *
  */
 
 /* standard include files */

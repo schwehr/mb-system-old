@@ -19,12 +19,6 @@
  *
  * The data format associated with this representation is:
  *      MBF_HYSWEEP1 : MBIO ID 201
- *
- * Author:	D. W. Caress (MBARI)
- * Date:	December 23, 2011
- *
- * $Log: mbsys_hysweep.h,v $
- *
  */
 /*
  * Notes on the MBSYS_HYSWEEP HYPACK and HYSWEEP data:

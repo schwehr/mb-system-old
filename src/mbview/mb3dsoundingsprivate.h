@@ -12,31 +12,6 @@
  *
  *    See README file for copying and redistribution conditions.
  *--------------------------------------------------------------------*/
-/*
- *
- * Author:	D. W. Caress
- * Date:	May 25,  2007
- *
- * $Log: mb3dsoundingsprivate.h,v $
- * Revision 5.4  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.3  2007/11/16 17:26:56  caress
- * Progress on MBeditviz
- *
- * Revision 5.2  2007/10/08 16:32:08  caress
- * Code status as of 8 October 2007.
- *
- * Revision 5.1  2007/07/03 17:35:54  caress
- * Working on MBeditviz.
- *
- * Revision 5.0  2007/06/17 23:16:14  caress
- * Added MBeditviz.
- *
- *
- */
-
-/*--------------------------------------------------------------------*/
 
 /* OpenGL Error checking */
 /* #define MBS_GETERRORS 1 */

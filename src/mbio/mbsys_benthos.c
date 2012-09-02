@@ -18,14 +18,6 @@
  * The formats associated with this i/o module are:
  *      MBF_XTFB1624 : MBIO ID 211
  *
- * Author:	Jens Renken (MARUM/University of Bremen)
- * Date:	March 29, 2011
- *
- * Author:	D. W. Caress
- * Date:	2 May 2012 (when the code was brought into the MB-System archive as a read-only i/o module)
- *
- * $Log: $
- *
  */
 
 /* standard include files */

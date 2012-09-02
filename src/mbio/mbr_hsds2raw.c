@@ -21,51 +21,6 @@
  *   mbr_rt_hsds2raw	- read and translate data
  *   mbr_wt_hsds2raw	- translate and write data
  *
- * Authors:	D. W. Caress
- * 		D. N. Chayes
- * Date:	June 20, 2001
- * $Log: mbr_hsds2raw.c,v $
- * Revision 5.12  2007/10/08 15:59:34  caress
- * MBIO changes as of 8 October 2007.
- *
- * Revision 5.11  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.10  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.9  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.8  2003/02/27 04:33:33  caress
- * Fixed handling of SURF format data.
- *
- * Revision 5.7  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.6  2002/07/20 20:42:40  caress
- * Release 5.0.beta20
- *
- * Revision 5.5  2002/04/06 02:43:39  caress
- * Release 5.0.beta16
- *
- * Revision 5.4  2001/12/18 04:27:45  caress
- * Release 5.0.beta11.
- *
- * Revision 5.3  2001/08/10 22:41:19  dcaress
- * Release 5.0.beta07
- *
- * Revision 5.2  2001-07-25 20:40:56-07  caress
- * Fixed handling of sidescan.
- *
- * Revision 5.1  2001/07/20 00:32:54  caress
- * Release 5.0.beta03
- *
- * Revision 5.0  2001/06/29  22:49:07  caress
- * Added support for HSDS2RAW
- *
- *
- *
  */
 
 /* standard include files */

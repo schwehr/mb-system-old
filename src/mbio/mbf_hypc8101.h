@@ -1,18 +1,8 @@
 /*--------------------------------------------------------------------
- *    The MB-system:	mbf_hypc8101.h	8/21/94
- *	$Id$
- *
  *    Copyright (c) 1994-2012 by
  *    David W. Caress (caress@mbari.org)
- *      Monterey Bay Aquarium Research Institute
- *      Moss Landing, CA 95039
  *    and Dale N. Chayes (dale@ldeo.columbia.edu)
- *      Lamont-Doherty Earth Observatory
- *      Palisades, NY 10964
  *
- *    See README file for copying and redistribution conditions.
- *--------------------------------------------------------------------*/
-/*
  * mbf_hypc8101.h defines the data structures used by MBIO functions
  * to store multibeam data read from the MBF_HYPC8101 format (MBIO id 83).  
  *

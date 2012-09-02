@@ -19,25 +19,10 @@
  * University of Hawaii under the GPL. Minor modifications have
  * been made to the version distributed here as part of MB-System.
  *
+ *	Copyright (c) 1991 by University of Hawaii.
  * Author:	Roger Davis (primary author)
  * Author:	D. W. Caress (MB-System revisions)
- * Date:	March 7, 2003 (MB-System revisions)
- * $Log: io.c,v $
- * Revision 5.1  2006/01/24 19:24:04  caress
- * Version 5.0.8 beta.
- *
- * Revision 5.0  2003/03/11 19:09:14  caress
- * Initial version.
- *
- *
- *
- *--------------------------------------------------------------------*/
-/*
- *	Copyright (c) 1991 by University of Hawaii.
- */
 
-/*
-   io.c --
    I/O routines for Hawaii MR1 files.
 */
 

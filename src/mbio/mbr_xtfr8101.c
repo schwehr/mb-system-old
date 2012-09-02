@@ -20,49 +20,6 @@
  *   mbr_dem_xtfr8101	- deallocate read/write memory
  *   mbr_rt_xtfr8101	- read and translate data
  *   mbr_wt_xtfr8101	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	August 26, 2001
- *
- * $Log: mbr_xtfr8101.c,v $
- * Revision 5.11  2008/09/13 06:08:09  caress
- * Updates to apply suggested patches to segy handling. Also fixes to remove compiler warnings.
- *
- * Revision 5.10  2006/03/06 21:47:48  caress
- * Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
- *
- * Revision 5.9  2005/11/05 00:48:05  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.8  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.7  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.6  2003/01/15 20:51:48  caress
- * Release 5.0.beta28
- *
- * Revision 5.5  2002/09/25 20:41:04  caress
- * Fixed some problems.
- *
- * Revision 5.4  2002/09/19 01:12:39  caress
- * Release 5.0.beta23
- *
- * Revision 5.3  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.2  2001/11/16 01:32:31  caress
- * Working on it...
- *
- * Revision 5.1  2001/10/12  21:08:37  caress
- * Added interpolation of attitude data.
- *
- * Revision 5.0  2001/09/17  23:24:10  caress
- * Added XTF format.
- *
-*
- *
  */
 
 /* standard include files */

@@ -16,19 +16,6 @@
  * mbf_sb2120xs.h defines the data structures used by MBIO functions
  * to store multibeam data read from the MBF_SB2120XSE format (MBIO id 44).  
  *
- * Author:	P. A. Cohen
- * Date:	March 20, 2000
- * Author:	D. W. Caress
- * Date:	December 8,  2000
- *
- * $Log: mbf_sb2120xs.h,v $
- * Revision 5.0  2000/12/10 20:24:25  caress
- * Initial revision.
- *
- *
- *
- */
-/*
  * Notes on the MBF_SB2120XS (XSE) data format:
  *   1. SeaBeam Instruments introduced a new format called XSE in 1999.
  *      This "Data Exchange Format" is associated with the new

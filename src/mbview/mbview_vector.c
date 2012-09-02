@@ -12,17 +12,7 @@
  *
  *    See README file for copying and redistribution conditions.
  *------------------------------------------------------------------------------*/
-/*
- *
- * Author:	D. W. Caress
- * Date:	October 28, 2003
- *
- * $Log: mbview_vector.c,v $
- *
- */
-/*------------------------------------------------------------------------------*/
 
-/* Standard includes for builtins. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

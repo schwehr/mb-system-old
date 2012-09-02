@@ -30,26 +30,6 @@
  *      MBF_EM710RAW : MBIO ID 58 - Vendor EM710
  *      MBF_EM710MBA : MBIO ID 59 - MBARI EM710 for processing
  *
- * Author:	D. W. Caress
- * Date:	February 22, 2008
- *
- * $Log: mbsys_simrad3.c,v $
- * Revision 5.4  2009/03/02 18:51:52  caress
- * Fixed problems with formats 58 and 59, and also updated copyright dates in several source files.
- *
- * Revision 5.3  2009/02/06 19:12:43  caress
- * Fixed description in mb_angle.c and angle extraction in mb_simrad3.c
- *
- * Revision 5.2  2008/11/16 21:51:18  caress
- * Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
- *
- * Revision 5.1  2008/07/10 06:40:34  caress
- * Fixed support for EM122
- *
- * Revision 5.0  2008/03/01 09:11:35  caress
- * Added support for Simrad EM710 multibeam in new formats 58 and 59.
- *
- *
  */
 
 /* standard include files */

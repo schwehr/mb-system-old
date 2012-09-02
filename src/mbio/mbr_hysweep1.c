@@ -21,11 +21,6 @@
  *   mbr_rt_hysweep1	- read and translate data
  *   mbr_wt_hysweep1	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	December 23,2011
- *
- * $Log: mbr_hysweep1.c,v $
- *
  */
 
 /* standard include files */

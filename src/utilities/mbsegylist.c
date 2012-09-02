@@ -17,36 +17,6 @@
  * file to stdout. The form of the output is quite flexible; 
  * MBsegylist is tailored to produce ascii files in spreadsheet  
  * style with data columns separated by tabs.
- *
- * Author:	D. W. Caress
- * Date:	May 29, 2004
- *
- * $Log: mbsegylist.c,v $
- * Revision 5.6  2007/10/17 20:34:00  caress
- * Release 5.1.1beta11
- * Added decimation option.
- *
- * Revision 5.5  2006/11/10 22:36:05  caress
- * Working towards release 5.1.0
- *
- * Revision 5.4  2006/01/18 15:17:00  caress
- * Added stdlib.h include.
- *
- * Revision 5.3  2005/06/04 05:19:04  caress
- * Fixed water depth calculation.
- *
- * Revision 5.2  2004/10/06 19:10:53  caress
- * Release 5.0.5 update.
- *
- * Revision 5.1  2004/07/27 19:48:35  caress
- * Working on handling subbottom data.
- *
- * Revision 5.0  2004/06/18 04:06:05  caress
- * Adding support for segy i/o and working on support for Reson 7k format 88.
- *
- *
- *
- *
  */
 
 /* standard include files */

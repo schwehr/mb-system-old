@@ -21,20 +21,6 @@
  *   mbr_rt_imagemba	- read and translate data
  *   mbr_wt_imagemba	- translate and write data
  *
- * Author:	D.W. Caress
- * Date:	July 18, 2008
- *
- * $Log: mbr_imagemba.c,v $
- * Revision 5.1  2008/09/20 00:57:41  caress
- * Release 5.1.1beta23
- *
- * Revision 5.0  2008/07/19 07:43:00  caress
- * Added format 192 to support Imagenex Delta T multibeam data.
- *
- *
- * 
- */
-/*
  * Notes on the MBF_IMAGEMBA data format:
  *   1. This data format is used to store Imagenex DeltaT multibeam 
  *      bathymetry data. 

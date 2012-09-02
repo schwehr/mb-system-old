@@ -20,39 +20,16 @@
  *   mbr_dem_edgjstar	- deallocate read/write memory
  *   mbr_rt_edgjstar	- read and translate data
  *   mbr_wt_edgjstar	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	May 2, 2005
- * $Log: mbr_edgjstar.c,v $
- * Revision 5.4  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.3  2006/11/10 22:36:04  caress
- * Working towards release 5.1.0
- *
- * Revision 5.2  2006/04/11 19:14:46  caress
- * Various fixes.
- *
- * Revision 5.1  2005/11/05 00:48:04  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.0  2005/06/04 04:11:35  caress
- * Support for Edgetech Jstar format (id 132 and 133).
- *
- *
- *
  */
  
 /* Debug flag */
 /* #define MBF_EDGJSTAR_DEBUG 1 */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
 
-/* mbio include files */
 #include "../../include/mb_status.h"
 #include "../../include/mb_format.h"
 #include "../../include/mb_io.h"

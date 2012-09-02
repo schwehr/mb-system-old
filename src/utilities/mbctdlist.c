@@ -24,14 +24,6 @@
  *     longitude
  *     latittude
  *
- * Author:	D. W. Caress
- * Date:	September 14,  2008
- *
- * $Log: mbctdlist.c,v $
- * Revision 5.0  2008/09/20 00:51:31  caress
- * Initial version of mbctdlist - list ctd data.
- *
- *
  */
 
 /* standard include files */

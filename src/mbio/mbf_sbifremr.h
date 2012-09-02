@@ -16,35 +16,6 @@
  * mbf_sbifremr.h defines the data structure used by MBIO functions
  * to store multibeam data read from the  MBF_SBIFREMR format (MBIO id 17).  
  *
- * Author:	D. W. Caress
- * Date:	March 29, 1996
- * Location:	152 39.061W; 34 09.150S on R/V Ewing
- *
- * $Log: mbf_sbifremr.h,v $
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.2  2000/09/30  06:34:20  caress
- * Snapshot for Dale.
- *
- * Revision 4.1  1998/10/05  18:32:27  caress
- * MB-System version 4.6beta
- *
- * Revision 4.0  1996/04/22  10:59:51  caress
- * Initial version.
- *
- * Revision 4.0  1996/04/22  10:59:51  caress
- * Initial version.
- *
- *
- */
-/*
  * Notes on the MBF_SBIFREMR data format:
  *   1. This data format is used to store 16 beam Sea Beam bathymetry
  *      data.  This format was created and used by IFREMER in Brest, 

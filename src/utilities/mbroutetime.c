@@ -18,14 +18,6 @@
  * or mb7k2ss to extract subbottom (or sidescan) data into files corresponding
  * to the lines between waypoints. The input route files are in the MBgrdviz
  * route file format. The times are in decimal epoch seconds (seconds since 1/1/1970).
- *
- * Author:	D. W. Caress
- * Date:	May 5, 2009
- * Location:	R/V Thompson, at the dock in Apia, Samoa
- *
- * $Log: mbroutetime.c,v $
- *
- *
  */
 
 /* standard include files */

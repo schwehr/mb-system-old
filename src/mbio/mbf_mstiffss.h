@@ -16,38 +16,6 @@
  * mbf_mstiffss.h defines the data structure used by MBIO functions
  * to store sidescan data read from the MBF_MSTIFFSS format (MBIO id 131).  
  *
- * Author:	D. W. Caress
- * Date:	April 7,  1998
- *
- * $Log: mbf_mstiffss.h,v $
- * Revision 5.3  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.2  2003/01/15 20:51:48  caress
- * Release 5.0.beta28
- *
- * Revision 5.1  2002/09/18 23:32:59  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2000/12/01 22:48:41  caress
- * First cut at Version 5.0.
- *
- * Revision 4.1  2000/09/30  06:34:20  caress
- * Snapshot for Dale.
- *
- * Revision 4.0  1998/10/05  18:30:03  caress
- * MB-System version 4.6beta
- *
- * Revision 1.1  1998/10/05  18:22:40  caress
- * Initial revision
- *
- * Revision 1.1  1998/10/05  17:46:15  caress
- * Initial revision
- *
- *
- *
- */
-/*
  * Notes on the MBF_MSTIFFSS data format:
  *   1. The MSTIFF data format is used to store raw sidescan data from 
  *      Sea Scan sidescan sonars. This format is a variant of

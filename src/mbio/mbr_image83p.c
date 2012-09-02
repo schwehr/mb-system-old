@@ -21,22 +21,6 @@
  *   mbr_rt_image83p	- read and translate data
  *   mbr_wt_image83p	- translate and write data
  *
- * Author:	Vivek Reddy, Santa Clara University
- *       	D.W. Caress
- * Date:	May 5, 2008
- *
- * $Log: mbr_image83p.c,v $
- * Revision 5.2  2008/09/20 00:57:41  caress
- * Release 5.1.1beta23
- *
- * Revision 5.1  2008/07/19 07:41:14  caress
- * Added formats 191 and 192 to support Imagenex Delta T multibeam data.
- *
- * Revision 5.0  2008/05/16 22:51:24  caress
- * Initial version.
- *
- */
-/*
  * Notes on the MBF_IMAGE83P data format:
  *   1. This data format is used to store Imagenex DeltaT multibeam
  *      bathymetry data.

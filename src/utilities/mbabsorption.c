@@ -79,23 +79,6 @@
  * Tk = temperature (deg K) = T + 273 (deg K)
  * S = salinity (per mil)
  * D = depth (m)
- * 
- * **************************
- *  
- * Author:	D. W. Caress
- * Date:	February 10, 2008
- *              R/V Zephyr
- *              Hanging out at the channel entrance to La Paz, BCS, MX
- *              helping out as MBARI tries to save the grounded
- *              R/V Western Flyer. 
- *              Note: as I was writing this code the Flyer was refloated
- *              and successfully backed off the reef.
- *
- * $Log: mbabsorption.c,v $
- * Revision 5.0  2008/02/12 02:33:49  caress
- * Initial version.
- *
- *
  */
 
 /* standard include files */

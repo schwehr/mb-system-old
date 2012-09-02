@@ -22,33 +22,6 @@
  *   mbr_rt_hydrob93	- read and translate data
  *   mbr_wt_hydrob93	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	September 19, 2002
- *
- * $Log: mbr_hydrob93.c,v $
- * Revision 5.5  2008/07/10 06:43:40  caress
- * Preparing for 5.1.1beta20
- *
- * Revision 5.4  2005/11/05 00:48:04  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.3  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.2  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/09/20 17:45:43  caress
- * Release 5.0.beta23
- *
- * Revision 5.0  2002/09/19 22:18:06  caress
- * Initial Revision
- * l.
- * l
- *
- *
- *
- *
  */
 
 /* standard include files */

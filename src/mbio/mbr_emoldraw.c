@@ -21,51 +21,6 @@
  *   mbr_rt_emoldraw	- read and translate data
  *   mbr_wt_emoldraw	- translate and write data
  *
- * Author:	D. W. Caress
- * Date:	March 4, 2001
- *
- * $Log: mbr_emoldraw.c,v $
- * Revision 5.12  2008/03/01 09:14:03  caress
- * Some housekeeping changes.
- *
- * Revision 5.11  2007/06/18 01:19:48  caress
- * Changes as of 17 June 2007.
- *
- * Revision 5.10  2006/01/24 19:11:17  caress
- * Version 5.0.8 beta.
- *
- * Revision 5.9  2005/11/05 00:48:04  caress
- * Programs changed to register arrays through mb_register_array() rather than allocating the memory directly with mb_realloc() or mb_malloc().
- *
- * Revision 5.8  2003/12/04 23:10:23  caress
- * Fixed problems with format 54 EM12DARW due to old code assuming how internal structure was packed. Also changed handling of beamflags for formats that don't support beamflags. Now flagged beams will always be nulled in such cases.
- *
- * Revision 5.7  2003/05/20 18:05:32  caress
- * Added svp_source to data source parameters.
- *
- * Revision 5.6  2003/04/17 21:05:23  caress
- * Release 5.0.beta30
- *
- * Revision 5.5  2002/10/02 23:55:42  caress
- * Release 5.0.beta24
- *
- * Revision 5.4  2002/08/21 00:55:46  caress
- * Release 5.0.beta22
- *
- * Revision 5.3  2002/07/20 20:42:40  caress
- * Release 5.0.beta20
- *
- * Revision 5.2  2001/07/20 00:31:11  caress
- * Release 5.0.beta03
- *
- * Revision 5.1  2001/06/08  21:44:01  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2001/03/22  20:49:19  caress
- * Trying to make version 5.0.beta0
- *
- *
- *
  */
 
 /* standard include files */

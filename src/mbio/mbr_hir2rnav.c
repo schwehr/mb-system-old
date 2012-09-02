@@ -20,13 +20,6 @@
  *   mbr_dem_hir2rnav	- deallocate read/write memory
  *   mbr_rt_hir2rnav	- read and translate data
  *   mbr_wt_hir2rnav	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	May 20, 1999
- *
- * $Log: mbr_hir2rnav.c,v $
- *
- *
  */
 
 /* standard include files */

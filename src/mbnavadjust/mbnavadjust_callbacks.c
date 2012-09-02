@@ -18,70 +18,7 @@
  * It can work with any data format supported by the MBIO library.
  * This file contains the callback functions from the MOTIF interface.
  *
- * Author:	D. W. Caress
- * Date:	March 22, 2000
- *
- * $Log: mbnavadjust_callbacks.c,v $
- * Revision 5.19  2008/12/22 08:32:52  caress
- * Added additional model view - survey vs survey rather than sequential.
- *
- * Revision 5.18  2008/10/17 07:52:44  caress
- * Check in on October 17, 2008.
- *
- * Revision 5.17  2008/09/11 20:12:43  caress
- * Checking in updates made during cruise AT15-36.
- *
- * Revision 5.16  2008/07/10 18:08:10  caress
- * Proceeding towards 5.1.1beta20.
- *
- * Revision 5.13  2008/05/16 22:42:32  caress
- * Release 5.1.1beta18 - working towards use of 3D uncertainty.
- *
- * Revision 5.12  2008/01/14 18:15:46  caress
- * Minor fixes.
- *
- * Revision 5.11  2007/05/14 06:34:11  caress
- * Many changes to mbnavadjust, including adding z offsets and 3D search grids.
- *
- * Revision 5.10  2006/06/16 19:30:58  caress
- * Check in after the Santa Monica Basin Mapping AUV Expedition.
- *
- * Revision 5.9  2006/01/24 19:18:42  caress
- * Version 5.0.8 beta.
- *
- * Revision 5.8  2005/06/04 04:34:06  caress
- * Added notion of "truecrossings", so it's possible to process the data while only looking at crossing tracks and ignoring overlap points.
- *
- * Revision 5.7  2004/12/02 06:34:27  caress
- * Fixes while supporting Reson 7k data.
- *
- * Revision 5.6  2004/05/21 23:31:28  caress
- * Moved to new version of BX GUI builder
- *
- * Revision 5.5  2003/04/17 21:07:49  caress
- * Release 5.0.beta30
- *
- * Revision 5.4  2002/08/28 01:32:45  caress
- * Finished first cut at man page.
- *
- * Revision 5.3  2002/03/26 07:43:57  caress
- * Release 5.0.beta15
- *
- * Revision 5.2  2001/07/20 00:33:43  caress
- * Release 5.0.beta03
- *
- * Revision 5.1  2001/01/22 07:45:59  caress
- * Version 5.0.beta01
- *
- * Revision 5.0  2000/12/01  22:55:48  caress
- * First cut at Version 5.0.
- *
- * Revision 4.0  2000/09/30  07:00:06  caress
- * Snapshot for Dale.
- *
- *
  */
-/*--------------------------------------------------------------------*/
 
 /* include files */
 #include <stdio.h>

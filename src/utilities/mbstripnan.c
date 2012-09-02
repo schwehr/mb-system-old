@@ -18,23 +18,6 @@
  * Little program to filter output from GMT's grd2xyz removing any nodes 
  * that have NaN elevations.  Output meant to feed into GMT's surface
  * in support of the mbm_grd2geovrml macro.
- *
- * Mike McCann   8 August 2002
- * MBARI
- *
- * $Log: mbstripnan.c,v $
- * Revision 5.3  2006/01/18 15:17:00  caress
- * Added stdlib.h include.
- *
- * Revision 5.2  2003/04/17 21:18:57  caress
- * Release 5.0.beta30
- *
- * Revision 5.1  2002/08/21 00:57:11  caress
- * Release 5.0.beta22
- *
- * Revision 5.0  2002/08/10 07:00:21  caress
- * First version from Mike McCann.
- *
  */
 
 #include <stdio.h>

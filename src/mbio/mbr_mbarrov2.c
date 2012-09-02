@@ -20,16 +20,6 @@
  *   mbr_dem_mbarrov2	- deallocate read/write memory
  *   mbr_rt_mbarrov2	- read and translate data
  *   mbr_wt_mbarrov2	- translate and write data
- *
- * Author:	D. W. Caress
- * Date:	May 20, 1999
- *
- * $Log: mbr_mbarrov2.c,v $
- * Revision 5.0  2006/10/05 18:56:44  caress
- * New files for 5.1.0
- *
- *
- *
  */
 
 /* standard include files */
