@@ -75,7 +75,6 @@ char	*getenv();
 	stderr if verbose > 1) */
 FILE	*outfp;
 
-static char rcs_id[] = "$Id$";
 char program_name[] = "mbsegypsd";
 char help_message[] =  "mbsegypsd calculates the power spectral density function of each trace in a segy data file, \noutputting the results as a GMT grid file.";
 char usage_message[] = "mbsegypsd -Ifile -Oroot [-Ashotscale \n\
@@ -292,7 +291,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(outfp,"\nProgram %s\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -300,7 +298,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(outfp,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(outfp,"dbg2  Version %s\n",rcs_id);
 		fprintf(outfp,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"dbg2  Control Parameters:\n");
 		fprintf(outfp,"dbg2       verbose:        %d\n",verbose);

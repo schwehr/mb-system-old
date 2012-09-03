@@ -32,8 +32,6 @@
     #define MB_DEPINT_DEBUG 1 
     #define MB_ALTINT_DEBUG 1 */
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 /* 	function mb_navint_add adds a nav fix to the internal
 		list used for interpolation/extrapolation. */
@@ -48,9 +46,7 @@ int mb_navint_add(int verbose, void *mbio_ptr, double time_d, double lon, double
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -122,7 +118,6 @@ int mb_navint_add(int verbose, void *mbio_ptr, double time_d, double lon, double
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -161,9 +156,7 @@ int mb_navint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -309,7 +302,6 @@ int mb_navint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       lon:        %f\n",*lon);
 		fprintf(stderr,"dbg2       lat:        %f\n",*lat);
@@ -338,9 +330,7 @@ int mb_attint_add(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -407,7 +397,6 @@ int mb_attint_add(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -434,9 +423,7 @@ int mb_attint_nadd(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       nsamples:   %d\n",nsamples);
@@ -505,7 +492,6 @@ int mb_attint_nadd(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -533,9 +519,7 @@ int mb_attint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -620,7 +604,6 @@ int mb_attint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       heave:        %f\n",*heave);
 		fprintf(stderr,"dbg2       roll:         %f\n",*roll);
@@ -647,9 +630,7 @@ int mb_hedint_add(int verbose, void *mbio_ptr, double time_d, double heading, in
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -705,7 +686,6 @@ int mb_hedint_add(int verbose, void *mbio_ptr, double time_d, double heading, in
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -731,9 +711,7 @@ int mb_hedint_nadd(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       nsamples:   %d\n",nsamples);
@@ -794,7 +772,6 @@ int mb_hedint_nadd(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -822,9 +799,7 @@ int mb_hedint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -908,7 +883,6 @@ int mb_hedint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       heading:      %f\n",*heading);
 		fprintf(stderr,"dbg2       error:        %d\n",*error);
@@ -933,9 +907,7 @@ int mb_depint_add(int verbose, void *mbio_ptr, double time_d, double sonardepth,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -991,7 +963,6 @@ int mb_depint_add(int verbose, void *mbio_ptr, double time_d, double sonardepth,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -1018,9 +989,7 @@ int mb_depint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -1095,7 +1064,6 @@ int mb_depint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       sonardepth:   %f\n",*sonardepth);
 		fprintf(stderr,"dbg2       error:        %d\n",*error);
@@ -1120,9 +1088,7 @@ int mb_altint_add(int verbose, void *mbio_ptr, double time_d, double altitude, i
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -1178,7 +1144,6 @@ int mb_altint_add(int verbose, void *mbio_ptr, double time_d, double altitude, i
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -1205,9 +1170,7 @@ int mb_altint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       time_d:     %f\n",time_d);
@@ -1282,7 +1245,6 @@ int mb_altint_interp(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       altitude:     %f\n",*altitude);
 		fprintf(stderr,"dbg2       error:        %d\n",*error);

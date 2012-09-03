@@ -61,7 +61,6 @@ struct bathptr
 	};
 
 /* program identifiers */
-static char rcs_id[] = "$Id$";
 char program_name[] = "MBROLLBIAS";
 char help_message[] =  "MBROLLBIAS is an utility used to assess roll bias of swath \nsonar systems using bathymetry data from two swaths covering the \nsame seafloor in opposite directions. The program takes two input  \nfiles and calculates best fitting planes for each dataset.   \nThe roll bias is calculated by solving for a common roll bias\nfactor which explains the difference between the seafloor\nslopes observed on the two swaths.  This approach assumes that \npitch bias is not a factor; this assumption is most correct when\nthe heading of the two shiptracks are exactly opposite. The area is\ndivided into a number of rectangular regions and calculations are done  \nin each region containing a sufficient number of data from both \nswaths.  A positive roll bias value means that the the vertical \nreference used by the swath system is biased to starboard, \ngiving rise to shallow bathymetry to port and deep bathymetry \nto starboard.";
 char usage_message[] = "mbrollbias -Dxdim/ydim -Fformat1/format2 -Ifile1 -Jfile2 -Llonflip -Rw/e/s/n -V -H]";
@@ -260,7 +259,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(outfp,"\nProgram %s\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -268,7 +266,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(outfp,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(outfp,"dbg2  Version %s\n",rcs_id);
 		fprintf(outfp,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"dbg2  Control Parameters:\n");
 		fprintf(outfp,"dbg2       verbose:          %d\n",verbose);

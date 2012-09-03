@@ -41,8 +41,6 @@ static int	mb_alloc_overflow = MB_NO;
 /* Local debug define */
 /* #define MB_MEM_DEBUG 1 */
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 int mb_mem_debug_on(int verbose, int *error)
 {
@@ -57,7 +55,6 @@ int mb_mem_debug_on(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -77,7 +74,6 @@ int mb_mem_debug_on(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -102,7 +98,6 @@ int mb_mem_debug_off(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -122,7 +117,6 @@ int mb_mem_debug_off(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -144,7 +138,6 @@ int mb_malloc(int verbose, size_t size, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       size:       %lu\n",size);
@@ -216,7 +209,6 @@ int mb_malloc(int verbose, size_t size, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       ptr:        %lu\n",(size_t)*ptr);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -239,7 +231,6 @@ int mb_mallocd(int verbose, char *sourcefile, int sourceline,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       sourcefile: %s\n",sourcefile);
@@ -315,7 +306,6 @@ int mb_mallocd(int verbose, char *sourcefile, int sourceline,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       ptr:        %lu\n",(size_t)*ptr);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -338,7 +328,6 @@ int mb_realloc(int verbose, size_t size, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       size:       %lu\n",size);
@@ -442,7 +431,6 @@ int mb_realloc(int verbose, size_t size, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       ptr:        %lu\n",(size_t)*ptr);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -466,7 +454,6 @@ int mb_reallocd(int verbose, char *sourcefile, int sourceline,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       sourcefile: %s\n",sourcefile);
@@ -578,7 +565,6 @@ int mb_reallocd(int verbose, char *sourcefile, int sourceline,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       ptr:        %lu\n",(size_t)*ptr);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -603,7 +589,6 @@ int mb_free(int verbose, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       ptr:        %lu\n",(size_t)*ptr);
@@ -676,7 +661,6 @@ int mb_free(int verbose, void **ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -700,7 +684,6 @@ int mb_freed(int verbose, char *sourcefile, int sourceline, void **ptr, int *err
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       sourcefile: %s\n",sourcefile);
@@ -775,7 +758,6 @@ int mb_freed(int verbose, char *sourcefile, int sourceline, void **ptr, int *err
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -796,7 +778,6 @@ int mb_memory_clear(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -831,7 +812,6 @@ int mb_memory_clear(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -853,7 +833,6 @@ int mb_memory_status(int verbose, int *nalloc, int *nallocmax,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -874,7 +853,6 @@ int mb_memory_status(int verbose, int *nalloc, int *nallocmax,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       nalloc:     %d\n",*nalloc);
 		fprintf(stderr,"dbg2       nallocmax:  %d\n",*nallocmax);
@@ -899,7 +877,6 @@ int mb_memory_list(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -928,7 +905,6 @@ int mb_memory_list(int verbose, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -942,7 +918,6 @@ int mb_memory_list(int verbose, int *error)
 int mb_register_array(int verbose, void *mbio_ptr, 
 		int type, size_t size, void **handle, int *error)
 {
-	static char rcs_id[]="$Id$";
 	char	*function_name = "mb_update_arrays";
 	int	status = MB_SUCCESS;
 	struct mb_io_struct *mb_io_ptr;
@@ -953,7 +928,6 @@ int mb_register_array(int verbose, void *mbio_ptr,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1032,7 +1006,6 @@ mb_io_ptr->regarray_size[mb_io_ptr->n_regarray-1]);*/
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       *handle:    %lx\n",(size_t)*handle);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -1047,7 +1020,6 @@ mb_io_ptr->regarray_size[mb_io_ptr->n_regarray-1]);*/
 int mb_update_arrays(int verbose, void *mbio_ptr, 
 		int nbath, int namp, int nss, int *error)
 {
-	static char rcs_id[]="$Id$";
 	char	*function_name = "mb_update_arrays";
 	int	status = MB_SUCCESS;
 	struct mb_io_struct *mb_io_ptr;
@@ -1058,7 +1030,6 @@ int mb_update_arrays(int verbose, void *mbio_ptr,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1320,7 +1291,6 @@ nss,mb_io_ptr->pixels_ss_alloc);*/
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -1334,7 +1304,6 @@ nss,mb_io_ptr->pixels_ss_alloc);*/
 int mb_update_arrayptr(int verbose, void *mbio_ptr, 
 		void **handle, int *error)
 {
-	static char rcs_id[]="$Id$";
 	char	*function_name = "mb_update_arrayptr";
 	int	status = MB_SUCCESS;
 	struct mb_io_struct *mb_io_ptr;
@@ -1345,7 +1314,6 @@ int mb_update_arrayptr(int verbose, void *mbio_ptr,
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       handle:     %lx\n",(size_t)handle);
@@ -1373,7 +1341,6 @@ fprintf(stderr,"\n");*/
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       *handle:    %lu\n",(size_t)*handle);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -1387,7 +1354,6 @@ fprintf(stderr,"\n");*/
 /*--------------------------------------------------------------------*/
 int mb_list_arrays(int verbose, void *mbio_ptr, int *error)
 {
-	static char rcs_id[]="$Id$";
 	char	*function_name = "mb_list_arrays";
 	int	status = MB_SUCCESS;
 	struct mb_io_struct *mb_io_ptr;
@@ -1397,7 +1363,6 @@ int mb_list_arrays(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1419,7 +1384,6 @@ int mb_list_arrays(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -1432,7 +1396,6 @@ int mb_list_arrays(int verbose, void *mbio_ptr, int *error)
 /*--------------------------------------------------------------------*/
 int mb_deall_ioarrays(int verbose, void *mbio_ptr, int *error)
 {
-	static char rcs_id[]="$Id$";
 	char	*function_name = "mb_deall_ioarrays";
 	int	status = MB_SUCCESS;
 	struct mb_io_struct *mb_io_ptr;
@@ -1442,7 +1405,6 @@ int mb_deall_ioarrays(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1507,7 +1469,6 @@ mb_io_ptr->regarray_ptr[mb_io_ptr->n_regarray-1]);*/
 	if (verbose >= 2 || mb_mem_debug)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");

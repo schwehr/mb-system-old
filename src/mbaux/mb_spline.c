@@ -33,9 +33,7 @@
 #include "../../include/mb_status.h"
 #include "../../include/mb_define.h"
 
-static char rcs_id[]="$Id$";
 
-/*--------------------------------------------------------------------------*/
 int mb_spline_init(int verbose, double *x, double *y, 
 	int n, double yp1, double ypn, double *y2, int *error)
 {
@@ -48,7 +46,6 @@ int mb_spline_init(int verbose, double *x, double *y,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       x:                %lu\n",(size_t)x);
@@ -128,7 +125,6 @@ int mb_spline_interp(int verbose, double *xa, double *ya, double *y2a,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       xa:               %lu\n",(size_t)xa);
@@ -193,7 +189,6 @@ int mb_linear_interp(int verbose, double *xa, double *ya,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       xa:               %lu\n",(size_t)xa);
@@ -256,7 +251,6 @@ int mb_linear_interp_degrees(int verbose, double *xa, double *ya,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       xa:               %lu\n",(size_t)xa);

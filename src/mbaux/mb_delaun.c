@@ -105,8 +105,6 @@
 /* some defines */
 #define	LARGE	1.0e10
 
-static char rcs_id[] = "$Id$";
-
 /*--------------------------------------------------------------------------*/
 /* 	function mb_delaun creates a network of triangles connecting an
 	input set of points, where the triangles are as close to equiangular
@@ -156,7 +154,6 @@ int mb_delaun(
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       npts:             %d\n",npts);

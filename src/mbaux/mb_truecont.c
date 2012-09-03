@@ -122,8 +122,6 @@ int get_hand_old(struct swath *data, int *hand,
 		int k, int i, int j, int d);
 int get_azimuth_old(struct swath *data, int iping, double *angle);
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------------*/
 /* 	function mb_contour_init initializes the memory required to
 	contour multibeam bathymetry data.
@@ -174,7 +172,6 @@ int mb_contour_init(
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       data:                 %lu\n",(size_t)data);
@@ -447,7 +444,6 @@ int mb_contour_deall(
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n",verbose);
 		fprintf(stderr,"dbg2       data:                    %lu\n",(size_t)data);
@@ -537,7 +533,6 @@ int mb_contour(
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n",verbose);
 		fprintf(stderr,"dbg2       data:                    %lu\n",(size_t)data);
@@ -596,7 +591,6 @@ int mb_tcontour(
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n",verbose);
 		fprintf(stderr,"dbg2       data:                    %lu\n",(size_t)data);
@@ -1386,7 +1380,6 @@ int mb_ocontour(int verbose, struct swath *data, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n",verbose);
 		fprintf(stderr,"dbg2       data:                    %lu\n",(size_t)data);

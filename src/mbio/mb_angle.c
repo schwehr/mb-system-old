@@ -182,8 +182,6 @@
 #include "../../include/mb_status.h"
 #include "../../include/mb_define.h"
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 int mb_takeoff_to_rollpitch(int verbose,
 		double theta, double phi,
@@ -198,7 +196,6 @@ int mb_takeoff_to_rollpitch(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       theta:      %f\n",theta);
@@ -224,7 +221,6 @@ int mb_takeoff_to_rollpitch(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       pitch:           %f\n",*pitch);
 		fprintf(stderr,"dbg2       roll:            %f\n",*roll);
@@ -251,7 +247,6 @@ int mb_rollpitch_to_takeoff(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       pitch:      %f\n",pitch);
@@ -285,7 +280,6 @@ int mb_rollpitch_to_takeoff(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       theta:           %f\n",*theta);
 		fprintf(stderr,"dbg2       phi:             %f\n",*phi);
@@ -312,7 +306,6 @@ int mb_xyz_to_takeoff(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       x:          %f\n",x);
@@ -351,7 +344,6 @@ int mb_xyz_to_takeoff(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       theta:           %f\n",*theta);
 		fprintf(stderr,"dbg2       phi:             %f\n",*phi);
@@ -391,7 +383,6 @@ int mb_lever(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       sonar_offset_x: %f\n",sonar_offset_x);
@@ -495,7 +486,6 @@ int mb_lever(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       lever_x:         %f\n",*lever_x);
 		fprintf(stderr,"dbg2       lever_y:         %f\n",*lever_y);

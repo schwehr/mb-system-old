@@ -35,8 +35,6 @@
 #include "../../include/mb_format.h"
 #include "../../include/mb_process.h"
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 int mb_pr_checkstatus(int verbose, char *file,
 			int *prstatus, int *error)
@@ -61,7 +59,6 @@ int mb_pr_checkstatus(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       file:      %s\n",file);
@@ -178,7 +175,6 @@ int mb_pr_checkstatus(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       prstatus:   %d\n",*prstatus);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -209,7 +205,6 @@ int mb_pr_readpar(int verbose, char *file, int lookforfiles,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:      %d\n",verbose);
 		fprintf(stderr,"dbg2       file:         %s\n",file);
@@ -1447,7 +1442,6 @@ int mb_pr_readpar(int verbose, char *file, int lookforfiles,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ifile_specified:    %d\n",process->mbp_ifile_specified);
 		fprintf(stderr,"dbg2       mbp_ifile:              %s\n",process->mbp_ifile);
@@ -1598,7 +1592,6 @@ int mb_pr_writepar(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                   %s\n",file);
@@ -1756,7 +1749,7 @@ int mb_pr_writepar(int verbose, char *file,
 	if ((fp = fopen(parfile, "w")) != NULL)
 	    {
 	    fprintf(fp,"## MB-System processing parameter file\n");
-	    fprintf(fp,"## Written by %s version %s\n", function_name, rcs_id);
+	    fprintf(fp,"## Written by %s\n", function_name);
 	    fprintf(fp,"## MB-system Version %s\n",MB_VERSION);
 	    right_now = time((time_t *)0);
 	    strncpy(date,ctime(&right_now),24);
@@ -2032,7 +2025,6 @@ int mb_pr_writepar(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2053,7 +2045,7 @@ int mb_pr_bathmode(int verbose, struct mb_process_struct *process,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
+		fprintf(stderr,"dbg2  Revision id: %s\n",
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       process:   %lu\n",(size_t)process);
@@ -2081,7 +2073,6 @@ int mb_pr_bathmode(int verbose, struct mb_process_struct *process,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2104,7 +2095,6 @@ int mb_pr_default_output(int verbose, struct mb_process_struct *process,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:             %d\n",verbose);
 		fprintf(stderr,"dbg2       process:             %lu\n",(size_t)process);
@@ -2160,7 +2150,6 @@ int mb_pr_default_output(int verbose, struct mb_process_struct *process,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ofile_specified: %d\n",process->mbp_ofile_specified);
 		fprintf(stderr,"dbg2       mbp_ofile:           %s\n",process->mbp_ofile);
@@ -2188,7 +2177,6 @@ int mb_pr_get_output(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:	%d\n",verbose);
 		fprintf(stderr,"dbg2       format:	%d\n",*format);
@@ -2237,7 +2225,6 @@ int mb_pr_get_output(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:	%d\n",*format);
 		fprintf(stderr,"dbg2       ofile:	%s\n",ofile);
@@ -2283,7 +2270,6 @@ int mb_pr_check(int verbose, char *ifile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       ifile:     %s\n",ifile);
@@ -2522,7 +2508,6 @@ int mb_pr_check(int verbose, char *ifile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       nparproblem:  %d\n",*nparproblem);
 		fprintf(stderr,"dbg2       ndataproblem: %d\n",*ndataproblem);
@@ -2548,7 +2533,6 @@ int mb_pr_update_ofile(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:             %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                %s\n",file);
@@ -2578,7 +2562,6 @@ int mb_pr_update_ofile(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2602,7 +2585,6 @@ int mb_pr_update_format(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                 %s\n",file);
@@ -2624,7 +2606,6 @@ int mb_pr_update_format(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2650,7 +2631,6 @@ int mb_pr_update_rollbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2679,7 +2659,6 @@ int mb_pr_update_rollbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2703,7 +2682,6 @@ int mb_pr_update_pitchbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2728,7 +2706,6 @@ int mb_pr_update_pitchbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2754,7 +2731,6 @@ int mb_pr_update_draft(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2783,7 +2759,6 @@ int mb_pr_update_draft(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2808,7 +2783,6 @@ int mb_pr_update_heave(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2835,7 +2809,6 @@ int mb_pr_update_heave(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2864,7 +2837,6 @@ int mb_pr_update_lever(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2899,7 +2871,6 @@ int mb_pr_update_lever(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2924,7 +2895,6 @@ int mb_pr_update_tide(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -2952,7 +2922,6 @@ int mb_pr_update_tide(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -2976,7 +2945,6 @@ int mb_pr_update_tt(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3001,7 +2969,6 @@ int mb_pr_update_tt(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3025,7 +2992,6 @@ int mb_pr_update_ssv(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3050,7 +3016,6 @@ int mb_pr_update_ssv(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3076,7 +3041,6 @@ int mb_pr_update_svp(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3106,7 +3070,6 @@ int mb_pr_update_svp(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3130,7 +3093,6 @@ int mb_pr_update_static(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3153,7 +3115,6 @@ int mb_pr_update_static(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3178,7 +3139,6 @@ int mb_pr_update_navadj(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                 %s\n",file);
@@ -3205,7 +3165,6 @@ int mb_pr_update_navadj(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3230,7 +3189,6 @@ int mb_pr_update_attitude(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3258,7 +3216,6 @@ int mb_pr_update_attitude(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3283,7 +3240,6 @@ int mb_pr_update_sonardepth(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:               %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                  %s\n",file);
@@ -3311,7 +3267,6 @@ int mb_pr_update_sonardepth(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3342,7 +3297,6 @@ int mb_pr_update_nav(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3379,7 +3333,6 @@ int mb_pr_update_nav(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3407,7 +3360,6 @@ int mb_pr_update_navshift(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3437,7 +3389,6 @@ int mb_pr_update_navshift(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3461,7 +3412,6 @@ int mb_pr_update_heading(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3483,7 +3433,6 @@ int mb_pr_update_heading(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3511,7 +3460,6 @@ int mb_pr_update_datacut(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3545,7 +3493,6 @@ int mb_pr_update_datacut(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3569,7 +3516,6 @@ int mb_pr_update_edit(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -3592,7 +3538,6 @@ int mb_pr_update_edit(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3621,7 +3566,6 @@ int mb_pr_update_ampcorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                  %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                     %s\n",file);
@@ -3655,7 +3599,6 @@ int mb_pr_update_ampcorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:                    %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3684,7 +3627,6 @@ int mb_pr_update_sscorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                  %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                     %s\n",file);
@@ -3718,7 +3660,6 @@ int mb_pr_update_sscorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:                    %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3744,7 +3685,6 @@ int mb_pr_update_ssrecalc(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                  %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                     %s\n",file);
@@ -3770,7 +3710,6 @@ int mb_pr_update_ssrecalc(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:                    %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3810,7 +3749,6 @@ int mb_pr_update_metadata(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                  %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                     %s\n",file);
@@ -3864,7 +3802,6 @@ int mb_pr_update_metadata(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:                    %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3896,7 +3833,6 @@ int mb_pr_update_kluges(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                  %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                     %s\n",file);
@@ -3934,7 +3870,6 @@ int mb_pr_update_kluges(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:                    %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -3960,7 +3895,6 @@ int mb_pr_get_ofile(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:             %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                %s\n",file);
@@ -4000,7 +3934,6 @@ int mb_pr_get_ofile(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ofile_specified: %d\n",*mbp_ofile_specified);
 		fprintf(stderr,"dbg2       ofile:               %s\n",mbp_ofile);
@@ -4026,7 +3959,6 @@ int mb_pr_get_format(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                 %s\n",file);
@@ -4043,7 +3975,6 @@ int mb_pr_get_format(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_format_specified: %d\n",*mbp_format_specified);
 		fprintf(stderr,"dbg2       mbp_format:           %d\n",*mbp_format);
@@ -4071,7 +4002,6 @@ int mb_pr_get_rollbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4090,7 +4020,6 @@ int mb_pr_get_rollbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_rollbias_mode: %d\n",*mbp_rollbias_mode);
 		fprintf(stderr,"dbg2       mbp_rollbias:      %f\n",*mbp_rollbias);
@@ -4118,7 +4047,6 @@ int mb_pr_get_pitchbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4135,7 +4063,6 @@ int mb_pr_get_pitchbias(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_pitchbias_mode: %d\n",*mbp_pitchbias_mode);
 		fprintf(stderr,"dbg2       mbp_pitchbias:      %f\n",*mbp_pitchbias);
@@ -4163,7 +4090,6 @@ int mb_pr_get_draft(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4182,7 +4108,6 @@ int mb_pr_get_draft(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_draft_mode:    %d\n",*mbp_draft_mode);
 		fprintf(stderr,"dbg2       mbp_draft:         %f\n",*mbp_draft);
@@ -4211,7 +4136,6 @@ int mb_pr_get_heave(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4229,7 +4153,6 @@ int mb_pr_get_heave(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_heave_mode:    %d\n",*mbp_heave_mode);
 		fprintf(stderr,"dbg2       mbp_heave:         %f\n",*mbp_heave);
@@ -4261,7 +4184,6 @@ int mb_pr_get_lever(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4283,7 +4205,6 @@ int mb_pr_get_lever(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_lever_mode:    %d\n",*mbp_lever_mode);
 		fprintf(stderr,"dbg2       mbp_vru_offsetx:   %f\n",*mbp_vru_offsetx);
@@ -4315,7 +4236,6 @@ int mb_pr_get_tide(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4334,7 +4254,6 @@ int mb_pr_get_tide(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_tide_mode:     %d\n",*mbp_tide_mode);
 		fprintf(stderr,"dbg2       mbp_tidefile:      %s\n",mbp_tidefile);
@@ -4361,7 +4280,6 @@ int mb_pr_get_tt(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4378,7 +4296,6 @@ int mb_pr_get_tt(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_tt_mode:       %d\n",*mbp_tt_mode);
 		fprintf(stderr,"dbg2       mbp_tt_mult:       %f\n",*mbp_tt_mult);
@@ -4404,7 +4321,6 @@ int mb_pr_get_ssv(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4421,7 +4337,6 @@ int mb_pr_get_ssv(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ssv_mode:      %d\n",*mbp_ssv_mode);
 		fprintf(stderr,"dbg2       mbp_ssv:           %f\n",*mbp_ssv);
@@ -4449,7 +4364,6 @@ int mb_pr_get_svp(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4469,7 +4383,6 @@ int mb_pr_get_svp(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_svp_mode:      %d\n",*mbp_svp_mode);
 		fprintf(stderr,"dbg2       mbp_svpfile:       %s\n",mbp_svpfile);
@@ -4497,7 +4410,6 @@ int mb_pr_get_static(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4515,7 +4427,6 @@ int mb_pr_get_static(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_static_mode:   %d\n",*mbp_static_mode);
 		fprintf(stderr,"dbg2       mbp_staticfile:    %s\n",mbp_staticfile);
@@ -4542,7 +4453,6 @@ int mb_pr_get_navadj(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       file:                 %s\n",file);
@@ -4564,7 +4474,6 @@ int mb_pr_get_navadj(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_navadj_mode:      %d\n",*mbp_navadj_mode);
 		fprintf(stderr,"dbg2       mbp_navadjfile:       %s\n",mbp_navadjfile);
@@ -4592,7 +4501,6 @@ int mb_pr_get_attitude(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4611,7 +4519,6 @@ int mb_pr_get_attitude(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_attitude_mode: %d\n",*mbp_attitude_mode);
 		fprintf(stderr,"dbg2       mbp_attitudefile:  %s\n",mbp_attitudefile);
@@ -4639,7 +4546,6 @@ int mb_pr_get_sonardepth(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4658,7 +4564,6 @@ int mb_pr_get_sonardepth(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_sonardepth_mode:   %d\n",*mbp_sonardepth_mode);
 		fprintf(stderr,"dbg2       mbp_sonardepthfile:    %s\n",mbp_sonardepthfile);
@@ -4692,7 +4597,6 @@ int mb_pr_get_nav(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4717,7 +4621,6 @@ int mb_pr_get_nav(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_nav_mode:      %d\n",*mbp_nav_mode);
 		fprintf(stderr,"dbg2       mbp_navfile:       %s\n",mbp_navfile);
@@ -4754,7 +4657,6 @@ int mb_pr_get_navshift(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4775,7 +4677,6 @@ int mb_pr_get_navshift(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_nav_shift:     %d\n",*mbp_nav_shift);
 		fprintf(stderr,"dbg2       mbp_nav_offsetx:   %f\n",*mbp_nav_offsetx);
@@ -4804,7 +4705,6 @@ int mb_pr_get_heading(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4821,7 +4721,6 @@ int mb_pr_get_heading(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_heading_mode:  %d\n",*mbp_heading_mode);
 		fprintf(stderr,"dbg2       mbp_headingbias:   %f\n",*mbp_headingbias);
@@ -4851,7 +4750,6 @@ int mb_pr_get_datacut(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4874,7 +4772,6 @@ int mb_pr_get_datacut(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_cut_num:        %d\n",*mbp_cut_num);
 		for (i=0;i<*mbp_cut_num;i++)
@@ -4906,7 +4803,6 @@ int mb_pr_get_edit(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4924,7 +4820,6 @@ int mb_pr_get_edit(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_edit_mode:     %d\n",*mbp_edit_mode);
 		fprintf(stderr,"dbg2       mbp_editfile:      %s\n",mbp_editfile);
@@ -4955,7 +4850,6 @@ int mb_pr_get_ampcorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -4979,7 +4873,6 @@ int mb_pr_get_ampcorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ampcorr_mode:         %d\n",*mbp_ampcorr_mode);
 		fprintf(stderr,"dbg2       mbp_ampcorrfile:          %s\n",mbp_ampcorrfile);
@@ -5015,7 +4908,6 @@ int mb_pr_get_sscorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -5039,7 +4931,6 @@ int mb_pr_get_sscorr(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_sscorr_mode:          %d\n",*mbp_sscorr_mode);
 		fprintf(stderr,"dbg2       mbp_sscorrfile:           %s\n",mbp_sscorrfile);
@@ -5072,7 +4963,6 @@ int mb_pr_get_ssrecalc(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -5091,7 +4981,6 @@ int mb_pr_get_ssrecalc(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_ssrecalc_mode:        %d\n",*mbp_ssrecalc_mode);
 		fprintf(stderr,"dbg2       mbp_ssrecalc_pixelsize:   %f\n",*mbp_ssrecalc_pixelsize);
@@ -5135,7 +5024,6 @@ int mb_pr_get_metadata(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -5169,7 +5057,6 @@ int mb_pr_get_metadata(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_meta_vessel:          %s\n",mbp_meta_vessel);
 		fprintf(stderr,"dbg2       mbp_meta_institution:     %s\n",mbp_meta_institution);
@@ -5219,7 +5106,6 @@ int mb_pr_get_kluges(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       file:              %s\n",file);
@@ -5245,7 +5131,6 @@ int mb_pr_get_kluges(int verbose, char *file,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       mbp_kluge001:             %d\n",*mbp_kluge001);
 		fprintf(stderr,"dbg2       mbp_kluge002:             %d\n",*mbp_kluge002);
@@ -5285,7 +5170,6 @@ int mb_pr_set_bathyslopenew(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
 		fprintf(stderr,"dbg2       nsmooth:         %d\n",nsmooth);
@@ -5406,7 +5290,6 @@ int mb_pr_set_bathyslope(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
 		fprintf(stderr,"dbg2       nbath:           %d\n",nbath);
@@ -5591,7 +5474,6 @@ int mb_pr_get_bathyslope(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
 		fprintf(stderr,"dbg2       ndepths:         %d\n",
@@ -5710,7 +5592,6 @@ int mb_pr_point_in_quad(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
 		fprintf(stderr,"dbg2       px:              %f\n",px);
@@ -5796,7 +5677,6 @@ int mb_pr_lockswathfile(int verbose, char *file, int purpose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       file:       %s\n",file);
@@ -5856,7 +5736,6 @@ int mb_pr_lockswathfile(int verbose, char *file, int purpose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -5886,7 +5765,6 @@ int mb_pr_lockinfo(int verbose, char *file, int *locked,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       file:       %s\n",file);
@@ -5953,7 +5831,6 @@ int mb_pr_lockinfo(int verbose, char *file, int *locked,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       locked:     %d\n",*locked);
 		fprintf(stderr,"dbg2       purpose:    %d\n",*purpose);
@@ -5995,7 +5872,6 @@ int mb_pr_unlockswathfile(int verbose, char *file, int purpose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       file:       %s\n",file);
@@ -6046,7 +5922,6 @@ int mb_pr_unlockswathfile(int verbose, char *file, int purpose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");

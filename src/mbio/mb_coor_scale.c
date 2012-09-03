@@ -39,8 +39,6 @@
 #define C6 1.175
 #define C7 0.0023
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 int mb_coor_scale(int verbose, double latitude, 
 			double *mtodeglon, double *mtodeglat)
@@ -53,7 +51,6 @@ int mb_coor_scale(int verbose, double latitude,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose: %d\n",verbose);
 		fprintf(stderr,"dbg2       latitude: %f\n",latitude);
@@ -80,7 +77,6 @@ int mb_coor_scale(int verbose, double latitude,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return arguments:\n");
 		fprintf(stderr,"dbg2       mtodeglon: %g\n",*mtodeglon);
 		fprintf(stderr,"dbg2       mtodeglat: %g\n",*mtodeglat);
@@ -101,7 +97,6 @@ int mb_apply_lonflip(int verbose, int lonflip, double *longitude)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose: %d\n",verbose);
 		fprintf(stderr,"dbg2       lonflip:   %d\n",lonflip);
@@ -135,7 +130,6 @@ int mb_apply_lonflip(int verbose, int lonflip, double *longitude)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return arguments:\n");
 		fprintf(stderr,"dbg2       longitude: %f\n",*longitude);
 		fprintf(stderr,"dbg2  Return status:\n");

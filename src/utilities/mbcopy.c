@@ -93,7 +93,6 @@ int mbcopy_reson8k_to_gsf(int verbose,
 		void *ombio_ptr,
 		int *error);
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -378,7 +377,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -386,7 +384,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:        %d\n",verbose);
@@ -738,8 +735,7 @@ int main (int argc, char **argv)
 		{
 		kind = MB_DATA_COMMENT;
 		strncpy(comment,"\0",256);
-		sprintf(comment,"These data copied by program %s version %s",
-			program_name,rcs_id);
+		sprintf(comment,"These data copied by program %s",program_name);
 		status = mb_put_comment(verbose,ombio_ptr,
 				comment,&error);
 		if (error == MB_ERROR_NO_ERROR) ocomment++;

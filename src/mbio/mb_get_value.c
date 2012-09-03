@@ -30,7 +30,6 @@
 /* maximum line length in characters */
 #define MB_GET_VALUE_MAXLINE 200
 
-/* static char rcs_id[]="$Id$"; */
 char	tmp[MB_GET_VALUE_MAXLINE];
 
 /*--------------------------------------------------------------------*/

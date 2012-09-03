@@ -36,7 +36,6 @@
 #define MBTIME_INPUT_EPOCH	0
 #define MBTIME_INPUT_CALENDAR	1
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -109,7 +108,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stdout,"\nProgram %s\n",program_name);
-		fprintf(stdout,"Version %s\n",rcs_id);
 		fprintf(stdout,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -117,7 +115,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);

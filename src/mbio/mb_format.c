@@ -51,8 +51,6 @@ static int format_alias_table[] =
 	71,	/* MBF_MBLDEOIH */
 	};
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 int mb_format_register(int verbose,
 			int *format,
@@ -68,9 +66,7 @@ int mb_format_register(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:    %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:  %lu\n",(size_t)mbio_ptr);
 		fprintf(stderr,"dbg2       format:    %d\n",*format);
@@ -417,7 +413,6 @@ int mb_format_register(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:             %d\n",*format);
 		fprintf(stderr,"dbg2       system:             %d\n",mb_io_ptr->system);
@@ -494,9 +489,7 @@ int mb_format_info(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:    %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       format:    %d\n",*format);
 		}
@@ -1380,7 +1373,6 @@ int mb_format_info(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:             %d\n",*format);
 		fprintf(stderr,"dbg2       system:             %d\n",*system);
@@ -1440,9 +1432,7 @@ int mb_format(int verbose, int *format, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1461,7 +1451,6 @@ int mb_format(int verbose, int *format, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -1475,7 +1464,6 @@ int mb_format(int verbose, int *format, int *error)
 /*--------------------------------------------------------------------*/
 int mb_format_system(int verbose, int *format, int *system, int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_system";
 	int	status;
 
@@ -1503,9 +1491,7 @@ int mb_format_system(int verbose, int *format, int *system, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1528,7 +1514,6 @@ int mb_format_system(int verbose, int *format, int *system, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:      %d\n",*format);
 		fprintf(stderr,"dbg2       system:      %d\n",*system);
@@ -1545,7 +1530,6 @@ int mb_format_dimensions(int verbose, int *format,
 		int *beams_bath_max, int *beams_amp_max, int *pixels_ss_max,
 		int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_dimensions";
 	int	status;
 
@@ -1570,9 +1554,7 @@ int mb_format_dimensions(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1597,7 +1579,6 @@ int mb_format_dimensions(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:         %d\n",*format);
 		fprintf(stderr,"dbg2       beams_bath_max: %d\n",*beams_bath_max);
@@ -1614,7 +1595,6 @@ int mb_format_dimensions(int verbose, int *format,
 /*--------------------------------------------------------------------*/
 int mb_format_description(int verbose, int *format, char *description, int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_description";
 	int	status;
 
@@ -1642,9 +1622,7 @@ int mb_format_description(int verbose, int *format, char *description, int *erro
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1663,7 +1641,6 @@ int mb_format_description(int verbose, int *format, char *description, int *erro
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:      %d\n",*format);
 		fprintf(stderr,"dbg2       description: %s\n",description);
@@ -1680,7 +1657,6 @@ int mb_format_flags(int verbose, int *format,
 		int *variable_beams, int *traveltime, int *beam_flagging,
 		int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_flags";
 	int	status;
 
@@ -1706,9 +1682,7 @@ int mb_format_flags(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1733,7 +1707,6 @@ int mb_format_flags(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:         %d\n",*format);
 		fprintf(stderr,"dbg2       variable_beams: %d\n",*variable_beams);
@@ -1753,7 +1726,6 @@ int mb_format_source(int verbose, int *format,
 		int *vru_source, int *svp_source,
 		int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_source";
 	int	status;
 
@@ -1778,9 +1750,7 @@ int mb_format_source(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1805,7 +1775,6 @@ int mb_format_source(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:         %d\n",*format);
 		fprintf(stderr,"dbg2       nav_source:     %d\n",*nav_source);
@@ -1824,7 +1793,6 @@ int mb_format_beamwidth(int verbose, int *format,
 		double *beamwidth_xtrack, double *beamwidth_ltrack,
 		int *error)
 {
-  static char rcs_id[]="$Id$";
 	char	*function_name = "mb_format_beamwidth";
 	int	status;
 
@@ -1851,9 +1819,7 @@ int mb_format_beamwidth(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:     %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       format:     %d\n",*format);
 		}
@@ -1877,7 +1843,6 @@ int mb_format_beamwidth(int verbose, int *format,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       format:           %d\n",*format);
 		fprintf(stderr,"dbg2       beamwidth_xtrack: %f\n",*beamwidth_xtrack);
@@ -1917,9 +1882,7 @@ int mb_get_format(int verbose, char *filename, char *fileroot,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:    %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:   %d\n",verbose);
 		fprintf(stderr,"dbg2       filename:  %s\n",filename);
 		}
@@ -3242,7 +3205,6 @@ int mb_get_format(int verbose, char *filename, char *fileroot,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		if (fileroot != NULL)
 		    fprintf(stderr,"dbg2       fileroot:   %s\n",fileroot);
@@ -3270,9 +3232,7 @@ int mb_datalist_open(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)*datalist);
 		fprintf(stderr,"dbg2       path:          %s\n",path);
@@ -3310,7 +3270,6 @@ int mb_datalist_open(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)*datalist);
 		if (*datalist != NULL)
@@ -3342,9 +3301,7 @@ int mb_datalist_close(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)*datalist);
 		}
@@ -3372,7 +3329,6 @@ int mb_datalist_close(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)*datalist);
 		fprintf(stderr,"dbg2       error:         %d\n",*error);
@@ -3400,9 +3356,7 @@ int mb_datalist_read(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)datalist);
 		}
@@ -3437,7 +3391,6 @@ int mb_datalist_read(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       path:        %s\n",path);
 		fprintf(stderr,"dbg2       format:      %d\n",*format);
@@ -3477,9 +3430,7 @@ int mb_datalist_readorg(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)datalist);
 		}
@@ -3731,7 +3682,6 @@ int mb_datalist_readorg(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       path:        %s\n",path);
 		fprintf(stderr,"dbg2       format:      %d\n",*format);
@@ -3773,9 +3723,7 @@ int mb_datalist_read2(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       datalist:      %lu\n",(size_t)datalist);
 		}
@@ -4069,7 +4017,6 @@ int mb_datalist_read2(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       pstatus      %d\n",*pstatus);
 		fprintf(stderr,"dbg2       path:        %s\n",path);
@@ -4103,9 +4050,7 @@ int mb_get_relative_path(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		fprintf(stderr,"dbg2       ipwd:          %s\n",ipwd);
@@ -4230,7 +4175,6 @@ int mb_get_relative_path(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		fprintf(stderr,"dbg2       error:         %d\n",*error);
@@ -4258,9 +4202,7 @@ int mb_get_shortest_path(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		}
@@ -4327,7 +4269,6 @@ int mb_get_shortest_path(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		fprintf(stderr,"dbg2       error:         %d\n",*error);
@@ -4354,9 +4295,7 @@ int mb_get_basename(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
-		fprintf(stderr,"dbg2       rcs_id:        %s\n",rcs_id);
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		}
@@ -4399,7 +4338,6 @@ int mb_get_basename(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       path:          %s\n",path);
 		fprintf(stderr,"dbg2       error:         %d\n",*error);

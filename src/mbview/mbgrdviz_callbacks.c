@@ -120,7 +120,6 @@ static int	survey_color = MBV_COLOR_BLACK;
 static char	survey_name[MB_PATH_MAXLINE];
 
 /* id variables */
-static char rcs_id[] = "$Id$";
 static char program_name[] = "MBgrdviz";
 
 /* status variables */
@@ -2375,7 +2374,6 @@ int do_mbgrdviz_savesite(size_t instance, char *output_file_ptr)
 			/* write the site file header */
 			fprintf(sfp, "## Site File Version %s\n", MBGRDVIZ_SITE_VERSION);
 			fprintf(sfp, "## Output by Program %s\n",program_name); 
-			fprintf(sfp, "## Program Version %s\n",rcs_id);
 			fprintf(sfp, "## MB-System Version %s\n",MB_VERSION);
 			strncpy(date,"\0",25);
 			right_now = time((time_t *)0);
@@ -2675,7 +2673,6 @@ int do_mbgrdviz_saveroute(size_t instance, char *output_file_ptr)
 			/* write the route file header */
 			fprintf(sfp, "## Route File Version %s\n", MBGRDVIZ_ROUTE_VERSION);
 			fprintf(sfp, "## Output by Program %s\n",program_name); 
-			fprintf(sfp, "## Program Version %s\n",rcs_id);
 			fprintf(sfp, "## MB-System Version %s\n",MB_VERSION);
 			strncpy(date,"\0",25);
 			right_now = time((time_t *)0);
@@ -3415,7 +3412,6 @@ int do_mbgrdviz_saveprofile(size_t instance, char *output_file_ptr)
 			/* write the profile file header */
 			fprintf(sfp, "## Profile File Version %s\n", MBGRDVIZ_PROFILE_VERSION);
 			fprintf(sfp, "## Output by Program %s\n",program_name); 
-			fprintf(sfp, "## Program Version %s\n",rcs_id);
 			fprintf(sfp, "## MB-System Version %s\n",MB_VERSION);
 			strncpy(date,"\0",25);
 			right_now = time((time_t *)0);
