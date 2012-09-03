@@ -33,8 +33,6 @@
 #define IOR 	-3
 #define EPS 0.0001
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------------*/
 /* 	function mb_track plots the shiptrack of multibeam data. */
 void mb_track(int verbose, struct swath *data, int *error)
@@ -54,7 +52,6 @@ void mb_track(int verbose, struct swath *data, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       swath:                %lu\n",(size_t)data);
@@ -231,7 +228,6 @@ void mb_trackpingnumber(int verbose, struct swath *data, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:              %d\n",verbose);
 		fprintf(stderr,"dbg2       swath:                %lu\n",(size_t)data);
@@ -328,7 +324,6 @@ void mb_trackname(int verbose, int perpendicular, struct swath *data, char *file
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:            %d\n",verbose);
 		fprintf(stderr,"dbg2       perpendicular:      %d\n",perpendicular);

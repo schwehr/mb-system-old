@@ -34,7 +34,6 @@
 #include "../../include/mb_segy.h"
 #include "../../include/mbsys_jstar.h"
 
-static char rcs_id[]="$Id$";
 
 /*--------------------------------------------------------------------*/
 int mbsys_jstar_alloc(int verbose, void *mbio_ptr, void **store_ptr,
@@ -49,7 +48,6 @@ int mbsys_jstar_alloc(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -99,7 +97,6 @@ int mbsys_jstar_deall(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -160,7 +157,6 @@ int mbsys_jstar_dimensions(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -238,7 +234,6 @@ int mbsys_jstar_pingnumber(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -315,7 +310,6 @@ int mbsys_jstar_extract(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -710,7 +704,6 @@ int mbsys_jstar_insert(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1044,7 +1037,6 @@ int mbsys_jstar_ttimes(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1134,7 +1126,6 @@ int mbsys_jstar_detects(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1221,7 +1212,6 @@ int mbsys_jstar_extract_altitude(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1328,7 +1318,6 @@ int mbsys_jstar_extract_nav(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1595,7 +1584,6 @@ int mbsys_jstar_insert_nav(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1793,7 +1781,6 @@ int mbsys_jstar_extract_segytraceheader(int verbose, void *mbio_ptr, void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:        %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:         %lu\n",(size_t)mbio_ptr);
@@ -2035,7 +2022,6 @@ int mbsys_jstar_extract_segy(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:           %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:            %lu\n",(size_t)mbio_ptr);
@@ -2267,7 +2253,6 @@ int mbsys_jstar_insert_segy(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:        %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:         %lu\n",(size_t)mbio_ptr);
@@ -2514,7 +2499,6 @@ int mbsys_jstar_copy(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);

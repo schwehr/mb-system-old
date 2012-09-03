@@ -132,7 +132,6 @@ struct mbedit_ping_struct
 	};
 
 /* id variables */
-static char rcs_id[] = "$Id$";
 static char program_name[] = "MBedit";
 static char help_message[] =  
 "MBedit is an interactive editor used to identify and flag\n\
@@ -412,7 +411,6 @@ int mbedit_init(int argc, char ** argv, int *startup_file)
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -420,7 +418,6 @@ int mbedit_init(int argc, char ** argv, int *startup_file)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n",verbose);

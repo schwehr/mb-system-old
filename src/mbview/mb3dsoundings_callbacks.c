@@ -80,7 +80,6 @@ static Cardinal 	ac;
 static Arg      	args[256];
 static char		value_text[MB_PATH_MAXLINE];
 
-static char rcs_id[]="$Id$";
 
 /* function prototypes */
 /*------------------------------------------------------------------------------*/
@@ -165,7 +164,6 @@ int mb3dsoundings_startup(int verbose, Widget parent, XtAppContext app, int *err
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -490,7 +488,6 @@ int mb3dsoundings_end(int verbose, int *error)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -550,7 +547,6 @@ int mb3dsoundings_set_dismiss_notify(int verbose, void (dismiss_notify)(), int *
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -588,7 +584,6 @@ int mb3dsoundings_set_edit_notify(int verbose, void (edit_notify)(int, int, int,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -629,7 +624,6 @@ int mb3dsoundings_set_info_notify(int verbose, void (info_notify)(int, int, int,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -670,7 +664,6 @@ int mb3dsoundings_set_bias_notify(int verbose, void (bias_notify)(double, double
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -711,7 +704,6 @@ int mb3dsoundings_set_biasapply_notify(int verbose, void (biasapply_notify)(doub
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);
@@ -752,7 +744,6 @@ int mb3dsoundings_reset()
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		}	
@@ -865,7 +856,6 @@ int mb3dsoundings_open(int verbose, struct mb3dsoundings_struct *soundingdata, i
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:       %d\n",verbose);
@@ -1034,7 +1024,6 @@ int mb3dsoundings_reset_glx()
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		}

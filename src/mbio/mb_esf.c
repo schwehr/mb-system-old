@@ -36,8 +36,6 @@ void mb_mergesort_setup(u_char *list1, u_char *list2, size_t n, size_t size,
 void mb_mergesort_insertionsort(u_char *a, size_t n, size_t size, 
 	int (*cmp)(void *, void *));
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------*/
 /* 	function mb_esf_check checks for an existing esf file. */
 int mb_esf_check(int verbose, char *swathfile, char *esffile, 
@@ -53,7 +51,6 @@ int mb_esf_check(int verbose, char *swathfile, char *esffile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:     %d\n",verbose);
 		fprintf(stderr,"dbg2       swathfile:   %s\n",swathfile);
@@ -81,7 +78,6 @@ int mb_esf_check(int verbose, char *swathfile, char *esffile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       esfile:      %s\n",esffile);
 		fprintf(stderr,"dbg2       found:       %d\n",*found);
@@ -120,7 +116,6 @@ int mb_esf_load(int verbose, char *swathfile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:     %d\n",verbose);
 		fprintf(stderr,"dbg2       swathfile:   %s\n",swathfile);
@@ -150,7 +145,6 @@ int mb_esf_load(int verbose, char *swathfile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       esfile:      %s\n",esffile);
 		fprintf(stderr,"dbg2       nedit:       %d\n",esf->nedit);
@@ -197,7 +191,6 @@ int mb_esf_open(int verbose, char *esffile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:     %d\n",verbose);
 		fprintf(stderr,"dbg2       esffile:     %s\n",esffile);
@@ -359,7 +352,6 @@ fprintf(stderr,"esstream %s opened with mode %s\n",esf->esstream,fmode);*/
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       nedit:       %d\n",esf->nedit);
 		for (i=0;i<esf->nedit;i++)
@@ -400,7 +392,6 @@ int mb_esf_apply(int verbose, struct mb_esf_struct *esf,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       nedit:            %d\n",esf->nedit);
@@ -525,7 +516,6 @@ j, time_d, i, beamflag[i], esf->edit[j].action);*/
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       time_d:           %f\n",time_d);
 		fprintf(stderr,"dbg2       pingmultiplicity: %d\n",pingmultiplicity);
@@ -554,7 +544,6 @@ int mb_esf_save(int verbose, struct mb_esf_struct *esf,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
@@ -598,7 +587,6 @@ int mb_esf_save(int verbose, struct mb_esf_struct *esf,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
 		fprintf(stderr,"dbg2       esf->edit:        %lu\n",(size_t)esf->edit);
@@ -625,7 +613,6 @@ int mb_ess_save(int verbose, struct mb_esf_struct *esf,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
@@ -669,7 +656,6 @@ int mb_ess_save(int verbose, struct mb_esf_struct *esf,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
 		fprintf(stderr,"dbg2       esf->edit:        %lu\n",(size_t)esf->edit);
@@ -694,7 +680,6 @@ int mb_esf_close(int verbose, struct mb_esf_struct *esf, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
@@ -728,7 +713,6 @@ int mb_esf_close(int verbose, struct mb_esf_struct *esf, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return value:\n");
 		fprintf(stderr,"dbg2       esf->nedit:       %d\n",esf->nedit);
 		fprintf(stderr,"dbg2       esf->edit:        %lu\n",(size_t)esf->edit);

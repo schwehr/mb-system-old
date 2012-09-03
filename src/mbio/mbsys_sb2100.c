@@ -34,7 +34,6 @@
 #include "../../include/mb_define.h"
 #include "../../include/mbsys_sb2100.h"
 
-static char rcs_id[]="$Id$";
 
 /*--------------------------------------------------------------------*/
 int mbsys_sb2100_alloc(int verbose, void *mbio_ptr, void **store_ptr, 
@@ -49,7 +48,6 @@ int mbsys_sb2100_alloc(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -72,7 +70,6 @@ int mbsys_sb2100_alloc(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       store_ptr:  %lu\n",(size_t)*store_ptr);
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
@@ -94,7 +91,6 @@ int mbsys_sb2100_deall(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -108,7 +104,6 @@ int mbsys_sb2100_deall(int verbose, void *mbio_ptr, void **store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");
@@ -131,7 +126,6 @@ int mbsys_sb2100_dimensions(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -167,7 +161,6 @@ int mbsys_sb2100_dimensions(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		fprintf(stderr,"dbg2       nbath:      %d\n",*nbath);
@@ -206,7 +199,6 @@ int mbsys_sb2100_extract(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -369,7 +361,6 @@ int mbsys_sb2100_extract(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		}
@@ -451,7 +442,6 @@ int mbsys_sb2100_insert(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -622,7 +612,6 @@ int mbsys_sb2100_ttimes(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -698,7 +687,6 @@ int mbsys_sb2100_ttimes(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		}
@@ -737,7 +725,6 @@ int mbsys_sb2100_detects(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -799,7 +786,6 @@ int mbsys_sb2100_detects(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		}
@@ -834,7 +820,6 @@ int mbsys_sb2100_gains(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -890,7 +875,6 @@ int mbsys_sb2100_gains(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		}
@@ -927,7 +911,6 @@ int mbsys_sb2100_extract_altitude(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1006,7 +989,6 @@ int mbsys_sb2100_extract_altitude(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:              %d\n",*kind);
 		fprintf(stderr,"dbg2       transducer_depth:  %f\n",*transducer_depth);
@@ -1037,7 +1019,6 @@ int mbsys_sb2100_extract_nav(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1151,7 +1132,6 @@ int mbsys_sb2100_extract_nav(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:       %d\n",*kind);
 		}
@@ -1203,7 +1183,6 @@ int mbsys_sb2100_insert_nav(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1294,7 +1273,6 @@ int mbsys_sb2100_extract_svp(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mb_ptr:     %lu\n",(size_t)mbio_ptr);
@@ -1347,7 +1325,6 @@ int mbsys_sb2100_extract_svp(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       kind:              %d\n",*kind);
 		fprintf(stderr,"dbg2       nsvp:              %d\n",*nsvp);
@@ -1377,7 +1354,6 @@ int mbsys_sb2100_insert_svp(int verbose, void *mbio_ptr, void *store_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1436,7 +1412,6 @@ int mbsys_sb2100_copy(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1461,7 +1436,6 @@ int mbsys_sb2100_copy(int verbose, void *mbio_ptr,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> completed\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Return values:\n");
 		fprintf(stderr,"dbg2       error:      %d\n",*error);
 		fprintf(stderr,"dbg2  Return status:\n");

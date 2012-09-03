@@ -75,7 +75,6 @@
 
 /* local variables */
 
-static char rcs_id[]="$Id$";
 
 /* function prototypes */
 /*------------------------------------------------------------------------------*/
@@ -129,7 +128,6 @@ int mbpingedit_startup(int verbose, Widget parent, XtAppContext app, int *error)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                 %d\n", verbose);

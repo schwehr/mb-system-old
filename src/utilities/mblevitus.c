@@ -46,7 +46,6 @@
 #define	NDEPTH_MAX	46
 #define	NLEVITUS_MAX	33
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -162,7 +161,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(outfp,"\nProgram %s\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -170,7 +168,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(outfp,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(outfp,"dbg2  Version %s\n",rcs_id);
 		fprintf(outfp,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"dbg2  Control Parameters:\n");
 		fprintf(outfp,"dbg2       verbose:    %d\n",verbose);
@@ -368,8 +365,8 @@ int main (int argc, char **argv)
 		}
 
 	/* print it out */
-	fprintf(ofp,"# Water velocity profile created by program %s version %s\n",
-		program_name,rcs_id);
+	fprintf(ofp,"# Water velocity profile created by program %s\n",
+		program_name);
 	fprintf(ofp,"# MB-system Version %s\n",MB_VERSION);
 	strncpy(date,"\0",25);
 	right_now = time((time_t *)0);

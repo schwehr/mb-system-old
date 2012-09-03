@@ -58,7 +58,6 @@
 /* local variables */
 static char		value_string[MB_PATH_MAXLINE];
 
-static char rcs_id[]="$Id$";
 
 /*------------------------------------------------------------------------------*/
 int mbview_getroutecount(int verbose, size_t instance,
@@ -76,7 +75,6 @@ int mbview_getroutecount(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -125,7 +123,6 @@ int mbview_getroutepointcount(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -184,7 +181,6 @@ int mbview_getrouteselected(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -243,7 +239,6 @@ int mbview_getrouteinfo(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -328,7 +323,6 @@ int mbview_allocroutearrays(int verbose,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -417,7 +411,6 @@ int mbview_freeroutearrays(int verbose,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -509,7 +502,6 @@ int mbview_addroute(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -629,7 +621,6 @@ int mbview_deleteroute(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -701,7 +692,6 @@ int mbview_getroute(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -925,7 +915,6 @@ int mbview_enableviewroutes(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -978,7 +967,6 @@ int mbview_enableeditroutes(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -1033,7 +1021,6 @@ int mbview_pick_route_select(size_t instance, int which, int xpixel, int ypixel)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -1245,7 +1232,6 @@ int mbview_extract_route_profile(size_t instance)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -1415,7 +1401,6 @@ int mbview_pick_route_add(size_t instance, int which, int xpixel, int ypixel)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -1642,7 +1627,6 @@ int mbview_pick_route_delete(size_t instance, int xpixel, int ypixel)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -1747,7 +1731,6 @@ int mbview_route_add(size_t instance, int inew, int jnew, int waypoint,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -2034,7 +2017,6 @@ int mbview_route_delete(size_t instance, int iroute, int ipoint)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -2202,7 +2184,6 @@ int mbview_route_setdistance(size_t instance, int working_route)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", mbv_verbose);
@@ -2348,7 +2329,6 @@ int mbview_drawroute(size_t instance, int rez)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -2526,7 +2506,6 @@ int mbview_updateroutelist()
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		}

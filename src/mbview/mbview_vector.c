@@ -57,7 +57,6 @@
 /* local variables */
 static char		value_string[MB_PATH_MAXLINE];
 
-static char rcs_id[]="$Id$";
 
 /*------------------------------------------------------------------------------*/
 int mbview_getvectorcount(int verbose, size_t instance,
@@ -75,7 +74,6 @@ int mbview_getvectorcount(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -124,7 +122,6 @@ int mbview_getvectorpointcount(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -185,7 +182,6 @@ int mbview_allocvectorarrays(int verbose,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -242,7 +238,6 @@ int mbview_freevectorarrays(int verbose,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -305,7 +300,6 @@ int mbview_addvector(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -536,7 +530,6 @@ int mbview_enableviewvectors(int verbose, size_t instance,
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:                   %d\n", verbose);
@@ -594,7 +587,6 @@ int mbview_pick_vector_select(size_t instance, int select, int which, int xpixel
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);
@@ -764,7 +756,6 @@ int mbview_vector_delete(size_t instance, int ivec)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       ivec:            %d\n",ivec);
@@ -847,7 +838,6 @@ int mbview_drawvector(size_t instance, int rez)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",
 			function_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       instance:         %ld\n",instance);

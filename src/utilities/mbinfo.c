@@ -54,7 +54,6 @@ struct ping
 #define XML			2
 #define MAX_OUTPUT_FORMAT 2
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -462,7 +461,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stream,"\nProgram %s\n",program_name);
-		fprintf(stream,"Version %s\n",rcs_id);
 		fprintf(stream,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -470,7 +468,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stream,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stream,"dbg2  Version %s\n",rcs_id);
 		fprintf(stream,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stream,"dbg2  Control Parameters:\n");
 		fprintf(stream,"dbg2       verbose:    %d\n",verbose);

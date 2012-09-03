@@ -24,9 +24,6 @@
 #include "../../include/mb_define.h"
 #include "../../include/mb_process.h"
 
-/* static char rcs_id[]="$Id: mb_compare.c,v 5.4 2003/07/26 17:59:32 caress Exp
-$"; */
-
 /*--------------------------------------------------------------------*/
 /* 	function mb_int_compare compares int values. */
 int mb_int_compare(void *a, void *b)

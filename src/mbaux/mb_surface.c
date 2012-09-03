@@ -168,8 +168,6 @@ double	guess_surface_time(int nx, int ny);
 int	get_prime_factors(int n, int f[]);
 int	gcd_euclid(int a,int b);
 
-static char rcs_id[] = "$Id$";
-
 int mb_surface(int verbose, int ndat, float *xdat, float *ydat, float *zdat,
 		double xxmin, double xxmax, double yymin, double yymax, double xxinc, double yyinc,
 		double ttension, float *sgrid)
@@ -183,7 +181,6 @@ int mb_surface(int verbose, int ndat, float *xdat, float *ydat, float *zdat,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       xxmin:      %f\n",xxmin);

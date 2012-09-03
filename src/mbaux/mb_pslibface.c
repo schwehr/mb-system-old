@@ -44,8 +44,6 @@ int	*green;
 int	*blue;
 int	rgb[3];
 
-static char rcs_id[]="$Id$";
-
 /*--------------------------------------------------------------------------*/
 /* 	function plot_init initializes the GMT plotting. */
 int plot_init(	int	verbose,
@@ -67,7 +65,6 @@ int plot_init(	int	verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		fprintf(stderr,"dbg2       argc:             %d\n",argc);
@@ -198,7 +195,6 @@ int plot_end(int verbose, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:          %d\n",verbose);
 		}

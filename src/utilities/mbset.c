@@ -43,7 +43,6 @@
 #include "../../include/mb_process.h"
 #include "../../include/mb_swap.h"
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -177,7 +176,6 @@ the manual pages for mbprocess and mbset. \n\n";
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-System Version %s\n",MB_VERSION);
 		}
 
@@ -1034,7 +1032,6 @@ the manual pages for mbprocess and mbset. \n\n";
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-	    fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 	    fprintf(stderr,"\ndbg2  MB-System Control Parameters:\n");
 	    fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
@@ -1046,7 +1043,6 @@ the manual pages for mbprocess and mbset. \n\n";
 	if (verbose == 1)
 	    {
 	    fprintf(stderr,"\nProgram <%s>\n",program_name);
-	    fprintf(stderr,"Version %s\n",rcs_id);
 	    fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 	    fprintf(stderr,"\nOutput MBprocess Parameters:\n");
 	    fprintf(stderr,"\nInput and Output Files:\n");

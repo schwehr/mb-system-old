@@ -59,8 +59,6 @@
 #define MBKONSBERGPREPROCESS_BATH_RECALC_NCALCMAX 50
 #define MBKONSBERGPREPROCESS_BATH_RECALC_ANGLEMODE 0
 
-static char rcs_id[] = "$Id: mbkongsbergpreprocess.c 1938 2012-02-22 20:58:08Z caress $";
-
 /*--------------------------------------------------------------------*/
 
 int main (int argc, char **argv)
@@ -413,7 +411,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -421,7 +418,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:             %d\n",verbose);

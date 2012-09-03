@@ -120,7 +120,6 @@ int mb7k2ss_intersect_grid(int verbose, double navlon, double navlat, double alt
 					struct mb7k2ss_grid_struct *grid,
 					double	 *range, int *error);
 
-static char rcs_id[] = "$Id$";
 char program_name[] = "mb7k2ss";
 
 /*--------------------------------------------------------------------*/
@@ -500,7 +499,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -508,7 +506,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:             %d\n",verbose);
@@ -569,7 +566,6 @@ int main (int argc, char **argv)
 	if (verbose == 1)
 		{
 		fprintf(stderr,"\nProgram <%s>\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"Control Parameters:\n");
 		if (bottompickmode == MB7K2SS_BOTTOMPICK_BATHYMETRY)

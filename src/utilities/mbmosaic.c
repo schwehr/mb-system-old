@@ -178,7 +178,6 @@ int mbmosaic_get_footprint(
 		int	*error);
 ;
 /* program identifiers */
-static char rcs_id[] = "$Id$";
 char program_name[] = "mbmosaic";
 char help_message[] =  "mbmosaic is an utility used to mosaic amplitude or \nsidescan data contained in a set of swath sonar data files.  \nThis program uses one of four algorithms (gaussian weighted mean, \nmedian filter, minimum filter, maximum filter) to grid regions \ncovered by multibeam swaths and then fills in gaps between \nthe swaths (to the degree specified by the user) using a minimum\ncurvature algorithm.";
 char usage_message[] = "mbmosaic -Ifilelist -Oroot \
@@ -648,7 +647,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(outfp,"\nProgram %s\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -656,7 +654,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(outfp,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(outfp,"dbg2  Version %s\n",rcs_id);
 		fprintf(outfp,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"dbg2  Control Parameters:\n");
 		fprintf(outfp,"dbg2       verbose:              %d\n",verbose);

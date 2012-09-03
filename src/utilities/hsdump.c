@@ -31,7 +31,6 @@
 #include "../../include/mb_define.h"
 #include "../../include/mbsys_hsds.h"
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -218,7 +217,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(output,"\nProgram %s\n",program_name);
-		fprintf(output,"Version %s\n",rcs_id);
 		fprintf(output,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -226,7 +224,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(output,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(output,"dbg2  Version %s\n",rcs_id);
 		fprintf(output,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(output,"dbg2  Control Parameters:\n");
 		fprintf(output,"dbg2       verbose:         %d\n",verbose);

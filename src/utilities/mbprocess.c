@@ -99,7 +99,6 @@ int get_anglecorr(int verbose,
 	int nangle, double *angles, double *corrs,
 	double angle, double *corr, int *error);
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -502,7 +501,6 @@ and mbedit edit save files.\n";
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-System Version %s\n",MB_VERSION);
 		}
 
@@ -577,7 +575,6 @@ and mbedit edit save files.\n";
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-	    fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 	    fprintf(stderr,"\ndbg2  MB-System Control Parameters:\n");
 	    fprintf(stderr,"dbg2       verbose:         %d\n",verbose);
@@ -617,7 +614,6 @@ and mbedit edit save files.\n";
 	else
 	    {
 	    fprintf(stderr,"\nProgram <%s>\n",program_name);
-	    fprintf(stderr,"Version %s\n",rcs_id);
 	    fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 	    fprintf(stderr,"\nProgram Operation:\n");
 	    fprintf(stderr,"  Input file:      %s\n",read_file);
@@ -3646,7 +3642,6 @@ and mbedit edit save files.\n";
 		status = mb_put_comment(verbose,ombio_ptr,comment,&error);
 		if (error == MB_ERROR_NO_ERROR) ocomment++;
 		strncpy(comment,"\0",MBP_FILENAMESIZE);
-		sprintf(comment,"Version %s",rcs_id);
 		status = mb_put_comment(verbose,ombio_ptr,comment,&error);
 		if (error == MB_ERROR_NO_ERROR) ocomment++;
 		strncpy(comment,"\0",MBP_FILENAMESIZE);

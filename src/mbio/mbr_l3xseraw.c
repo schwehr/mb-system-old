@@ -100,7 +100,6 @@ int mbr_l3xseraw_wr_sidescan(int verbose,int *buffer_size,char *buffer,void *sto
 int mbr_l3xseraw_wr_seabeam(int verbose,int *buffer_size,char *buffer,void *store_ptr,int *error);
 int mbr_l3xseraw_wr_comment(int verbose,int *buffer_size,char *buffer,void *store_ptr,int *error);
 
-static char rcs_id[]="$Id$";
 
 /*--------------------------------------------------------------------*/
 int mbr_register_l3xseraw(int verbose, void *mbio_ptr, int *error)
@@ -113,7 +112,6 @@ int mbr_register_l3xseraw(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -245,7 +243,6 @@ int mbr_info_l3xseraw(int verbose,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		}
@@ -314,7 +311,6 @@ int mbr_alm_l3xseraw(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -356,7 +352,6 @@ int mbr_dem_l3xseraw(int verbose, void *mbio_ptr, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -398,7 +393,6 @@ int mbr_rt_l3xseraw(int verbose, void *mbio_ptr, void *store_ptr, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -508,7 +502,6 @@ int mbr_wt_l3xseraw(int verbose, void *mbio_ptr, void *store_ptr, int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -573,7 +566,6 @@ int mbr_l3xseraw_rd_data(int verbose,void *mbio_ptr,void *store_ptr,int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -1042,7 +1034,6 @@ int mbr_l3xseraw_rd_nav(int verbose,int buffer_size,char *buffer,void *store_ptr
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -1354,7 +1345,6 @@ int mbr_l3xseraw_rd_svp(int verbose,int buffer_size,char *buffer,void *store_ptr
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -1607,7 +1597,6 @@ int mbr_l3xseraw_rd_tide(int verbose,int buffer_size,char *buffer,void *store_pt
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -1652,7 +1641,6 @@ int mbr_l3xseraw_rd_ship(int verbose,int buffer_size,char *buffer,void *store_pt
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -1973,7 +1961,6 @@ int mbr_l3xseraw_rd_sidescan(int verbose,int buffer_size,char *buffer,void *stor
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -2408,7 +2395,6 @@ int mbr_l3xseraw_rd_multibeam(int verbose,int buffer_size,char *buffer,void *sto
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3206,7 +3192,6 @@ int mbr_l3xseraw_rd_singlebeam(int verbose,int buffer_size,char *buffer,void *st
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3244,7 +3229,6 @@ int mbr_l3xseraw_rd_message(int verbose,int buffer_size,char *buffer,void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3288,7 +3272,6 @@ int mbr_l3xseraw_rd_seabeam(int verbose,int buffer_size,char *buffer,void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3560,7 +3543,6 @@ int mbr_l3xseraw_rd_geodetic(int verbose,int buffer_size,char *buffer,void *stor
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3598,7 +3580,6 @@ int mbr_l3xseraw_rd_native(int verbose,int buffer_size,char *buffer,void *store_
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3636,7 +3617,6 @@ int mbr_l3xseraw_rd_product(int verbose,int buffer_size,char *buffer,void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3674,7 +3654,6 @@ int mbr_l3xseraw_rd_bathymetry(int verbose,int buffer_size,char *buffer,void *st
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3712,7 +3691,6 @@ int mbr_l3xseraw_rd_control(int verbose,int buffer_size,char *buffer,void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3756,7 +3734,6 @@ int mbr_l3xseraw_rd_comment(int verbose,int buffer_size,char *buffer,void *store
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       buffer_size:%d\n",buffer_size);
@@ -3882,7 +3859,6 @@ int mbr_l3xseraw_wr_data(int verbose,void *mbio_ptr,void *store_ptr,int *error)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 		fprintf(stderr,"dbg2       mbio_ptr:   %lu\n",(size_t)mbio_ptr);
@@ -4050,7 +4026,6 @@ int mbr_l3xseraw_wr_nav(int verbose,int *buffer_size,char *buffer,void *store_pt
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -4699,7 +4674,6 @@ int mbr_l3xseraw_wr_svp(int verbose,int *buffer_size,char *buffer,void *store_pt
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -5109,7 +5083,6 @@ int mbr_l3xseraw_wr_ship(int verbose,int *buffer_size,char *buffer,void *store_p
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -5568,7 +5541,6 @@ int mbr_l3xseraw_wr_multibeam(int verbose,int *buffer_size,char *buffer,void *st
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -6668,7 +6640,6 @@ int mbr_l3xseraw_wr_sidescan(int verbose,int *buffer_size,char *buffer,void *sto
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -7236,7 +7207,6 @@ int mbr_l3xseraw_wr_seabeam(int verbose,int *buffer_size,char *buffer,void *stor
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);
@@ -7646,7 +7616,6 @@ int mbr_l3xseraw_wr_comment(int verbose,int *buffer_size,char *buffer,void *stor
 	if (verbose >= 2)
 	    {
 	    fprintf(stderr,"\ndbg2  MBIO function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 	    fprintf(stderr,"dbg2  Input arguments:\n");
 	    fprintf(stderr,"dbg2       verbose:    %d\n",verbose);
 	    fprintf(stderr,"dbg2       buffer:     %lu\n",(size_t)buffer);

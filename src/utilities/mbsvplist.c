@@ -47,7 +47,6 @@
 char	*ctime();
 char	*getenv();
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -249,7 +248,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(stderr,"\nProgram %s\n",program_name);
-		fprintf(stderr,"Version %s\n",rcs_id);
 		fprintf(stderr,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -257,7 +255,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(stderr,"dbg2  Version %s\n",rcs_id);
 		fprintf(stderr,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(stderr,"dbg2  Control Parameters:\n");
 		fprintf(stderr,"dbg2       verbose:        %d\n",verbose);
@@ -574,7 +571,6 @@ int main (int argc, char **argv)
 				/* write it out */
 				fprintf(svp_fp, "## Water Sound Velocity Profile (SVP)\n");
 				fprintf(svp_fp, "## Output by Program %s\n",program_name); 
-				fprintf(svp_fp, "## Program Version %s\n",rcs_id);
 				fprintf(svp_fp, "## MB-System Version %s\n",MB_VERSION);
 				strncpy(date,"\0",25);
 				right_now = time((time_t *)0);

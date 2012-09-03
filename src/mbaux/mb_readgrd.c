@@ -53,8 +53,6 @@ extern int isnanf(float x);
 /* default no data value define */
 #define	DEFAULT_NODATA		-9999999.9
 
-static char rcs_id[] = "$Id$";
-
 /* global variables */
 static char program_name[] = "mb_readgrd";
 static int	pargc;
@@ -107,7 +105,6 @@ int mb_readgrd(int verbose, char *grdfile,
 	if (verbose >= 2)
 		{
 		fprintf(stderr,"\ndbg2  MBBA function <%s> called\n",function_name);
-		fprintf(stderr,"dbg2  Revision id: %s\n",rcs_id);
 		fprintf(stderr,"dbg2  Input arguments:\n");
 		fprintf(stderr,"dbg2       verbose:         %d\n", verbose);
 		fprintf(stderr,"dbg2       grdfile:         %s\n", grdfile);

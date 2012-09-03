@@ -32,7 +32,6 @@
 #include "../../include/mb_swap.h"
 #include "../../include/mb_define.h"
 
-/* static	char	rcs_id[]="$Id$"; */
 
 /*--------------------------------------------------------------------*/
 /* function mb_swap_check determines if the cpu is byteswapped */

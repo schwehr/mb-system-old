@@ -90,7 +90,6 @@
 #include "../../include/mb_status.h"
 #include "../../include/mb_define.h"
 
-static char rcs_id[] = "$Id$";
 
 /*--------------------------------------------------------------------*/
 
@@ -190,7 +189,6 @@ int main (int argc, char **argv)
 	if (verbose == 1 || help)
 		{
 		fprintf(outfp,"\nProgram %s\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		}
 
@@ -198,7 +196,6 @@ int main (int argc, char **argv)
 	if (verbose >= 2)
 		{
 		fprintf(outfp,"\ndbg2  Program <%s>\n",program_name);
-		fprintf(outfp,"dbg2  Version %s\n",rcs_id);
 		fprintf(outfp,"dbg2  MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"dbg2  Control Parameters:\n");
 		fprintf(outfp,"dbg2       verbose:    %d\n",verbose);
@@ -228,7 +225,6 @@ int main (int argc, char **argv)
 	if (verbose > 0)
 		{
 		fprintf(outfp,"\nProgram <%s>\n",program_name);
-		fprintf(outfp,"Version %s\n",rcs_id);
 		fprintf(outfp,"MB-system Version %s\n",MB_VERSION);
 		fprintf(outfp,"Input Parameters:\n");
 		fprintf(outfp,"     Frequency:        %f kHz\n",frequency);
