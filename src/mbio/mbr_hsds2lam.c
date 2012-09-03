@@ -22,7 +22,6 @@
  *   mbr_wt_hsds2lam	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

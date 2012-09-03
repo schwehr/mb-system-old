@@ -17,7 +17,6 @@
  * which has been initialized by mb_write_init().
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

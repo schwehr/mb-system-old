@@ -136,7 +136,6 @@
 #define	MBF_HS10JAMS_MAXLINE	800
 #define	MBF_HS10JAMS_LENGTH	717
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

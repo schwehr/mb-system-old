@@ -19,7 +19,6 @@
  * file exists one will be created.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

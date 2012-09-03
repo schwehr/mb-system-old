@@ -26,7 +26,6 @@
  *   mbr_wt_sburivax	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

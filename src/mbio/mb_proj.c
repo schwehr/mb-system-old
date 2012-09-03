@@ -25,7 +25,6 @@
  * Frank Warmerdam, <warmerdam@pobox.com>
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <sys/stat.h>

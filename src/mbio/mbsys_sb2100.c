@@ -23,7 +23,6 @@
  *      MBF_SB2100B2 : MBIO ID 43
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

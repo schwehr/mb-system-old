@@ -69,7 +69,6 @@
  * are documented in the mbsys_ldeoih.h file.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

@@ -22,7 +22,6 @@
  *   mbr_wt_mbarrov2	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

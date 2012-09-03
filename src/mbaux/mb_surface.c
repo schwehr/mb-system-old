@@ -54,7 +54,6 @@
  * (revision of 26 February, 1992) into a function "surfunc" follow:
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

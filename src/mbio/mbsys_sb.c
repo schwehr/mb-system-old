@@ -27,7 +27,6 @@
  *      MBF_SBIFREMR : MBIO ID 17
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

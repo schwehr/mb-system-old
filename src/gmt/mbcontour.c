@@ -1,18 +1,8 @@
 /*--------------------------------------------------------------------
- *    The MB-system:	mbcontour.c	6/4/93
- *    $Id$
- *
  *    Copyright (c) 1993-2012 by
  *    David W. Caress (caress@mbari.org)
- *      Monterey Bay Aquarium Research Institute
- *      Moss Landing, CA 95039
  *    and Dale N. Chayes (dale@ldeo.columbia.edu)
- *      Lamont-Doherty Earth Observatory
- *      Palisades, NY 10964
  *
- *    See README file for copying and redistribution conditions.
- *--------------------------------------------------------------------*/
-/*
  * MBCONTOUR is a GMT compatible utility which creates a color postscript
  * contour map of multibeam swath bathymetry.
  * Complete maps are made by using MBCONTOUR in conjunction with the
@@ -21,7 +11,6 @@
  * Contours can also be set to have ticks pointing downhill.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

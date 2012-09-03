@@ -17,7 +17,6 @@
  * and insert data into sonar specific structures.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

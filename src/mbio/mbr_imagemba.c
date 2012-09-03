@@ -30,7 +30,6 @@
  *   3. Comment records are supported.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

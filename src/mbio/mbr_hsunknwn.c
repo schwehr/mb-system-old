@@ -54,7 +54,6 @@
  * end of the first line, after the center water depth.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

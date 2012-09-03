@@ -21,7 +21,6 @@
  * if it does not exist.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

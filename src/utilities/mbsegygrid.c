@@ -18,7 +18,6 @@
  * along a profile, and the y-axis is time..
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -25,7 +25,6 @@
  *   mb_fileio_put	- put bytes to output
  */
 
-/* standard include files */
 #include <stdio.h>
 
 /* mbio include files */

@@ -23,7 +23,6 @@
  *      MBF_RESON7KP : MBIO ID 193 - Stripped processed data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

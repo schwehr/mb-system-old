@@ -22,7 +22,6 @@
  *   mbr_wt_mr1prvr2	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

@@ -17,7 +17,6 @@
  * for writing with mb_write or mb_put.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

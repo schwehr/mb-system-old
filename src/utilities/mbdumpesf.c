@@ -18,7 +18,6 @@
  * bathymetry editing tools such as mbedit and mbeditviz.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -41,7 +41,6 @@
  * swath file so that mbprocess applies the tide model during processing.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

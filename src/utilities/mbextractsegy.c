@@ -18,7 +18,6 @@
  * rewrites it as a SEGY file in the form used by SIOSEIS. .
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

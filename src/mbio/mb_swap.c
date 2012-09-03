@@ -24,7 +24,6 @@
  * as arguments.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 

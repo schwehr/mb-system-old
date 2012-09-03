@@ -27,7 +27,6 @@
  * and the manual pages for mbprocess and mbset.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

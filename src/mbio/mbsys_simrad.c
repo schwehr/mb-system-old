@@ -28,7 +28,6 @@
  *      MBF_EM300MBA : MBIO ID 57 - MBARI EM3000, EM300, EM120
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

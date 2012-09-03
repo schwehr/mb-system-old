@@ -22,7 +22,6 @@
  *   mbr_wt_xtfb1624	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

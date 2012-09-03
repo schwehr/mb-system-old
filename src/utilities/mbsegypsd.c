@@ -18,7 +18,6 @@
  * the x axis and frequency along the y axis.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

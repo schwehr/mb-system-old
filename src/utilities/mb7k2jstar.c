@@ -17,7 +17,6 @@
  * from Reson 7k format data and outputs in the Edgetech Jstar format.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

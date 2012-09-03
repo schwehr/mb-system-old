@@ -26,7 +26,6 @@
  *   Mode 6:  Bathymetry shaded by amplitude using cpt gray data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

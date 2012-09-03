@@ -21,7 +21,6 @@
  * to meet the data format specification exactly).
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

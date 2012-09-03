@@ -21,7 +21,6 @@
  *      MBF_ELMK2UNB : MBIO ID 92
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

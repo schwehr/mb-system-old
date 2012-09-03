@@ -20,7 +20,6 @@
  * route file format. The times are in decimal epoch seconds (seconds since 1/1/1970).
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

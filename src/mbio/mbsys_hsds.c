@@ -24,7 +24,6 @@
  *      MBF_HSLDEOIH : MBIO ID 24
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

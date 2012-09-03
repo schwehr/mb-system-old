@@ -17,7 +17,6 @@
  * for reading with mb_read or mb_get.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

@@ -22,7 +22,6 @@
  *   mbr_wt_hypc8101	- translate and write data
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

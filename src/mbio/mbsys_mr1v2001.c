@@ -22,7 +22,6 @@
  *      MBF_MR1PRVR2 : MBIO ID 63
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

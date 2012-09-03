@@ -22,7 +22,6 @@
  *      MBF_HSMDRAW : MBIO ID 101
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>

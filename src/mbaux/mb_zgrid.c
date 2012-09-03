@@ -93,7 +93,6 @@
  *     April 25,  1995
  *--------------------------------------------------------------------*/
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

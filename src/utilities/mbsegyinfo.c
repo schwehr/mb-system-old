@@ -16,7 +16,6 @@
  * MBsegyinfo reads a segy data file and outputs some basic statistics.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

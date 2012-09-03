@@ -30,7 +30,6 @@
  *      January 1993, pp 255-275.
  */
 
-/* standard include files */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
