@@ -1,103 +1,25 @@
-#     The MB-system:	Makefile.template  7/27/2003
-#	$Id$
-#
 #     Copyright (c) 2003-2011 by
 #     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/mbview directory level
-# Author:	D. W. Caress
-# Date:		August 31, 2002
-#
-# $Log: Makefile.template,v $
-# Revision 5.13  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.12  2008/11/16 21:51:18  caress
-# Updating all recent changes, including time lag analysis using mbeditviz and improvements to the mbgrid footprint gridding algorithm.
-#
-# Revision 5.11  2007/11/16 17:26:56  caress
-# Progress on MBeditviz
-#
-# Revision 5.10  2007/10/08 16:32:08  caress
-# Code status as of 8 October 2007.
-#
-# Revision 5.9  2007/06/17 23:27:30  caress
-# Added NBeditviz.
-#
-# Revision 5.8  2006/12/15 21:42:49  caress
-# Incremental CVS update.
-#
-# Revision 5.7  2006/04/11 19:17:04  caress
-# Added a profile capability.
-#
-# Revision 5.6  2006/03/06 21:41:02  caress
-# Changed libproj and libgsf to libmbproj and libmbgsf.
-#
-# Revision 5.5  2005/02/10 02:50:00  caress
-# Removed mbeditviz and updated usage message for mbgrdviz.
-#
-# Revision 5.4  2005/02/02 08:23:52  caress
-# Added lots of functionality to mbview.
-#
-# Revision 5.3  2004/12/02 06:36:32  caress
-# Fixes while supporting Reson 7k data.
-#
-# Revision 5.1  2004/01/06 21:04:12  caress
-# Added mbeditviz
-#
-# Revision 5.0  2003/12/02 20:20:35  caress
-# Making version number 5.0
-#
-# Revision 1.2  2003/11/07 01:12:44  caress
-# Added routes, sites, and nav. Also now calculates color and scaling for points only as needed.
-#
-# Revision 1.1  2003/09/23 21:22:00  caress
-# Adding first cut on mbview to cvs.
-#
-#
-### sets locations of vital objects
+
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Locations of GMT libraries, binaries, and include files:
 GMTLIBDIR = /sw/lib
 GMTINCDIR = /sw/include
 NETCDFINCDIR = /sw/include
-#
-# Locations of Motif include files and libraries:
 MOTIFINCDIR = /sw/include
 MOTIFLIBS = -L/sw/lib -L/usr/X11R6/lib -lXm -lXt -lX11
-#
-# Locations of OpenGL libraries:
 OPENGLLIBS = -lGLU -lGL
-#
-# Compilers 
-CC = cc 
-#
-# Compile and load flags:
-CFLAGS = -g -I/usr/include/X11R6 -DDARWIN -DGMT3_3
-LFLAGS = -lm -L/usr/local/netcdf/lib -lnetcdf
+CC = cc
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DBYTESWAPPED -I/usr/include/gmt
+LFLAGS = -Wl -lm -lnetcdf -lgmt -lpsl
 ARCHIVE = ar rcv
-
-### set gsflib - could be version supplied with MB-System or other installation
-GSFLIB  = $(LIBDIR)/libmbgsf.a
 
 ### set projlib - could be version supplied with MB-System or other installation
 PROJLIB  = $(LIBDIR)/libmbproj.a
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the executable and man page
 all: $(INCDIR)/mbview.h $(LIBDIR)/libmbview.a $(BINDIR)/mbgrdviz $(BINDIR)/mbeditviz
 
 ### make the library
@@ -156,9 +78,7 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
-		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
-		$(GMTLIBDIR)/libpsl.a
+		$(LIBDIR)/libmbxgr.a
 	$(CC) $(CFLAGS) mbgrdviz_main.o \
 		mbgrdviz_bxutils.o \
 		mbgrdviz_callbacks.o \
@@ -170,9 +90,6 @@ $(BINDIR)/mbgrdviz: mbgrdviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbgrdviz
 $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		mbeditviz_bxutils.o \
@@ -186,10 +103,7 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbps.a \
-		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a
+		$(LIBDIR)/libmbxgr.a
 	$(CC) $(CFLAGS) mbeditviz_main.o \
 		mbeditviz_bxutils.o \
 		mbeditviz_callbacks.o \
@@ -202,9 +116,6 @@ $(BINDIR)/mbeditviz: mbeditviz_main.o \
 		$(LIBDIR)/libsapi.a \
 		$(LIBDIR)/libmr1pr.a  \
 		$(LIBDIR)/libmbxgr.a \
-		$(GSFLIB) \
-		$(GMTLIBDIR)/libgmt.a \
-		$(GMTLIBDIR)/libpsl.a \
 		$(OPENGLLIBS) $(MOTIFLIBS) $(LFLAGS) -o $(BINDIR)/mbeditviz
 
 ### compile the source files

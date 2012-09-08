@@ -63,7 +63,6 @@
 #include "../../include/mb_define.h"
 #include "../../include/mb_segy.h"
 #include "../../include/sapi.h"
-#include "gsf.h"
 #include "netcdf.h"
 
 
@@ -157,7 +156,6 @@ int mb_write_init(int verbose,
 	mb_io_ptr->file3_pos = 0;
 	mb_io_ptr->file3_bytes = 0;
 	mb_io_ptr->ncid = 0;
-	mb_io_ptr->gsfid = 0;
 	mb_io_ptr->xdrs = NULL;
 	mb_io_ptr->xdrs2 = NULL;
 	mb_io_ptr->xdrs3 = NULL;
@@ -447,24 +445,6 @@ int mb_write_init(int verbose,
 	else if (mb_io_ptr->filetype == MB_FILETYPE_SINGLE)
 	    {
 	    status = mb_fileio_open(verbose, *mbio_ptr, error);
-	    }
-
-	/* else handle gsf files to be opened with gsflib */
-	else if (mb_io_ptr->filetype == MB_FILETYPE_GSF)
-	    {
-	    status = gsfOpen(mb_io_ptr->file,
-				GSF_CREATE,
-				(int *) &(mb_io_ptr->gsfid));
-	    if (status == 0)
-		{
-		status = MB_SUCCESS;
-		*error = MB_ERROR_NO_ERROR;
-		}
-	    else
-		{
-		status = MB_FAILURE;
-		*error = MB_ERROR_OPEN_FAIL;
-		}
 	    }
 
 	/* else handle netcdf files to be opened with libnetcdf */

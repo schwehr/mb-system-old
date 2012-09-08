@@ -286,10 +286,6 @@ int mb_format_register(int verbose,
 		{
 		status = mbr_register_dsl120sf(verbose, mbio_ptr, error);
 		}
-	else if (*format == MBF_GSFGENMB)
-		{
-		status = mbr_register_gsfgenmb(verbose, mbio_ptr, error);
-		}
 	else if (*format == MBF_MSTIFFSS)
 		{
 		status = mbr_register_mstiffss(verbose, mbio_ptr, error);
@@ -1010,17 +1006,6 @@ int mb_format_info(int verbose,
 			beamwidth_xtrack, beamwidth_ltrack,
 			error);
 		}
-	else if (*format == MBF_GSFGENMB)
-		{
-		status = mbr_info_gsfgenmb(verbose, system,
-			beams_bath_max, beams_amp_max, pixels_ss_max,
-			format_name, system_name, format_description,
-			numfile, filetype,
-			variable_beams, traveltime, beam_flagging,
-			nav_source, heading_source, vru_source, svp_source,
-			beamwidth_xtrack, beamwidth_ltrack,
-			error);
-		}
 	else if (*format == MBF_MSTIFFSS)
 		{
 		status = mbr_info_mstiffss(verbose, system,
@@ -1416,7 +1401,7 @@ int mb_format(int verbose, int *format, int *error)
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -1475,7 +1460,7 @@ int mb_format_system(int verbose, int *format, int *system, int *error)
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -1538,7 +1523,7 @@ int mb_format_dimensions(int verbose, int *format,
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -1606,7 +1591,7 @@ int mb_format_description(int verbose, int *format, char *description, int *erro
 	char	format_name[MB_NAME_LENGTH];
 	char	system_name[MB_NAME_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -1669,7 +1654,7 @@ int mb_format_flags(int verbose, int *format,
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	nav_source;	/* data record types containing the primary navigation */
 	int	heading_source;	/* data record types containing the primary heading */
 	int	vru_source;	/* data record types containing the primary vru */
@@ -1738,7 +1723,7 @@ int mb_format_source(int verbose, int *format,
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -1805,7 +1790,7 @@ int mb_format_beamwidth(int verbose, int *format,
 	char	system_name[MB_NAME_LENGTH];
 	char	format_description[MB_DESCRIPTION_LENGTH];
 	int	numfile;	/* the number of parallel files required for i/o */
-	int	filetype;	/* type of files used (normal, xdr, or gsf) */
+	int	filetype;	/* type of files used (normal, xdr) */
 	int	variable_beams; /* if true then number of beams variable */
 	int	traveltime;	/* if true then traveltime and angle data supported */
 	int	beam_flagging;	/* if true then beam flagging supported */
@@ -2971,54 +2956,6 @@ int mb_get_format(int verbose, char *filename, char *fileroot,
 		    fileroot[strlen(filename)-suffix_len] = '\0';
 		    }
 		*format = MBF_MR1PRVR2;
-		found = MB_YES;
-		}
-	    }
-
-	/* look for a CARIS GSF export *.gsf format convention */
-	if (found == MB_NO)
-	    {
-	    if (strlen(filename) >= 5)
-		i = strlen(filename) - 4;
-	    else
-		i = 0;
-	    if ((suffix = strstr(&filename[i],".gsf")) != NULL)
-		suffix_len = 4;
-	    else if ((suffix = strstr(&filename[i],".GSF")) != NULL)
-		suffix_len = 4;
-	    else
-		suffix_len = 0;
-	    if (suffix_len == 4)
-		{
-		if (fileroot != NULL)
-		    {
-		    strncpy(fileroot, filename, strlen(filename)-suffix_len);
-		    fileroot[strlen(filename)-suffix_len] = '\0';
-		    }
-		*format = MBF_GSFGENMB;
-		found = MB_YES;
-		}
-	    }
-
-	/* look for a SAIC GSF *.d0X format convention */
-	if (found == MB_NO)
-	    {
-	    if (strlen(filename) >= 5)
-		i = strlen(filename) - 4;
-	    else
-		i = 0;
-	    if ((suffix = strstr(&filename[i],".d0")) != NULL)
-		suffix_len = 4;
-	    else
-		suffix_len = 0;
-	    if (suffix_len == 4)
-		{
-		if (fileroot != NULL)
-		    {
-		    strncpy(fileroot, filename, strlen(filename)-suffix_len);
-		    fileroot[strlen(filename)-suffix_len] = '\0';
-		    }
-		*format = MBF_GSFGENMB;
 		found = MB_YES;
 		}
 	    }

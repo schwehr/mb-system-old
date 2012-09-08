@@ -1,73 +1,16 @@
-#     The MB-system:	Makefile.template  7/16/2002
-#	$Id$
-#
 #     Copyright (c) 2002-2009 by
 #     David W. Caress (caress@mbari.org)
-#       Monterey Bay Aquarium Research Institute
-#       Moss Landing, CA 95039
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-#       Lamont-Doherty Earth Observatory
-#       Palisades, NY  10964
-#
-#     See README file for copying and redistribution conditions.
-#
-# Makefile template for MB-system at the src/surf directory level
-# Author:	D. W. Caress
-# Date:		July 16, 2002
-#
-# $Log: Makefile.template,v $
-# Revision 5.9  2009/03/13 07:05:58  caress
-# Release 5.1.2beta02
-#
-# Revision 5.8  2008/09/29 04:56:21  caress
-# Proj 4.6.1
-#
-# Revision 5.7  2008/01/14 18:21:58  caress
-# Upgraded to Proj 4.6.0 release.
-#
-# Revision 5.6  2007/10/07 20:05:48  caress
-# New proj version 4.5.0
-#
-# Revision 5.5  2006/03/06 21:49:27  caress
-# Implemented changes suggested by Bob Courtney of the Geological Survey of Canada to support translating Reson data to GSF.
-#
-# Revision 5.4  2004/02/25 21:39:36  caress
-# Release 5.0.3
-#
-# Revision 5.3  2003/07/27 20:50:22  caress
-# Release 5.0.0
-#
-# Revision 5.2  2002/10/02 23:55:08  caress
-# Release 5.0.beta24
-#
-# Revision 5.1  2002/09/19 00:33:55  caress
-# More recent version of PROJ4
-#
-# Revision 5.0  2002/07/20 20:47:57  caress
-# Initial Revision
-#
-#
-#
-### sets locations of vital objects
 BINDIR = ../../bin
 LIBDIR = ../../lib
 INCDIR = ../../include
 MANDIR = ../../man
 
-# *** CHANGE THESE TO FIT YOUR LOCAL ENVIRONMENT ***
-#
-# Compilers
 CC = cc
-#
-# Compile and load flags:
-LFLAGS = -lm
-CFLAGS = -g -DIRIX
+LFLAGS = -Wl -lm -L/sw/lib -lnetcdf
+CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DBYTESWAPPED
 ARCHIVE = ar rcv
-#
-# *** LEAVE EVERYTHING ELSE BELOW ALONE ***
 
-### make all makes the proj library, executables, man pages,
-### and associated include files
 all:	$(LIBDIR)/libmbproj.a \
 	$(INCDIR)/proj_api.h \
 	$(BINDIR)/proj \
@@ -76,11 +19,9 @@ all:	$(LIBDIR)/libmbproj.a \
 	$(MANDIR)/man1/geod.1 \
 	$(MANDIR)/man3/pj_init.3
 
-### make clean removes the object files
 clean:
 	rm -f *.o
 
-### link or copy the executables
 $(BINDIR)/geod: geod.o \
 		$(LIBDIR)/libmbproj.a
 	$(CC) $(CFLAGS) geod.o \
@@ -92,7 +33,6 @@ $(BINDIR)/proj: proj.o \
 		$(LIBDIR)/libmbproj.a \
 		$(LFLAGS) -o $(BINDIR)/proj
 
-### put together the library
 $(LIBDIR)/libmbproj.a: \
 		PJ_aea.o \
 		PJ_aeqd.o \
@@ -193,7 +133,7 @@ $(LIBDIR)/libmbproj.a: \
 		bchgen.o \
 		biveval.o \
 		dmstor.o \
- 		emess.o \
+		emess.o \
 		gen_cheb.o \
 		geocent.o \
 		geod_for.o \
@@ -347,7 +287,7 @@ $(LIBDIR)/libmbproj.a: \
 		bchgen.o \
 		biveval.o \
 		dmstor.o \
- 		emess.o \
+		emess.o \
 		gen_cheb.o \
 		geocent.o \
 		geod_for.o \
