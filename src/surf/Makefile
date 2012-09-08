@@ -1,15 +1,12 @@
 #     Copyright (c) 2002-2011 by
 #     David W. Caress (caress@mbari.org)
 #     and Dale N. Chayes (dale@ldeo.columbia.edu)
-BINDIR = ../../bin
-LIBDIR = ../../lib
-INCDIR = ../../include
+HOST := $(shell uname)
+TOPDIR := ../..
 
-CC = cc
-CFLAGS = -O3 -funroll-loops -fexpensive-optimizations -I/usr/X11R6/include -Wall -Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls  -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs -DBYTESWAPPED
-ARCHIVE = ar rcv
-all:	$(LIBDIR)/libsapi.a \
-	$(INCDIR)/sapi.h
+include $(TOPDIR)/Makefile.$(HOST)
+
+all: $(LIBDIR)/libsapi.a $(INCDIR)/sapi.h
 
 clean:
 	rm -f *.o

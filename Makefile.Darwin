@@ -1,0 +1,19 @@
+# -*- Makefile -*-
+#CC = cc
+CFLAGS := 
+#CFLAGS += -O3 -funroll-loops -fexpensive-optimizations 
+CFLAGS += -g
+
+CFLAGS += -I/usr/X11R6/include 
+CFLAGS += -Wall #-Wimplicit -pedantic -W -Wstrict-prototypes -Wredundant-decls
+#CFLAGS += -Wimplicit-int -Wimplicit-function-declaration -Wnested-externs 
+
+CFLAGS += -DBYTESWAPPED
+
+CFLAGS += -Werror
+
+BINDIR := ../../bin
+LIBDIR := ../../lib
+INCDIR := ../../include
+
+ARCHIVE := ar rcv

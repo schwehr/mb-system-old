@@ -30,7 +30,7 @@
 #include <string.h>
 
 #include "xdr_surf.h"
-
+#include "../../config.h"
 
 
 /* ***********************************************************************
@@ -139,7 +139,7 @@ short getSurfVersion(char* version)
 
 
  
-XdrSurf xdr_SurfCheckVersion(XDR *xdrs,SurfDescriptor *gp,char* label,
+XdrSurf xdr_SurfCheckVersion(XDR *xdrs, SurfDescriptor *gp, UNUSED char *label,
                                   short* newVersion,short* oldVersion)
 {
   u_int sizeL;

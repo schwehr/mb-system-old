@@ -111,25 +111,45 @@ static SurfGlobalData defaultGlobalData =
 };
 
 
+/* TODO: Make these something really out of range */
 static SurfStatistics defaultStatistics =
 {
- SURF_STATISTICS_LABEL
+    SURF_STATISTICS_LABEL,
+    0., 0., 0., 0.,
+    0., 0., // speed
+    0., 0., // roll
+    0., 0., // pitch
+    0., 0., // heave
+    0., 0., // star
+    0., 0., // ahead
+    0., 0. // depth
 };
 
 static SurfPositionSensorArray defaultPositionSensorArray =
 {
  SURF_POSITION_SENSOR_LABEL,
- UNKNOWNPOSSENS
+ UNKNOWNPOSSENS,
+ "UNKNOWN SENSOR UNION"
 };
 
+const float SURF_TRANS_PARAM_OUT_OF_RANGE = -9.99e-30;
 static SurfTransducerParameterTable defaultTransducerTable =
 {
- SURF_TRANSDUCER_TABLE_LABEL
+    SURF_TRANSDUCER_TABLE_LABEL,
+    SURF_TRANS_PARAM_OUT_OF_RANGE, 
+    SURF_TRANS_PARAM_OUT_OF_RANGE,
+    SURF_TRANS_PARAM_OUT_OF_RANGE,
+    SURF_TRANS_PARAM_OUT_OF_RANGE,
+    SURF_TRANS_PARAM_OUT_OF_RANGE,
+    SURF_TRANS_PARAM_OUT_OF_RANGE
 };
 
+const float SURF_MULTIBEAM_ANGLE_OUT_OF_RANGE = -8.88e-31;
 static SurfMultiBeamAngleTable defaultAngleTable =
 {
- SURF_MULTIBEAM_ANGLE_LABEL
+    SURF_MULTIBEAM_ANGLE_LABEL,
+    0,
+    {SURF_MULTIBEAM_ANGLE_OUT_OF_RANGE}
 };
 
 
